@@ -24,12 +24,17 @@ CATEGORIES = {
         "fornecedores": ["EDP Comercial", "EDP", "Galp Energia", "Endesa Energia", "Endesa", "Iberdrola Portugal", "Iberdrola", "Águas de Portugal", "EPAL", "Naturgy"],
         "valor_min": 30, "valor_max": 300,
         "descricoes": [
+            "Período de faturação: março a abril",
+            "Período de faturação: janeiro a fevereiro",
+            "Período de faturação: outubro a novembro",
             "Fatura de eletricidade mês de março",
             "Consumo de água instalações desportivas",
             "Fatura de gás aquecimento balneários",
             "Fornecimento de energia elétrica pavilhão",
             "Água e saneamento mês de janeiro",
             "Fatura bimestral de eletricidade",
+            "Fatura de energia elétrica e gás",
+            "Consumo de eletricidade pavilhão desportivo",
         ],
     },
     "Comunicações": {
@@ -146,7 +151,7 @@ CATEGORIES = {
     },
 }
 
-TOTAL_RECORDS = 600
+TOTAL_RECORDS = 1100
 NOISE_FRACTION = 0.08
 
 all_categories = list(CATEGORIES.keys())

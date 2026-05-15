@@ -1,601 +1,1101 @@
 fornecedor,valor,descricao,categoria
-Fixando,434.38,Reparação canalização balneários,Manutenção e Reparações
-ManutençãoPro,24.0,Substituição de equipamentos danificados,Manutenção e Reparações
-Gráfica Central,257.01,Design de logótipo do clube,Publicidade e Marketing
-Ageas,512.76,Seguro de saúde equipa técnica,Seguros
-Puma,518.13,Compra de bolas de andebol,Material Desportivo
-MEO,65.94,Pack comunicações sede do clube,Comunicações
-Galp Energia,230.38,Água e saneamento mês de janeiro,Água Luz e Gás
-PricewaterhouseCoopers,468.8,Relatório de contas anual,Serviços de Contabilidade
-NOS Empresas,88.06,Fatura telemóvel treinador,Comunicações
-Árbitro Costa,152.29,Pagamento de árbitros jogo casa,Arbitragem e Competições
-Hertz,81.58,Transporte atletas para competição,Transportes e Deslocações
-Árbitro Silva,247.73,Honorários árbitro assistente,Arbitragem e Competições
-Allianz,536.19,Renovação seguro instalações desportivas,Seguros
-Lidl,962.64,Tablet para gestão de treinos,Equipamento Informático
-TOC Independente,84.51,Consultoria financeira gestão associação,Serviços de Contabilidade
-Serralharia Norte,171.36,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-Fnac,1124.19,Software de gestão desportiva,Equipamento Informático
-Publico,242.53,Patrocínio e materiais de merchandising,Publicidade e Marketing
-NOS,97.32,Fatura telemóvel treinador,Comunicações
-Federação Portuguesa de Andebol,167.96,Inscrição campeonato nacional,Arbitragem e Competições
-Hertz,90.26,Aluguer de autocarro para viagem,Transportes e Deslocações
-NOS,48.67,Mensalidade internet e telefone,Comunicações
-Decathlon,399.08,Material de proteção e luvas de guarda-redes,Material Desportivo
-Delegado Ferreira,102.63,Pagamento de árbitros jogo casa,Arbitragem e Competições
-Serralharia Norte,217.05,Reparação balneários instalações,Manutenção e Reparações
-Worten,544.46,Compra de portátil para escritório,Equipamento Informático
-Gráfica Central,447.43,Patrocínio e materiais de merchandising,Publicidade e Marketing
-Intersport,721.1,Compra de bolas de andebol,Material Desportivo
-Dell,744.29,Impressora para secretaria do clube,Equipamento Informático
-Puma,381.1,Material de proteção e luvas de guarda-redes,Material Desportivo
-Dell,766.38,Impressora para secretaria do clube,Equipamento Informático
-Puma,298.08,Equipamento de treino para atletas,Material Desportivo
-NMedia,116.66,Campanha nas redes sociais,Publicidade e Marketing
-Pinturas Lisboa,531.81,Arranjo de portões e vedações,Manutenção e Reparações
-Apple,286.34,Impressora para secretaria do clube,Equipamento Informático
-Fixando,362.56,Substituição de equipamentos danificados,Manutenção e Reparações
-Uber,126.95,Combustível deslocação a jogo fora,Transportes e Deslocações
-El Corte Inglés,88.29,Catering jantar de gala do clube,Alimentação e Bebidas
-Gráfica Central,194.18,Criação de site e presença online,Publicidade e Marketing
-Serralharia Norte,215.53,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-Galp Energia,129.24,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-Galp,136.45,Transporte atletas para competição,Transportes e Deslocações
-KPMG,365.04,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Tranquilidade,1089.51,Seguro de saúde equipa técnica,Seguros
-BDO,427.86,Serviços de contabilidade mensal,Serviços de Contabilidade
-Tranquilidade,996.27,Apólice de seguro responsabilidade civil,Seguros
-Endesa Energia,230.85,Fatura de eletricidade mês de março,Água Luz e Gás
-Iberdrola Portugal,184.99,Consumo de água instalações desportivas,Água Luz e Gás
-NOS Empresas,64.65,Mensalidade internet e telefone,Comunicações
-Electricista Costa,327.25,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-EPAL,189.41,Água e saneamento mês de janeiro,Água Luz e Gás
-FlixBus,140.5,Portagens deslocação equipa,Transportes e Deslocações
-Tranquilidade,721.79,Apólice de seguro responsabilidade civil,Seguros
-Gráfica Central,300.21,Campanha nas redes sociais,Publicidade e Marketing
-Contabilidade Silva & Associados,209.42,Relatório de contas anual,Serviços de Contabilidade
-Águas de Portugal,192.27,Fatura de eletricidade mês de março,Água Luz e Gás
-Continente,114.39,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Delegado Ferreira,144.13,Consumo de água instalações desportivas,Água Luz e Gás
-Árbitro Silva,145.87,Pagamento de árbitros jogo casa,Arbitragem e Competições
-NOS,71.74,Mensalidade internet e telefone,Comunicações
-Deloitte,229.38,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Gráfica Central,285.99,Produção de flyers para torneio,Publicidade e Marketing
-Federação Portuguesa de Andebol,208.35,Honorários árbitro assistente,Arbitragem e Competições
-Design Studio,345.21,Publicidade jornal local,Publicidade e Marketing
-Mercadona,114.27,Compras supermercado para torneio,Alimentação e Bebidas
-EPAL,292.32,Consumo de água instalações desportivas,Água Luz e Gás
-Águas de Portugal,358.44,Serviços de contabilidade mensal,Serviços de Contabilidade
-Allianz,45.71,Mensalidade internet e telefone,Comunicações
-Águas de Portugal,189.11,Água e saneamento mês de janeiro,Água Luz e Gás
-Puma,381.1,Compra de bolas de andebol,Material Desportivo
-Lenovo,997.92,Tablet para gestão de treinos,Equipamento Informático
-Endesa,121.45,Fatura bimestral de eletricidade,Água Luz e Gás
-HP,1270.72,Tablet para gestão de treinos,Equipamento Informático
-Intersport,470.37,Equipamento de treino para atletas,Material Desportivo
-Federação Portuguesa de Andebol,139.46,Inscrição campeonato nacional,Arbitragem e Competições
-Agência Criativa,321.45,Impressão de cartazes e banners,Publicidade e Marketing
-Rentalhas,154.28,Combustível viagem torneio nacional,Transportes e Deslocações
-Delegado Ferreira,354.5,Inscrição campeonato nacional,Arbitragem e Competições
-HP,2400.0,Software de gestão desportiva,Equipamento Informático
-Lidl,108.87,Snacks e lanches concentração,Alimentação e Bebidas
-Pingo Doce,308.55,Compras supermercado para torneio,Alimentação e Bebidas
-Árbitro Costa,272.54,Custos organização jogo oficial,Arbitragem e Competições
-Intermarché,232.27,Catering jantar de gala do clube,Alimentação e Bebidas
-NOS,488.67,Seguro de acidentes pessoais atletas,Seguros
-Endesa Energia,110.85,Água e saneamento mês de janeiro,Água Luz e Gás
-Serralharia Norte,299.05,Reparação canalização balneários,Manutenção e Reparações
-Árbitro Silva,233.69,Honorários árbitro assistente,Arbitragem e Competições
-Publico,302.56,Criação de site e presença online,Publicidade e Marketing
-Auchan,59.89,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Endesa Energia,234.59,Consumo de água instalações desportivas,Água Luz e Gás
-EPAL,182.62,Água e saneamento mês de janeiro,Água Luz e Gás
-Worten,69.46,Fatura de eletricidade mês de março,Água Luz e Gás
-Intersport,337.68,Compra de bolas de andebol,Material Desportivo
-Associação Regional de Andebol,248.66,Quotas federação portuguesa de andebol,Arbitragem e Competições
-El Corte Inglés,71.74,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Fidelidade,925.23,Seguro de acidentes pessoais atletas,Seguros
-CP Comboios,130.99,Transporte atletas para competição,Transportes e Deslocações
-NOS Empresas,38.75,Fatura telemóvel treinador,Comunicações
-Galp Energia,176.78,Fatura bimestral de eletricidade,Água Luz e Gás
-Tranquilidade,514.47,Seguro de equipamentos e material,Seguros
-NMedia,250.99,Criação de site e presença online,Publicidade e Marketing
-Zurich,490.65,Seguro de saúde equipa técnica,Seguros
-Naturgy,268.82,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-ManutençãoPro,223.7,Substituição de equipamentos danificados,Manutenção e Reparações
-Rentalhas,108.32,Portagens deslocação equipa,Transportes e Deslocações
-Ageas,425.19,Apólice de seguro responsabilidade civil,Seguros
-Hertz,170.88,Fatura bimestral de eletricidade,Água Luz e Gás
-NOWO,61.37,Fatura telemóvel treinador,Comunicações
-Contabilidade Silva & Associados,543.89,Serviços de contabilidade mensal,Serviços de Contabilidade
-TOC Independente,95.1,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Auchan,109.93,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-EDP Comercial,130.02,Fatura bimestral de eletricidade,Água Luz e Gás
-Delegado Ferreira,134.24,Honorários árbitro assistente,Arbitragem e Competições
-HP,284.28,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Serralharia Norte,339.35,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
-NOS Empresas,31.96,Fatura telemóvel treinador,Comunicações
-Águas de Portugal,24.0,Fatura de eletricidade mês de março,Água Luz e Gás
-Repsol,58.38,Combustível viagem torneio nacional,Transportes e Deslocações
-Sport Zone,403.32,Sapatos e sapatilhas de andebol,Material Desportivo
-Tranquilidade,773.01,Seguro de acidentes pessoais atletas,Seguros
-Dell,683.88,Impressora para secretaria do clube,Equipamento Informático
-HP,1982.8,Impressora para secretaria do clube,Equipamento Informático
-TOC Independente,521.08,Relatório de contas anual,Serviços de Contabilidade
-Agência Criativa,174.06,Publicidade jornal local,Publicidade e Marketing
-MEO,58.51,Serviço de internet banda larga,Comunicações
-Microsoft,1061.12,Tablet para gestão de treinos,Equipamento Informático
-Delegado Ferreira,231.77,Taxa de participação torneio,Arbitragem e Competições
-NOS,53.56,Mensalidade internet e telefone,Comunicações
-El Corte Inglés,95.11,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Nike,322.93,Compra de bolas de andebol,Material Desportivo
-EDP,110.43,Fatura bimestral de eletricidade,Água Luz e Gás
-Adidas,235.09,Compra de sacos de desporto e mochilas,Material Desportivo
-Electricista Costa,367.36,Arranjo de portões e vedações,Manutenção e Reparações
-Design Studio,272.92,Criação de site e presença online,Publicidade e Marketing
-TOC Independente,414.3,Relatório de contas anual,Serviços de Contabilidade
-Design Studio,229.86,Campanha nas redes sociais,Publicidade e Marketing
-ManutençãoPro,226.69,Substituição de equipamentos danificados,Manutenção e Reparações
-ManutençãoPro,211.58,Design de logótipo do clube,Publicidade e Marketing
-Endesa Energia,66.21,Consumo de água instalações desportivas,Água Luz e Gás
-Federação Portuguesa de Andebol,219.22,Custos organização jogo oficial,Arbitragem e Competições
-Asics,563.46,Coletes e fatos de treino,Material Desportivo
-Associação Regional de Andebol,291.1,Quotas federação portuguesa de andebol,Arbitragem e Competições
-BP,143.64,Portagens deslocação equipa,Transportes e Deslocações
-ManutençãoPro,304.77,Pintura e remodelação escritório,Manutenção e Reparações
-KPMG,158.24,Declaração fiscal anual do clube,Serviços de Contabilidade
-Iberdrola Portugal,84.26,Consumo de água instalações desportivas,Água Luz e Gás
-Gráfica Central,162.22,Design de logótipo do clube,Publicidade e Marketing
-Printmaster,333.43,Impressão de cartazes e banners,Publicidade e Marketing
-CP Comboios,144.21,Portagens deslocação equipa,Transportes e Deslocações
-BP,105.49,Bilhetes de comboio campeonato,Transportes e Deslocações
-Fixando,294.17,Substituição de equipamentos danificados,Manutenção e Reparações
-NOS,149.4,Quotas federação portuguesa de andebol,Arbitragem e Competições
-Fidelidade,774.51,Seguro de saúde equipa técnica,Seguros
-Fixando,239.26,Pintura e remodelação escritório,Manutenção e Reparações
-HP,893.66,Impressora para secretaria do clube,Equipamento Informático
-Federação Portuguesa de Andebol,82.59,Honorários árbitro assistente,Arbitragem e Competições
-Delegado Ferreira,182.38,Taxa de participação torneio,Arbitragem e Competições
-TOC Independente,368.8,Consultoria financeira gestão associação,Serviços de Contabilidade
-Worten,1351.47,Monitor e periféricos computador,Equipamento Informático
-Pinturas Lisboa,461.98,Pintura e remodelação escritório,Manutenção e Reparações
-NOS,35.26,Fatura telemóvel treinador,Comunicações
-Allianz,1308.74,Seguro de acidentes pessoais atletas,Seguros
-El Corte Inglés,155.83,Catering jantar de gala do clube,Alimentação e Bebidas
-MEO Empresas,86.14,Mensalidade internet e telefone,Comunicações
-Repsol,147.73,Combustível viagem torneio nacional,Transportes e Deslocações
-Federação Portuguesa de Andebol,145.59,Honorários árbitro assistente,Arbitragem e Competições
-EDP Comercial,165.35,Água e saneamento mês de janeiro,Água Luz e Gás
-BP,114.46,Combustível viagem torneio nacional,Transportes e Deslocações
-NOS,46.4,Pack comunicações sede do clube,Comunicações
-Dell,508.63,Webcam e microfone reuniões online,Equipamento Informático
-Galp,143.61,Bilhetes de comboio campeonato,Transportes e Deslocações
-Lidl,236.23,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-Serralharia Norte,207.71,Reparação balneários instalações,Manutenção e Reparações
-Printmaster,222.01,Impressão de cartazes e banners,Publicidade e Marketing
-EPAL,138.53,Água e saneamento mês de janeiro,Água Luz e Gás
-Árbitro Silva,229.25,Custos organização jogo oficial,Arbitragem e Competições
-Asics,1394.29,Compra de portátil para escritório,Equipamento Informático
-Dell,566.81,Webcam e microfone reuniões online,Equipamento Informático
-Allianz,980.26,Seguro de saúde equipa técnica,Seguros
-Auchan,75.98,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Asics,254.75,Compra de bolas de andebol,Material Desportivo
-TecnoFix,49.93,Fatura telemóvel treinador,Comunicações
-Endesa,171.55,Água e saneamento mês de janeiro,Água Luz e Gás
-Printmaster,371.49,Publicidade jornal local,Publicidade e Marketing
-Delegado Ferreira,290.75,Quotas federação portuguesa de andebol,Arbitragem e Competições
-Publico,138.4,Design de logótipo do clube,Publicidade e Marketing
-Ageas,644.5,Seguro de saúde equipa técnica,Seguros
-NOWO,75.74,Mensalidade internet e telefone,Comunicações
-Serralharia Norte,399.39,Pintura e remodelação escritório,Manutenção e Reparações
-NOS,75.82,Serviço de internet banda larga,Comunicações
-Nike,483.92,Sapatos e sapatilhas de andebol,Material Desportivo
-Uber,119.6,Portagens deslocação equipa,Transportes e Deslocações
-Pinturas Lisboa,146.55,Reparação canalização balneários,Manutenção e Reparações
-BP,109.61,Táxi ou uber após jogo tardio,Transportes e Deslocações
-Continente,126.96,Compras supermercado para torneio,Alimentação e Bebidas
-Contabilidade Silva & Associados,264.76,Água e saneamento mês de janeiro,Água Luz e Gás
-Gráfica Central,364.06,Criação de site e presença online,Publicidade e Marketing
-Microsoft,1212.23,Tablet para gestão de treinos,Equipamento Informático
-Lenovo,520.32,Software de gestão desportiva,Equipamento Informático
-BDO,569.42,Serviços de contabilidade mensal,Serviços de Contabilidade
-Gráfica Central,273.62,Publicidade jornal local,Publicidade e Marketing
-Nike,495.74,Material de proteção e luvas de guarda-redes,Material Desportivo
-Intermarché,142.32,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-El Corte Inglés,72.66,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Tranquilidade,457.43,Seguro de saúde equipa técnica,Seguros
-Allianz,363.99,Renovação seguro instalações desportivas,Seguros
-Serralharia Norte,406.14,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-Pinturas Lisboa,165.14,Substituição de equipamentos danificados,Manutenção e Reparações
-TecnoFix,286.37,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
-Zurich,853.8,Seguro de acidentes pessoais atletas,Seguros
-Hertz,76.49,Bilhetes de comboio campeonato,Transportes e Deslocações
-Mercadona,173.05,Snacks e lanches concentração,Alimentação e Bebidas
-Gráfica Central,262.76,Publicidade jornal local,Publicidade e Marketing
-Árbitro Silva,283.53,Patrocínio e materiais de merchandising,Publicidade e Marketing
-Samsung,774.49,Software de gestão desportiva,Equipamento Informático
-Deloitte,135.86,Declaração fiscal anual do clube,Serviços de Contabilidade
-Uber,77.01,Combustível viagem torneio nacional,Transportes e Deslocações
-Nike,147.78,Aquisição de redes para baliza,Material Desportivo
-Samsung,352.2,Impressora para secretaria do clube,Equipamento Informático
-Águas de Portugal,256.55,Consumo de água instalações desportivas,Água Luz e Gás
-El Corte Inglés,126.1,Compras supermercado para torneio,Alimentação e Bebidas
-Repsol,66.13,Táxi ou uber após jogo tardio,Transportes e Deslocações
-Iberdrola Portugal,132.66,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-Microsoft,441.03,Impressora para secretaria do clube,Equipamento Informático
-AXA,980.27,Renovação seguro instalações desportivas,Seguros
-Associação Regional de Andebol,274.26,Pagamento de árbitros jogo casa,Arbitragem e Competições
-Tranquilidade,1800.0,Seguro de equipamentos e material,Seguros
-Fidelidade,965.63,Prémio de seguro anual clube,Seguros
-Delegado Ferreira,224.3,Honorários árbitro assistente,Arbitragem e Competições
-Contabilidade Silva & Associados,202.09,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Fidelidade,820.37,Seguro de saúde equipa técnica,Seguros
-Árbitro Silva,173.17,Pagamento de árbitros jogo casa,Arbitragem e Competições
-El Corte Inglés,18.24,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-Federação Portuguesa de Andebol,306.04,Inscrição campeonato nacional,Arbitragem e Competições
-Deloitte,370.31,Compra de bolas de andebol,Material Desportivo
-Generali,1205.51,Renovação seguro instalações desportivas,Seguros
-KPMG,184.97,Serviços de contabilidade mensal,Serviços de Contabilidade
-Asics,160.19,Sapatos e sapatilhas de andebol,Material Desportivo
-FlixBus,204.39,Combustível deslocação a jogo fora,Transportes e Deslocações
-Tranquilidade,399.96,Prémio de seguro anual clube,Seguros
-EPAL,131.13,Fatura de gás aquecimento balneários,Água Luz e Gás
-Associação Regional de Andebol,168.42,Honorários árbitro assistente,Arbitragem e Competições
-Iberdrola Portugal,226.79,Fatura de eletricidade mês de março,Água Luz e Gás
-KPMG,150.7,Consultoria financeira gestão associação,Serviços de Contabilidade
-Hertz,133.27,Aluguer de autocarro para viagem,Transportes e Deslocações
-Continente,332.81,Substituição de equipamentos danificados,Manutenção e Reparações
-Serralharia Norte,132.26,Substituição de equipamentos danificados,Manutenção e Reparações
-Sport Zone,699.81,Material de proteção e luvas de guarda-redes,Material Desportivo
-NOS Empresas,41.61,Pack comunicações sede do clube,Comunicações
-Lidl,141.87,Fatura de eletricidade mês de março,Água Luz e Gás
-HP,40.0,Impressora para secretaria do clube,Equipamento Informático
-NOWO,59.47,Fatura telemóvel treinador,Comunicações
-KPMG,411.49,Serviços de contabilidade mensal,Serviços de Contabilidade
-Asics,495.44,Coletes e fatos de treino,Material Desportivo
-TOC Independente,392.72,Consultoria financeira gestão associação,Serviços de Contabilidade
-BP,86.7,Portagens deslocação equipa,Transportes e Deslocações
-Puma,290.03,Sapatos e sapatilhas de andebol,Material Desportivo
-Associação Regional de Andebol,372.62,Pagamento de árbitros jogo casa,Arbitragem e Competições
-TecnoFix,164.41,Substituição de equipamentos danificados,Manutenção e Reparações
-Endesa,187.19,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-NMedia,405.29,Patrocínio e materiais de merchandising,Publicidade e Marketing
-Sport Zone,338.11,Compra de sacos de desporto e mochilas,Material Desportivo
-HP,1826.92,Webcam e microfone reuniões online,Equipamento Informático
-Intermarché,165.69,Bilhetes de comboio campeonato,Transportes e Deslocações
-Uber,118.35,Combustível viagem torneio nacional,Transportes e Deslocações
-Fidelidade,1027.99,Apólice de seguro responsabilidade civil,Seguros
-Ageas,979.83,Prémio de seguro anual clube,Seguros
-Agência Criativa,320.19,Criação de site e presença online,Publicidade e Marketing
-Contabilidade Silva & Associados,256.44,Serviços de contabilidade mensal,Serviços de Contabilidade
-Puma,461.91,Equipamento de treino para atletas,Material Desportivo
-Mercadona,204.37,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Decathlon,526.73,Equipamento de treino para atletas,Material Desportivo
-Intermarché,47.11,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Federação Portuguesa de Andebol,280.88,Inscrição campeonato nacional,Arbitragem e Competições
-Allianz,1168.83,Renovação seguro instalações desportivas,Seguros
-Mercadona,464.16,Compra de sacos de desporto e mochilas,Material Desportivo
-Printmaster,277.89,Serviços de contabilidade mensal,Serviços de Contabilidade
-Generali,174.53,Custos organização jogo oficial,Arbitragem e Competições
-NOWO,36.63,Fatura telefonia fixa mensal,Comunicações
-Rentalhas,160.25,Combustível deslocação a jogo fora,Transportes e Deslocações
-Árbitro Costa,229.15,Honorários árbitro assistente,Arbitragem e Competições
-Deloitte,504.73,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Electricista Costa,246.71,Reparação balneários instalações,Manutenção e Reparações
-FlixBus,104.01,Táxi ou uber após jogo tardio,Transportes e Deslocações
-El Corte Inglés,53.64,Compras supermercado para torneio,Alimentação e Bebidas
-Auchan,121.96,Transporte atletas para competição,Transportes e Deslocações
-Endesa,152.47,Fatura de eletricidade mês de março,Água Luz e Gás
-AXA,1463.88,Seguro de equipamentos e material,Seguros
-Associação Regional de Andebol,268.83,Pagamento de árbitros jogo casa,Arbitragem e Competições
-PricewaterhouseCoopers,509.71,Relatório de contas anual,Serviços de Contabilidade
-Delegado Ferreira,158.21,Honorários árbitro assistente,Arbitragem e Competições
-Serralharia Norte,363.19,Substituição de equipamentos danificados,Manutenção e Reparações
-Worten,1691.35,Compra de portátil para escritório,Equipamento Informático
-EDP,154.11,Fatura de eletricidade mês de março,Água Luz e Gás
-TOC Independente,112.09,Campanha nas redes sociais,Publicidade e Marketing
-Intersport,312.38,Coletes e fatos de treino,Material Desportivo
-Tranquilidade,1179.07,Renovação seguro instalações desportivas,Seguros
-Associação Regional de Andebol,204.09,Taxa de participação torneio,Arbitragem e Competições
-Sport Zone,157.86,Sapatos e sapatilhas de andebol,Material Desportivo
-MEO,69.48,Pack comunicações sede do clube,Comunicações
-Árbitro Costa,272.15,Quotas federação portuguesa de andebol,Arbitragem e Competições
-Federação Portuguesa de Andebol,229.21,Taxa de participação torneio,Arbitragem e Competições
-MEO Empresas,75.64,Serviço de internet banda larga,Comunicações
-Endesa,108.35,Fatura bimestral de eletricidade,Água Luz e Gás
-Deloitte,435.76,Relatório de contas anual,Serviços de Contabilidade
-Tranquilidade,804.55,Prémio de seguro anual clube,Seguros
-Árbitro Costa,174.52,Pagamento de árbitros jogo casa,Arbitragem e Competições
-Árbitro Silva,130.36,Pagamento de árbitros jogo casa,Arbitragem e Competições
-NMedia,384.7,Criação de site e presença online,Publicidade e Marketing
-Microsoft,1490.63,Software de gestão desportiva,Equipamento Informático
-Contabilidade Silva & Associados,607.59,Relatório de contas anual,Serviços de Contabilidade
-CP Comboios,106.0,Transporte atletas para competição,Transportes e Deslocações
-CP Comboios,94.66,Aluguer de autocarro para viagem,Transportes e Deslocações
-Pingo Doce,283.58,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Delegado Ferreira,79.62,Honorários árbitro assistente,Arbitragem e Competições
-ManutençãoPro,24.0,Pintura e remodelação escritório,Manutenção e Reparações
-NMedia,309.98,Produção de flyers para torneio,Publicidade e Marketing
-Lenovo,755.1,Impressora para secretaria do clube,Equipamento Informático
-Electricista Costa,91.27,Pintura e remodelação escritório,Manutenção e Reparações
-Hertz,137.39,Portagens deslocação equipa,Transportes e Deslocações
-Design Studio,311.31,Design de logótipo do clube,Publicidade e Marketing
-Publico,188.67,Design de logótipo do clube,Publicidade e Marketing
-PricewaterhouseCoopers,584.52,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Microsoft,1818.95,Monitor e periféricos computador,Equipamento Informático
-Nike,389.07,Monitor e periféricos computador,Equipamento Informático
-Hertz,95.11,Bilhetes de comboio campeonato,Transportes e Deslocações
-Dell,1203.72,Compra de portátil para escritório,Equipamento Informático
-Contabilidade Silva & Associados,350.66,Auditoria às contas do exercício,Serviços de Contabilidade
-Tranquilidade,269.8,Prémio de seguro anual clube,Seguros
-Iberdrola,150.17,Água e saneamento mês de janeiro,Água Luz e Gás
-Fidelidade,896.84,Seguro de acidentes pessoais atletas,Seguros
-TOC Independente,318.88,Processamento de salários e recibos verdes,Serviços de Contabilidade
-Zurich,689.66,Seguro de acidentes pessoais atletas,Seguros
-AXA,874.93,Renovação seguro instalações desportivas,Seguros
-Contabilidade Silva & Associados,482.3,Relatório de contas anual,Serviços de Contabilidade
-Microsoft,1306.07,Compra de portátil para escritório,Equipamento Informático
-Associação Regional de Andebol,191.35,Honorários árbitro assistente,Arbitragem e Competições
-Apple,890.91,Impressora para secretaria do clube,Equipamento Informático
-Lidl,994.44,Webcam e microfone reuniões online,Equipamento Informático
-Iberdrola Portugal,162.58,Consumo de água instalações desportivas,Água Luz e Gás
-Intersport,196.09,Sapatos e sapatilhas de andebol,Material Desportivo
-Microsoft,1324.41,Impressora para secretaria do clube,Equipamento Informático
-Publico,272.86,Campanha nas redes sociais,Publicidade e Marketing
-Uber,75.42,Transporte atletas para competição,Transportes e Deslocações
-Galp Energia,270.61,Água e saneamento mês de janeiro,Água Luz e Gás
-Deloitte,438.95,Serviços de contabilidade mensal,Serviços de Contabilidade
-Sport Zone,710.57,Equipamento de treino para atletas,Material Desportivo
-Agência Criativa,277.76,Criação de site e presença online,Publicidade e Marketing
-PricewaterhouseCoopers,471.45,Processamento de salários e recibos verdes,Serviços de Contabilidade
-BDO,304.67,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-Vodafone,35.38,Pack comunicações sede do clube,Comunicações
-ManutençãoPro,321.28,Pintura e remodelação escritório,Manutenção e Reparações
-Pinturas Lisboa,273.41,Arranjo de portões e vedações,Manutenção e Reparações
-NOWO,44.33,Fatura telemóvel treinador,Comunicações
-Pinturas Lisboa,304.21,Pintura e remodelação escritório,Manutenção e Reparações
-Lenovo,972.82,Software de gestão desportiva,Equipamento Informático
-Puma,66.26,Material de proteção e luvas de guarda-redes,Material Desportivo
-Rentalhas,12.28,Combustível viagem torneio nacional,Transportes e Deslocações
-Worten,40.0,Webcam e microfone reuniões online,Equipamento Informático
-Printmaster,301.11,Publicidade jornal local,Publicidade e Marketing
-Worten,559.17,Impressora para secretaria do clube,Equipamento Informático
-Repsol,120.4,Transporte atletas para competição,Transportes e Deslocações
-Deloitte,497.43,Serviços de contabilidade mensal,Serviços de Contabilidade
-Auchan,165.73,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-NOWO,66.03,Plano de dados móveis equipa técnica,Comunicações
-Repsol,145.36,Aluguer de autocarro para viagem,Transportes e Deslocações
-MEO Empresas,27.85,Plano de dados móveis equipa técnica,Comunicações
-Fnac,1757.4,Impressora para secretaria do clube,Equipamento Informático
-AXA,503.62,Prémio de seguro anual clube,Seguros
-Delegado Ferreira,302.14,Taxa de participação torneio,Arbitragem e Competições
-Ageas,1752.06,Apólice de seguro responsabilidade civil,Seguros
-Fnac,1129.32,Webcam e microfone reuniões online,Equipamento Informático
-MEO Empresas,56.15,Serviço de internet banda larga,Comunicações
-El Corte Inglés,126.75,Catering jantar de gala do clube,Alimentação e Bebidas
-Árbitro Costa,78.93,Pagamento de árbitros jogo casa,Arbitragem e Competições
-EDP,30.84,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-NOWO,65.15,Fatura telefonia fixa mensal,Comunicações
-Continente,214.22,Catering jantar de gala do clube,Alimentação e Bebidas
-Hertz,72.09,Transporte atletas para competição,Transportes e Deslocações
-Intersport,539.69,Material de proteção e luvas de guarda-redes,Material Desportivo
-Fidelidade,1018.98,Prémio de seguro anual clube,Seguros
-MEO,73.13,Pack comunicações sede do clube,Comunicações
-Rentalhas,76.9,Combustível deslocação a jogo fora,Transportes e Deslocações
-Associação Regional de Andebol,33.59,Fatura telemóvel treinador,Comunicações
-Intersport,104.01,Quotas federação portuguesa de andebol,Arbitragem e Competições
-Pinturas Lisboa,216.6,Pintura e remodelação escritório,Manutenção e Reparações
-Mercadona,105.9,Refeições pós-jogo para atletas,Alimentação e Bebidas
-BDO,255.11,Consultoria financeira gestão associação,Serviços de Contabilidade
-BDO,391.54,Relatório de contas anual,Serviços de Contabilidade
-Fidelidade,499.99,Seguro de equipamentos e material,Seguros
-Árbitro Costa,67.07,Taxa de participação torneio,Arbitragem e Competições
-Auchan,313.05,Custos organização jogo oficial,Arbitragem e Competições
-Printmaster,217.97,Campanha nas redes sociais,Publicidade e Marketing
-Generali,714.11,Apólice de seguro responsabilidade civil,Seguros
-TecnoFix,291.35,Declaração fiscal anual do clube,Serviços de Contabilidade
-BP,132.95,Transporte atletas para competição,Transportes e Deslocações
-El Corte Inglés,65.62,Táxi ou uber após jogo tardio,Transportes e Deslocações
-Puma,312.18,Aquisição de redes para baliza,Material Desportivo
-Hertz,206.32,Combustível deslocação a jogo fora,Transportes e Deslocações
-Endesa,160.14,Consumo de água instalações desportivas,Água Luz e Gás
-Zurich,643.72,Renovação seguro instalações desportivas,Seguros
-PricewaterhouseCoopers,623.73,Relatório de contas anual,Serviços de Contabilidade
-Árbitro Costa,149.64,Taxa de participação torneio,Arbitragem e Competições
-Nike,94.43,Material de proteção e luvas de guarda-redes,Material Desportivo
-Árbitro Silva,167.02,Custos organização jogo oficial,Arbitragem e Competições
-Pingo Doce,623.21,Coletes e fatos de treino,Material Desportivo
-Decathlon,368.54,Aquisição de redes para baliza,Material Desportivo
-ManutençãoPro,45.18,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-Asics,579.23,Material de proteção e luvas de guarda-redes,Material Desportivo
-Intermarché,195.35,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Electricista Costa,311.35,Arranjo de portões e vedações,Manutenção e Reparações
-Iberdrola,171.19,Água e saneamento mês de janeiro,Água Luz e Gás
-Allianz,1099.74,Seguro de equipamentos e material,Seguros
-Vodafone,28.99,Plano de dados móveis equipa técnica,Comunicações
-Agência Criativa,182.5,Campanha nas redes sociais,Publicidade e Marketing
-Fixando,508.86,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
-Worten,1176.73,Monitor e periféricos computador,Equipamento Informático
-NOS,40.51,Fatura telemóvel treinador,Comunicações
-Sport Zone,489.43,Material de proteção e luvas de guarda-redes,Material Desportivo
-Gráfica Central,382.92,Campanha nas redes sociais,Publicidade e Marketing
-Árbitro Costa,274.93,Quotas federação portuguesa de andebol,Arbitragem e Competições
-Fidelidade,317.82,Apólice de seguro responsabilidade civil,Seguros
-BP,1009.06,Disco externo backup documentos,Equipamento Informático
-AXA,919.4,Renovação seguro instalações desportivas,Seguros
-AXA,1197.45,Prémio de seguro anual clube,Seguros
-MEO Empresas,59.31,Serviço de internet banda larga,Comunicações
-MEO,656.28,Compra de portátil para escritório,Equipamento Informático
-Worten,194.6,Software de gestão desportiva,Equipamento Informático
-Pinturas Lisboa,216.2,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
-Gráfica Central,188.04,Impressão de cartazes e banners,Publicidade e Marketing
-Árbitro Costa,149.71,Quotas federação portuguesa de andebol,Arbitragem e Competições
-PricewaterhouseCoopers,578.93,Declaração fiscal anual do clube,Serviços de Contabilidade
-Design Studio,198.82,Design de logótipo do clube,Publicidade e Marketing
-TecnoFix,292.68,Substituição de equipamentos danificados,Manutenção e Reparações
-Árbitro Silva,358.27,Honorários árbitro assistente,Arbitragem e Competições
-Gráfica Central,181.94,Produção de flyers para torneio,Publicidade e Marketing
-Samsung,776.37,Software de gestão desportiva,Equipamento Informático
-Puma,485.77,Material de proteção e luvas de guarda-redes,Material Desportivo
-Pingo Doce,322.03,Compras supermercado para torneio,Alimentação e Bebidas
-Fixando,303.41,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
-El Corte Inglés,191.07,Compras supermercado para torneio,Alimentação e Bebidas
-MEO Empresas,163.19,Compras alimentares para evento desportivo,Alimentação e Bebidas
-MEO,65.01,Serviço de internet banda larga,Comunicações
-Pingo Doce,36.8,Transporte atletas para competição,Transportes e Deslocações
-Repsol,110.57,Transporte atletas para competição,Transportes e Deslocações
-AXA,934.86,Seguro de equipamentos e material,Seguros
-Ageas,1087.72,Prémio de seguro anual clube,Seguros
-Dell,1042.19,Compra de portátil para escritório,Equipamento Informático
-CP Comboios,110.39,Bilhetes de comboio campeonato,Transportes e Deslocações
-Uber,134.91,Aluguer de autocarro para viagem,Transportes e Deslocações
-Intersport,161.82,Campanha nas redes sociais,Publicidade e Marketing
-Galp,98.82,Táxi ou uber após jogo tardio,Transportes e Deslocações
-NOWO,64.55,Pack comunicações sede do clube,Comunicações
-Federação Portuguesa de Andebol,148.38,Inscrição campeonato nacional,Arbitragem e Competições
-Pinturas Lisboa,308.61,Reparação balneários instalações,Manutenção e Reparações
-EDP Comercial,220.48,Fatura de eletricidade mês de março,Água Luz e Gás
-Fixando,25.52,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-Zurich,1137.18,Seguro de saúde equipa técnica,Seguros
-Decathlon,457.13,Sapatos e sapatilhas de andebol,Material Desportivo
-Serralharia Norte,57.56,Material de proteção e luvas de guarda-redes,Material Desportivo
-Intermarché,84.56,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Design Studio,352.64,Patrocínio e materiais de merchandising,Publicidade e Marketing
-Lidl,224.25,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Worten,331.65,Tablet para gestão de treinos,Equipamento Informático
-Gráfica Central,440.98,Design de logótipo do clube,Publicidade e Marketing
-Mercadona,126.02,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Zurich,471.76,Renovação seguro instalações desportivas,Seguros
-Dell,1374.8,Disco externo backup documentos,Equipamento Informático
-Intermarché,136.58,Snacks e lanches concentração,Alimentação e Bebidas
-Intersport,772.3,Compra de bolas de andebol,Material Desportivo
-HP,319.57,Equipamento de treino para atletas,Material Desportivo
-Design Studio,345.69,Impressão de cartazes e banners,Publicidade e Marketing
-Auchan,310.08,Refeições pós-jogo para atletas,Alimentação e Bebidas
-NOS,65.86,Plano de dados móveis equipa técnica,Comunicações
-Pingo Doce,274.27,Compras alimentares para evento desportivo,Alimentação e Bebidas
-NMedia,238.84,Patrocínio e materiais de merchandising,Publicidade e Marketing
-HP,981.55,Monitor e periféricos computador,Equipamento Informático
-Árbitro Silva,119.04,Honorários árbitro assistente,Arbitragem e Competições
-BDO,275.08,Declaração fiscal anual do clube,Serviços de Contabilidade
-NMedia,438.25,Patrocínio e materiais de merchandising,Publicidade e Marketing
-Nike,437.66,Equipamento de treino para atletas,Material Desportivo
-Hertz,167.01,Transporte atletas para competição,Transportes e Deslocações
-MEO Empresas,109.26,Fatura telemóvel treinador,Comunicações
-Intermarché,110.46,Refeições pós-jogo para atletas,Alimentação e Bebidas
-CP Comboios,92.18,Transporte atletas para competição,Transportes e Deslocações
-Águas de Portugal,227.86,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-CP Comboios,133.99,Combustível viagem torneio nacional,Transportes e Deslocações
-Pingo Doce,16.0,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Tranquilidade,1049.9,Prémio de seguro anual clube,Seguros
-PricewaterhouseCoopers,335.68,Auditoria às contas do exercício,Serviços de Contabilidade
-Pingo Doce,207.57,Compras supermercado para torneio,Alimentação e Bebidas
-Auchan,220.6,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Adidas,422.47,Compra de bolas de andebol,Material Desportivo
-PricewaterhouseCoopers,275.08,Consultoria financeira gestão associação,Serviços de Contabilidade
-Iberdrola Portugal,187.36,Fatura de eletricidade mês de março,Água Luz e Gás
-Intermarché,169.15,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Fidelidade,1065.64,Seguro de equipamentos e material,Seguros
-TecnoFix,241.14,Pintura e remodelação escritório,Manutenção e Reparações
-Pinturas Lisboa,355.58,Serviço de limpeza e manutenção geral,Manutenção e Reparações
-Delegado Ferreira,220.6,Custos organização jogo oficial,Arbitragem e Competições
-MEO,91.0,Pack comunicações sede do clube,Comunicações
-EDP Comercial,199.65,Fatura bimestral de eletricidade,Água Luz e Gás
-Decathlon,336.97,Compra de bolas de andebol,Material Desportivo
-AXA,944.47,Seguro de equipamentos e material,Seguros
-Rentalhas,78.39,Portagens deslocação equipa,Transportes e Deslocações
-NOS,41.81,Fatura telefonia fixa mensal,Comunicações
-KPMG,355.87,Relatório de contas anual,Serviços de Contabilidade
-TecnoFix,208.88,Pintura e remodelação escritório,Manutenção e Reparações
-Generali,968.87,Seguro de acidentes pessoais atletas,Seguros
-Intersport,568.89,Aquisição de redes para baliza,Material Desportivo
-Endesa Energia,232.74,Fatura bimestral de eletricidade,Água Luz e Gás
-Decathlon,209.19,Coletes e fatos de treino,Material Desportivo
-NOS Empresas,61.2,Plano de dados móveis equipa técnica,Comunicações
-Tranquilidade,707.37,Seguro de acidentes pessoais atletas,Seguros
-El Corte Inglés,248.68,Refeições pós-jogo para atletas,Alimentação e Bebidas
-MEO Empresas,69.47,Fatura telefonia fixa mensal,Comunicações
-NOS Empresas,70.44,Pack comunicações sede do clube,Comunicações
-CP Comboios,46.2,Bilhetes de comboio campeonato,Transportes e Deslocações
-Nike,546.44,Equipamento de treino para atletas,Material Desportivo
-NOWO,66.93,Fatura telemóvel treinador,Comunicações
-Uber,182.13,Patrocínio e materiais de merchandising,Publicidade e Marketing
-Pingo Doce,113.67,Catering jantar de gala do clube,Alimentação e Bebidas
-Auchan,29.29,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-Zurich,1133.9,Seguro de equipamentos e material,Seguros
-NMedia,189.39,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-Tranquilidade,999.81,Seguro de acidentes pessoais atletas,Seguros
-Vodafone,61.99,Mensalidade internet e telefone,Comunicações
-El Corte Inglés,188.35,Refeições pós-jogo para atletas,Alimentação e Bebidas
-Printmaster,302.41,Design de logótipo do clube,Publicidade e Marketing
-Decathlon,352.8,Compra de sacos de desporto e mochilas,Material Desportivo
-Adidas,382.67,Coletes e fatos de treino,Material Desportivo
-Intermarché,143.42,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-Endesa,142.88,Fatura bimestral de eletricidade,Água Luz e Gás
-Serralharia Norte,211.03,Substituição de equipamentos danificados,Manutenção e Reparações
-MEO Empresas,103.81,Plano de dados móveis equipa técnica,Comunicações
-Generali,860.61,Apólice de seguro responsabilidade civil,Seguros
-Hertz,180.34,Combustível deslocação a jogo fora,Transportes e Deslocações
-Endesa Energia,332.2,Auditoria às contas do exercício,Serviços de Contabilidade
-Endesa Energia,90.32,Água e saneamento mês de janeiro,Água Luz e Gás
-Vodafone,276.42,Design de logótipo do clube,Publicidade e Marketing
-Design Studio,373.14,Publicidade jornal local,Publicidade e Marketing
-Serralharia Norte,402.21,Reparação canalização balneários,Manutenção e Reparações
-Gráfica Central,331.02,Criação de site e presença online,Publicidade e Marketing
-El Corte Inglés,151.97,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Dell,638.47,Impressora para secretaria do clube,Equipamento Informático
-Electricista Costa,766.5,Webcam e microfone reuniões online,Equipamento Informático
-Mercadona,208.04,Catering jantar de gala do clube,Alimentação e Bebidas
-ManutençãoPro,214.17,Arranjo de portões e vedações,Manutenção e Reparações
+BDO,472.84,Relatório de contas anual,Serviços de Contabilidade
+Publico,163.67,Criação de site e presença online,Publicidade e Marketing
+Zurich,679.05,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Uber,62.04,Transporte atletas para competição,Transportes e Deslocações
 Intersport,226.68,Coletes e fatos de treino,Material Desportivo
-Rentalhas,97.79,Transporte atletas para competição,Transportes e Deslocações
-BDO,364.46,Auditoria às contas do exercício,Serviços de Contabilidade
-Associação Regional de Andebol,392.07,Inscrição campeonato nacional,Arbitragem e Competições
-Iberdrola Portugal,136.61,Fatura de gás aquecimento balneários,Água Luz e Gás
-BDO,430.67,Relatório de contas anual,Serviços de Contabilidade
-Design Studio,36.17,Pack comunicações sede do clube,Comunicações
-BDO,130.16,Auditoria às contas do exercício,Serviços de Contabilidade
-Pinturas Lisboa,294.89,Reparação canalização balneários,Manutenção e Reparações
-TOC Independente,248.96,Declaração fiscal anual do clube,Serviços de Contabilidade
-Apple,970.24,Tablet para gestão de treinos,Equipamento Informático
-TOC Independente,519.23,Relatório de contas anual,Serviços de Contabilidade
-MEO Empresas,76.27,Pack comunicações sede do clube,Comunicações
-Electricista Costa,275.17,Substituição de equipamentos danificados,Manutenção e Reparações
-Tranquilidade,104.52,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-Iberdrola Portugal,149.17,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-NOWO,82.86,Mensalidade internet e telefone,Comunicações
-Árbitro Costa,168.07,Taxa de participação torneio,Arbitragem e Competições
-Galp,157.19,Combustível deslocação a jogo fora,Transportes e Deslocações
-Decathlon,175.97,Compra de bolas de andebol,Material Desportivo
-Nike,338.63,Equipamento de treino para atletas,Material Desportivo
-MEO Empresas,63.69,Mensalidade internet e telefone,Comunicações
-MEO,75.04,Fatura telemóvel treinador,Comunicações
-TOC Independente,497.41,Relatório de contas anual,Serviços de Contabilidade
-Uber,95.4,Aluguer de autocarro para viagem,Transportes e Deslocações
-Apple,903.59,Webcam e microfone reuniões online,Equipamento Informático
-Águas de Portugal,219.85,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
-Continente,164.5,Compras alimentares para evento desportivo,Alimentação e Bebidas
-Gráfica Central,258.46,Design de logótipo do clube,Publicidade e Marketing
-Fixando,362.46,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+NOS,113.64,Bilhetes de comboio campeonato,Transportes e Deslocações
+Puma,518.13,Compra de bolas de andebol,Material Desportivo
+Intersport,772.3,Compra de bolas de andebol,Material Desportivo
+MEO,46.97,Pack comunicações sede do clube,Comunicações
+Pinturas Lisboa,114.25,Pintura e remodelação escritório,Manutenção e Reparações
+Ageas,885.74,Apólice de seguro responsabilidade civil,Seguros
+Sport Zone,699.81,Material de proteção e luvas de guarda-redes,Material Desportivo
+Pingo Doce,114.74,Compras supermercado para torneio,Alimentação e Bebidas
+Delegado Ferreira,165.33,Inscrição campeonato nacional,Arbitragem e Competições
+Vodafone,51.2,Plano de dados móveis equipa técnica,Comunicações
+Fnac,943.53,Software de gestão desportiva,Equipamento Informático
+KPMG,493.66,Declaração fiscal anual do clube,Serviços de Contabilidade
+Repsol,117.08,Portagens deslocação equipa,Transportes e Deslocações
+FlixBus,107.3,Combustível deslocação a jogo fora,Transportes e Deslocações
+Árbitro Silva,102.94,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Pingo Doce,124.03,Catering jantar de gala do clube,Alimentação e Bebidas
+Fixando,370.19,Pintura e remodelação escritório,Manutenção e Reparações
+EPAL,160.08,Fatura de gás aquecimento balneários,Água Luz e Gás
+Zurich,1456.66,Seguro de saúde equipa técnica,Seguros
+Intermarché,226.86,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Vodafone,54.95,Fatura telemóvel treinador,Comunicações
+Lenovo,1534.03,Monitor e periféricos computador,Equipamento Informático
+Microsoft,650.7,Tablet para gestão de treinos,Equipamento Informático
+Mercadona,98.71,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Electricista Costa,311.51,Substituição de equipamentos danificados,Manutenção e Reparações
+Árbitro Costa,163.74,Taxa de participação torneio,Arbitragem e Competições
+Pinturas Lisboa,316.27,Pintura e remodelação escritório,Manutenção e Reparações
+Rentalhas,144.4,Combustível viagem torneio nacional,Transportes e Deslocações
+Serralharia Norte,274.24,Arranjo de portões e vedações,Manutenção e Reparações
+NOWO,45.85,Serviço de internet banda larga,Comunicações
+CP Comboios,107.25,Transporte atletas para competição,Transportes e Deslocações
+Nike,480.52,Aquisição de redes para baliza,Material Desportivo
+Uber,16.14,Bilhetes de comboio campeonato,Transportes e Deslocações
+Lenovo,668.67,Compra de portátil para escritório,Equipamento Informático
+Fixando,202.11,Substituição de equipamentos danificados,Manutenção e Reparações
+HP,477.67,Impressora para secretaria do clube,Equipamento Informático
+Contabilidade Silva & Associados,353.26,Declaração fiscal anual do clube,Serviços de Contabilidade
+Asics,160.19,Sapatos e sapatilhas de andebol,Material Desportivo
+BDO,252.71,Serviços de contabilidade mensal,Serviços de Contabilidade
+Design Studio,233.21,Impressão de cartazes e banners,Publicidade e Marketing
+Iberdrola,217.77,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+Intermarché,165.42,Refeições pós-jogo para atletas,Alimentação e Bebidas
+NOWO,62.27,Mensalidade internet e telefone,Comunicações
+El Corte Inglés,157.71,Catering jantar de gala do clube,Alimentação e Bebidas
+Generali,603.94,Seguro de saúde equipa técnica,Seguros
+Allianz,974.3,Seguro de saúde equipa técnica,Seguros
+BDO,259.28,Relatório de contas anual,Serviços de Contabilidade
+Árbitro Silva,115.49,Custos organização jogo oficial,Arbitragem e Competições
+Delegado Ferreira,287.04,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Nike,311.23,Pintura e remodelação escritório,Manutenção e Reparações
+EDP,169.63,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+Lenovo,1016.99,Compra de portátil para escritório,Equipamento Informático
+Endesa Energia,154.11,Período de faturação: outubro a novembro,Água Luz e Gás
+BP,68.75,Aluguer de autocarro para viagem,Transportes e Deslocações
+KPMG,485.1,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Zurich,531.43,Seguro de equipamentos e material,Seguros
+Contabilidade Silva & Associados,576.56,Declaração fiscal anual do clube,Serviços de Contabilidade
+Fnac,1795.04,Software de gestão desportiva,Equipamento Informático
+Endesa,259.69,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+Associação Regional de Andebol,112.97,Custos organização jogo oficial,Arbitragem e Competições
+Tranquilidade,912.95,Seguro de saúde equipa técnica,Seguros
+Nike,368.94,Equipamento de treino para atletas,Material Desportivo
+Associação Regional de Andebol,99.81,Inscrição campeonato nacional,Arbitragem e Competições
+Contabilidade Silva & Associados,403.7,Serviços de contabilidade mensal,Serviços de Contabilidade
+Árbitro Silva,221.01,Pagamento de árbitros jogo casa,Arbitragem e Competições
+NOS,69.24,Fatura telefonia fixa mensal,Comunicações
+Pingo Doce,60.44,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Iberdrola,35.04,Serviço de internet banda larga,Comunicações
+Associação Regional de Andebol,382.58,Inscrição campeonato nacional,Arbitragem e Competições
+Gráfica Central,405.42,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Sport Zone,418.28,Material de proteção e luvas de guarda-redes,Material Desportivo
+Sport Zone,338.11,Compra de sacos de desporto e mochilas,Material Desportivo
+Fidelidade,1553.61,Seguro de saúde equipa técnica,Seguros
+El Corte Inglés,104.5,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Fixando,269.47,Reparação canalização balneários,Manutenção e Reparações
+Serralharia Norte,272.01,Reparação balneários instalações,Manutenção e Reparações
+Delegado Ferreira,205.67,Taxa de participação torneio,Arbitragem e Competições
+BP,140.69,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Apple,799.64,Compra de portátil para escritório,Equipamento Informático
+Generali,1008.3,Seguro de saúde equipa técnica,Seguros
+TecnoFix,401.4,Reparação canalização balneários,Manutenção e Reparações
+Associação Regional de Andebol,229.06,Inscrição campeonato nacional,Arbitragem e Competições
+Associação Regional de Andebol,275.1,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Gráfica Central,454.23,Produção de flyers para torneio,Publicidade e Marketing
+CP Comboios,25.7,Transporte atletas para competição,Transportes e Deslocações
+Zurich,878.43,Seguro de saúde equipa técnica,Seguros
+Worten,1008.85,Software de gestão desportiva,Equipamento Informático
+NOWO,744.02,Seguro de saúde equipa técnica,Seguros
+Deloitte,271.63,Declaração fiscal anual do clube,Serviços de Contabilidade
+Árbitro Costa,217.15,Honorários árbitro assistente,Arbitragem e Competições
+Printmaster,247.96,Produção de flyers para torneio,Publicidade e Marketing
+Generali,691.41,Seguro de saúde equipa técnica,Seguros
+TecnoFix,262.0,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+EDP,331.27,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+ManutençãoPro,388.32,Pintura e remodelação escritório,Manutenção e Reparações
+Fixando,259.49,Reparação canalização balneários,Manutenção e Reparações
+Vodafone,55.26,Fatura telefonia fixa mensal,Comunicações
+TecnoFix,364.9,Substituição de equipamentos danificados,Manutenção e Reparações
+PricewaterhouseCoopers,438.47,Auditoria às contas do exercício,Serviços de Contabilidade
+Pinturas Lisboa,476.8,Serviços de contabilidade mensal,Serviços de Contabilidade
+Vodafone,383.95,Auditoria às contas do exercício,Serviços de Contabilidade
+Fixando,368.83,Arranjo de portões e vedações,Manutenção e Reparações
+Associação Regional de Andebol,257.26,Pagamento de árbitros jogo casa,Arbitragem e Competições
+BDO,569.35,Consultoria financeira gestão associação,Serviços de Contabilidade
+Intermarché,234.09,Compras alimentares para evento desportivo,Alimentação e Bebidas
+El Corte Inglés,185.66,Compras alimentares para evento desportivo,Alimentação e Bebidas
+AXA,991.48,Prémio de seguro anual clube,Seguros
+Intermarché,206.88,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Dell,1134.1,Monitor e periféricos computador,Equipamento Informático
+Vodafone,62.61,Pack comunicações sede do clube,Comunicações
+Árbitro Silva,356.55,Taxa de participação torneio,Arbitragem e Competições
+Delegado Ferreira,185.96,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Delegado Ferreira,281.07,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Gráfica Central,257.22,Criação de site e presença online,Publicidade e Marketing
+AXA,1532.34,Seguro de equipamentos e material,Seguros
+Agência Criativa,116.65,Design de logótipo do clube,Publicidade e Marketing
+PricewaterhouseCoopers,271.9,Declaração fiscal anual do clube,Serviços de Contabilidade
+Árbitro Silva,221.49,Taxa de participação torneio,Arbitragem e Competições
+Samsung,1698.8,Monitor e periféricos computador,Equipamento Informático
+Puma,312.18,Aquisição de redes para baliza,Material Desportivo
+Pinturas Lisboa,208.23,Reparação balneários instalações,Manutenção e Reparações
+Intermarché,52.61,Compras alimentares para evento desportivo,Alimentação e Bebidas
+TOC Independente,353.54,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Design Studio,486.73,Impressão de cartazes e banners,Publicidade e Marketing
+Agência Criativa,240.18,Campanha nas redes sociais,Publicidade e Marketing
+NOWO,50.29,Serviço de internet banda larga,Comunicações
+El Corte Inglés,48.39,Compras alimentares para evento desportivo,Alimentação e Bebidas
+BP,83.9,Bilhetes de comboio campeonato,Transportes e Deslocações
+AXA,1212.8,Prémio de seguro anual clube,Seguros
+EPAL,220.83,Fatura bimestral de eletricidade,Água Luz e Gás
+Worten,714.1,Compra de portátil para escritório,Equipamento Informático
+NOS,31.28,Pack comunicações sede do clube,Comunicações
+CP Comboios,93.65,Combustível deslocação a jogo fora,Transportes e Deslocações
+Deloitte,183.08,Auditoria às contas do exercício,Serviços de Contabilidade
+EDP,312.86,Fatura de eletricidade mês de março,Água Luz e Gás
+Agência Criativa,129.88,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Iberdrola,213.2,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+Continente,122.86,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+EDP,209.32,Fatura de eletricidade mês de março,Água Luz e Gás
+Delegado Ferreira,281.89,Honorários árbitro assistente,Arbitragem e Competições
+Contabilidade Silva & Associados,454.24,Serviços de contabilidade mensal,Serviços de Contabilidade
+Printmaster,161.14,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Lidl,360.0,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+MEO,79.08,Serviço de internet banda larga,Comunicações
+Repsol,108.4,Portagens deslocação equipa,Transportes e Deslocações
+PricewaterhouseCoopers,190.41,Relatório de contas anual,Serviços de Contabilidade
+NOS Empresas,83.26,Fatura telemóvel treinador,Comunicações
+Fnac,1528.02,Impressora para secretaria do clube,Equipamento Informático
+Allianz,1088.9,Apólice de seguro responsabilidade civil,Seguros
+Decathlon,399.08,Material de proteção e luvas de guarda-redes,Material Desportivo
+Puma,381.01,Coletes e fatos de treino,Material Desportivo
+Tranquilidade,1013.63,Seguro de saúde equipa técnica,Seguros
+Serralharia Norte,365.25,Consultoria financeira gestão associação,Serviços de Contabilidade
+Microsoft,60.91,Fatura telefonia fixa mensal,Comunicações
+Lidl,309.88,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+AXA,529.45,Prémio de seguro anual clube,Seguros
+Intersport,568.89,Aquisição de redes para baliza,Material Desportivo
+EPAL,136.61,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Design Studio,215.99,Impressão de cartazes e banners,Publicidade e Marketing
+FlixBus,27.69,Transporte atletas para competição,Transportes e Deslocações
+Lidl,142.57,Compras supermercado para torneio,Alimentação e Bebidas
+Endesa,191.5,Pintura e remodelação escritório,Manutenção e Reparações
+Delegado Ferreira,98.3,Custos organização jogo oficial,Arbitragem e Competições
+Deloitte,284.66,Relatório de contas anual,Serviços de Contabilidade
+NMedia,194.8,Campanha nas redes sociais,Publicidade e Marketing
+Ageas,375.03,Seguro de saúde equipa técnica,Seguros
+CP Comboios,130.81,Bilhetes de comboio campeonato,Transportes e Deslocações
+Vodafone,71.77,Pack comunicações sede do clube,Comunicações
+Apple,746.76,Tablet para gestão de treinos,Equipamento Informático
+Uber,135.33,Transporte atletas para competição,Transportes e Deslocações
+AXA,864.17,Apólice de seguro responsabilidade civil,Seguros
+Ageas,940.6,Prémio de seguro anual clube,Seguros
+Árbitro Costa,227.35,Quotas federação portuguesa de andebol,Arbitragem e Competições
+NOS,82.1,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+Federação Portuguesa de Andebol,236.63,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Fixando,388.03,Arranjo de portões e vedações,Manutenção e Reparações
+Associação Regional de Andebol,301.77,Quotas federação portuguesa de andebol,Arbitragem e Competições
+NOWO,35.99,Mensalidade internet e telefone,Comunicações
+NOS Empresas,44.15,Pack comunicações sede do clube,Comunicações
+Associação Regional de Andebol,185.42,Honorários árbitro assistente,Arbitragem e Competições
+Árbitro Costa,241.33,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Galp,195.7,Combustível viagem torneio nacional,Transportes e Deslocações
+Design Studio,427.51,Publicidade jornal local,Publicidade e Marketing
+Apple,1565.49,Disco externo backup documentos,Equipamento Informático
+Design Studio,147.98,Impressão de cartazes e banners,Publicidade e Marketing
+Asics,491.96,Compra de bolas de andebol,Material Desportivo
+Electricista Costa,462.86,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+Galp Energia,147.14,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Endesa,363.03,Custos organização jogo oficial,Arbitragem e Competições
+Endesa Energia,169.07,Fatura de energia elétrica e gás,Água Luz e Gás
+Nike,322.93,Compra de bolas de andebol,Material Desportivo
+Contabilidade Silva & Associados,401.03,Auditoria às contas do exercício,Serviços de Contabilidade
+Generali,698.97,Renovação seguro instalações desportivas,Seguros
+Fixando,234.56,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+EDP,196.97,Período de faturação: março a abril,Água Luz e Gás
+AXA,449.11,Apólice de seguro responsabilidade civil,Seguros
+Agência Criativa,271.32,Campanha nas redes sociais,Publicidade e Marketing
+Fidelidade,759.91,Seguro de acidentes pessoais atletas,Seguros
+Lenovo,1613.17,Tablet para gestão de treinos,Equipamento Informático
+Samsung,1120.82,Webcam e microfone reuniões online,Equipamento Informático
+Intersport,521.24,Sapatos e sapatilhas de andebol,Material Desportivo
+Nike,464.16,Compra de sacos de desporto e mochilas,Material Desportivo
+Agência Criativa,268.89,Criação de site e presença online,Publicidade e Marketing
+Asics,370.31,Compra de bolas de andebol,Material Desportivo
+Árbitro Silva,241.72,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Intermarché,94.21,Catering jantar de gala do clube,Alimentação e Bebidas
+Intersport,579.11,Aquisição de redes para baliza,Material Desportivo
+Decathlon,209.19,Coletes e fatos de treino,Material Desportivo
+FlixBus,123.74,Bilhetes de comboio campeonato,Transportes e Deslocações
+Lenovo,1733.52,Webcam e microfone reuniões online,Equipamento Informático
+Worten,766.2,Software de gestão desportiva,Equipamento Informático
+Mercadona,249.44,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Lenovo,1211.42,Compra de portátil para escritório,Equipamento Informático
+KPMG,352.3,Relatório de contas anual,Serviços de Contabilidade
+Endesa Energia,181.91,Fatura de eletricidade mês de março,Água Luz e Gás
+BP,203.58,Táxi ou uber após jogo tardio,Transportes e Deslocações
+El Corte Inglés,17.25,Catering jantar de gala do clube,Alimentação e Bebidas
+Intermarché,183.26,Snacks e lanches concentração,Alimentação e Bebidas
+Contabilidade Silva & Associados,196.01,Compras supermercado para torneio,Alimentação e Bebidas
+Publico,137.51,Patrocínio e materiais de merchandising,Publicidade e Marketing
+ManutençãoPro,260.63,Arranjo de portões e vedações,Manutenção e Reparações
+Allianz,1084.73,Seguro de acidentes pessoais atletas,Seguros
+Fnac,105.9,Impressão de cartazes e banners,Publicidade e Marketing
+Árbitro Costa,165.88,Período de faturação: março a abril,Água Luz e Gás
+Iberdrola,200.23,Fatura de gás aquecimento balneários,Água Luz e Gás
+Endesa Energia,56.49,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Árbitro Costa,93.29,Fatura de eletricidade mês de março,Água Luz e Gás
+Galp Energia,222.81,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+BDO,393.45,Auditoria às contas do exercício,Serviços de Contabilidade
+Deloitte,426.32,Consultoria financeira gestão associação,Serviços de Contabilidade
+EDP,411.5,Material de proteção e luvas de guarda-redes,Material Desportivo
 Decathlon,445.8,Aquisição de redes para baliza,Material Desportivo
-Microsoft,241.86,Compra de portátil para escritório,Equipamento Informático
-Pingo Doce,219.67,Compras alimentares para evento desportivo,Alimentação e Bebidas
-NOS Empresas,21.62,Fatura telefonia fixa mensal,Comunicações
-TOC Independente,245.03,Declaração fiscal anual do clube,Serviços de Contabilidade
-Árbitro Costa,237.7,Declaração fiscal anual do clube,Serviços de Contabilidade
-Lidl,129.2,Água e bebidas isotónicas treinos,Alimentação e Bebidas
-Agência Criativa,295.63,Produção de flyers para torneio,Publicidade e Marketing
-Dell,917.28,Webcam e microfone reuniões online,Equipamento Informático
-NOS,40.19,Fatura telemóvel treinador,Comunicações
-Serralharia Norte,194.03,Reparação balneários instalações,Manutenção e Reparações
-Uber,173.46,Bilhetes de comboio campeonato,Transportes e Deslocações
+BP,67.15,Combustível viagem torneio nacional,Transportes e Deslocações
+Pinturas Lisboa,328.87,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+Iberdrola Portugal,35.48,Consumo de água instalações desportivas,Água Luz e Gás
+Árbitro Silva,242.2,Inscrição campeonato nacional,Arbitragem e Competições
+Puma,273.41,Aquisição de redes para baliza,Material Desportivo
+Auchan,274.0,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Tranquilidade,1316.37,Seguro de acidentes pessoais atletas,Seguros
+Galp,109.72,Combustível viagem torneio nacional,Transportes e Deslocações
+Repsol,85.44,Combustível viagem torneio nacional,Transportes e Deslocações
+NMedia,344.29,Publicidade jornal local,Publicidade e Marketing
+Iberdrola,182.54,Fatura de gás aquecimento balneários,Água Luz e Gás
+Microsoft,1123.92,Software de gestão desportiva,Equipamento Informático
+Printmaster,283.25,Criação de site e presença online,Publicidade e Marketing
+Iberdrola,192.86,Consumo de água instalações desportivas,Água Luz e Gás
+FlixBus,162.06,Bilhetes de comboio campeonato,Transportes e Deslocações
+NOWO,46.14,Fatura telefonia fixa mensal,Comunicações
+NMedia,247.35,Criação de site e presença online,Publicidade e Marketing
+ManutençãoPro,321.05,Reparação balneários instalações,Manutenção e Reparações
+Fixando,200.34,Substituição de equipamentos danificados,Manutenção e Reparações
+Adidas,599.62,Aquisição de redes para baliza,Material Desportivo
+Generali,885.29,Renovação seguro instalações desportivas,Seguros
+Allianz,754.45,Seguro de equipamentos e material,Seguros
+Asics,254.75,Compra de bolas de andebol,Material Desportivo
+MEO,53.69,Plano de dados móveis equipa técnica,Comunicações
+Vodafone,75.49,Serviço de internet banda larga,Comunicações
+MEO Empresas,41.24,Fatura telefonia fixa mensal,Comunicações
+Rentalhas,262.14,Reparação canalização balneários,Manutenção e Reparações
+Árbitro Silva,241.98,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Árbitro Silva,414.71,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Agência Criativa,321.51,Design de logótipo do clube,Publicidade e Marketing
+Printmaster,134.98,Impressão de cartazes e banners,Publicidade e Marketing
+Rentalhas,1504.86,Disco externo backup documentos,Equipamento Informático
+Endesa Energia,131.02,Fatura de energia elétrica e gás,Água Luz e Gás
+Auchan,155.61,Catering jantar de gala do clube,Alimentação e Bebidas
+Pinturas Lisboa,120.97,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+AXA,562.99,Prémio de seguro anual clube,Seguros
+Auchan,93.11,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Agência Criativa,372.83,Impressão de cartazes e banners,Publicidade e Marketing
+Intersport,196.09,Sapatos e sapatilhas de andebol,Material Desportivo
+Agência Criativa,272.29,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Lenovo,1139.18,Compra de portátil para escritório,Equipamento Informático
+EDP Comercial,176.78,Fatura de energia elétrica e gás,Água Luz e Gás
+Árbitro Costa,243.23,Honorários árbitro assistente,Arbitragem e Competições
+BDO,397.52,Serviços de contabilidade mensal,Serviços de Contabilidade
+Puma,293.37,Compra de sacos de desporto e mochilas,Material Desportivo
+Microsoft,244.18,Taxa de participação torneio,Arbitragem e Competições
+NOWO,76.26,Fatura telefonia fixa mensal,Comunicações
+Sport Zone,487.11,Material de proteção e luvas de guarda-redes,Material Desportivo
+Naturgy,196.94,Fatura de energia elétrica e gás,Água Luz e Gás
+Vodafone,71.22,Serviço de internet banda larga,Comunicações
+Fixando,419.97,Declaração fiscal anual do clube,Serviços de Contabilidade
+Fidelidade,635.79,Renovação seguro instalações desportivas,Seguros
+Generali,307.39,Seguro de acidentes pessoais atletas,Seguros
+Generali,602.7,Apólice de seguro responsabilidade civil,Seguros
+Allianz,1233.24,Apólice de seguro responsabilidade civil,Seguros
+Zurich,635.14,Prémio de seguro anual clube,Seguros
+Dell,766.14,Software de gestão desportiva,Equipamento Informático
+El Corte Inglés,150.03,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Decathlon,443.2,Material de proteção e luvas de guarda-redes,Material Desportivo
+Galp Energia,99.21,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+Delegado Ferreira,382.3,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Fixando,293.76,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Iberdrola,230.03,Período de faturação: março a abril,Água Luz e Gás
+Decathlon,513.62,Apólice de seguro responsabilidade civil,Seguros
+AXA,1184.57,Renovação seguro instalações desportivas,Seguros
+Generali,1336.46,Prémio de seguro anual clube,Seguros
+Naturgy,109.93,Fatura bimestral de eletricidade,Água Luz e Gás
+ManutençãoPro,112.87,Reparação balneários instalações,Manutenção e Reparações
+KPMG,345.06,Serviços de contabilidade mensal,Serviços de Contabilidade
+BDO,481.64,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Endesa Energia,104.96,Período de faturação: março a abril,Água Luz e Gás
+MEO,81.66,Pack comunicações sede do clube,Comunicações
+Pinturas Lisboa,244.72,Substituição de equipamentos danificados,Manutenção e Reparações
+EDP,116.78,Água e saneamento mês de janeiro,Água Luz e Gás
+Design Studio,367.61,Design de logótipo do clube,Publicidade e Marketing
+Allianz,1307.9,Renovação seguro instalações desportivas,Seguros
+MEO,102.88,Mensalidade internet e telefone,Comunicações
+KPMG,353.72,Serviços de contabilidade mensal,Serviços de Contabilidade
+Pingo Doce,168.42,Snacks e lanches concentração,Alimentação e Bebidas
+KPMG,487.91,Consultoria financeira gestão associação,Serviços de Contabilidade
+Zurich,577.16,Monitor e periféricos computador,Equipamento Informático
+Naturgy,171.73,Fatura bimestral de eletricidade,Água Luz e Gás
+FlixBus,120.85,Portagens deslocação equipa,Transportes e Deslocações
+Fixando,438.49,Pintura e remodelação escritório,Manutenção e Reparações
+MEO Empresas,46.93,Plano de dados móveis equipa técnica,Comunicações
+Auchan,40.76,Snacks e lanches concentração,Alimentação e Bebidas
+Vodafone,75.18,Fatura telemóvel treinador,Comunicações
+Águas de Portugal,253.23,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+Delegado Ferreira,246.82,Honorários árbitro assistente,Arbitragem e Competições
+Intersport,330.92,Compra de bolas de andebol,Material Desportivo
+KPMG,89.76,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Worten,887.63,Impressora para secretaria do clube,Equipamento Informático
+MEO,102.44,Fatura telemóvel treinador,Comunicações
+Serralharia Norte,210.05,Reparação balneários instalações,Manutenção e Reparações
+TOC Independente,282.53,Relatório de contas anual,Serviços de Contabilidade
+El Corte Inglés,164.73,Compras supermercado para torneio,Alimentação e Bebidas
+PricewaterhouseCoopers,427.58,Declaração fiscal anual do clube,Serviços de Contabilidade
+Pingo Doce,195.28,Catering jantar de gala do clube,Alimentação e Bebidas
+Galp,135.06,Transporte atletas para competição,Transportes e Deslocações
+Generali,596.64,Aquisição de redes para baliza,Material Desportivo
+NOS,92.65,Mensalidade internet e telefone,Comunicações
+Federação Portuguesa de Andebol,281.24,Quotas federação portuguesa de andebol,Arbitragem e Competições
+FlixBus,76.86,Combustível deslocação a jogo fora,Transportes e Deslocações
+Electricista Costa,255.52,Substituição de equipamentos danificados,Manutenção e Reparações
+Auchan,197.72,Snacks e lanches concentração,Alimentação e Bebidas
+EPAL,168.93,Consumo de água instalações desportivas,Água Luz e Gás
+Pinturas Lisboa,339.63,Substituição de equipamentos danificados,Manutenção e Reparações
+Uber,34.77,Combustível viagem torneio nacional,Transportes e Deslocações
+FlixBus,26.08,Combustível deslocação a jogo fora,Transportes e Deslocações
+Lenovo,1272.3,Compra de portátil para escritório,Equipamento Informático
+Federação Portuguesa de Andebol,106.01,Inscrição campeonato nacional,Arbitragem e Competições
+Fidelidade,1247.18,Renovação seguro instalações desportivas,Seguros
+BDO,442.91,Auditoria às contas do exercício,Serviços de Contabilidade
+Intermarché,99.71,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Hertz,61.89,Combustível viagem torneio nacional,Transportes e Deslocações
+EDP,107.14,Fatura de energia elétrica e gás,Água Luz e Gás
+Printmaster,153.38,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Puma,66.26,Material de proteção e luvas de guarda-redes,Material Desportivo
+Dell,1188.05,Software de gestão desportiva,Equipamento Informático
+CP Comboios,212.86,Transporte atletas para competição,Transportes e Deslocações
+TecnoFix,508.84,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+Gráfica Central,102.66,Serviço de internet banda larga,Comunicações
+NOS Empresas,20.96,Serviço de internet banda larga,Comunicações
+NOS,73.59,Plano de dados móveis equipa técnica,Comunicações
+MEO Empresas,106.29,Pack comunicações sede do clube,Comunicações
+Worten,2256.88,Software de gestão desportiva,Equipamento Informático
+Nike,147.78,Aquisição de redes para baliza,Material Desportivo
+Nike,613.16,Equipamento de treino para atletas,Material Desportivo
+Publico,426.36,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Agência Criativa,281.27,Campanha nas redes sociais,Publicidade e Marketing
+Generali,1135.74,Seguro de saúde equipa técnica,Seguros
+NOWO,38.45,Fatura telefonia fixa mensal,Comunicações
+Adidas,196.98,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+Nike,546.44,Equipamento de treino para atletas,Material Desportivo
+Repsol,159.33,Bilhetes de comboio campeonato,Transportes e Deslocações
+Electricista Costa,214.7,Substituição de equipamentos danificados,Manutenção e Reparações
+TecnoFix,234.6,Relatório de contas anual,Serviços de Contabilidade
+Endesa Energia,243.21,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+Galp,116.79,Combustível viagem torneio nacional,Transportes e Deslocações
+Tranquilidade,506.1,Seguro de acidentes pessoais atletas,Seguros
+Lidl,163.29,Compras supermercado para torneio,Alimentação e Bebidas
+Lidl,16.0,Catering jantar de gala do clube,Alimentação e Bebidas
+Samsung,1900.49,Compra de portátil para escritório,Equipamento Informático
+Sport Zone,442.21,Compra de sacos de desporto e mochilas,Material Desportivo
+Agência Criativa,88.83,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Worten,807.82,Monitor e periféricos computador,Equipamento Informático
+Associação Regional de Andebol,175.64,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Fidelidade,659.57,Renovação seguro instalações desportivas,Seguros
+Endesa Energia,98.14,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Design Studio,188.39,Água e saneamento mês de janeiro,Água Luz e Gás
+Ageas,1038.68,Seguro de acidentes pessoais atletas,Seguros
+Fixando,197.59,Substituição de equipamentos danificados,Manutenção e Reparações
+Repsol,117.85,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Árbitro Silva,175.02,Pagamento de árbitros jogo casa,Arbitragem e Competições
+ManutençãoPro,516.72,Arranjo de portões e vedações,Manutenção e Reparações
+AXA,548.54,Renovação seguro instalações desportivas,Seguros
+Nike,150.59,Compra de bolas de andebol,Material Desportivo
+Vodafone,22.65,Mensalidade internet e telefone,Comunicações
+Gráfica Central,287.31,Criação de site e presença online,Publicidade e Marketing
+MEO Empresas,35.24,Mensalidade internet e telefone,Comunicações
+TecnoFix,227.36,Pintura e remodelação escritório,Manutenção e Reparações
+Galp Energia,162.66,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+Hertz,122.92,Bilhetes de comboio campeonato,Transportes e Deslocações
+Publico,244.32,Design de logótipo do clube,Publicidade e Marketing
+Delegado Ferreira,351.33,Inscrição campeonato nacional,Arbitragem e Competições
+Naturgy,81.92,Fatura de energia elétrica e gás,Água Luz e Gás
+Fidelidade,447.89,Seguro de acidentes pessoais atletas,Seguros
+TOC Independente,558.18,Serviços de contabilidade mensal,Serviços de Contabilidade
+Iberdrola,293.03,Fatura bimestral de eletricidade,Água Luz e Gás
+Allianz,200.4,Seguro de equipamentos e material,Seguros
+CP Comboios,132.1,Aluguer de autocarro para viagem,Transportes e Deslocações
+Ageas,792.68,Seguro de equipamentos e material,Seguros
+Samsung,721.22,Software de gestão desportiva,Equipamento Informático
+BDO,211.08,Pintura e remodelação escritório,Manutenção e Reparações
+Agência Criativa,187.5,Impressão de cartazes e banners,Publicidade e Marketing
+Naturgy,183.68,Água e saneamento mês de janeiro,Água Luz e Gás
+Mercadona,53.94,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Galp Energia,242.14,Consumo de água instalações desportivas,Água Luz e Gás
+Uber,77.6,Combustível viagem torneio nacional,Transportes e Deslocações
+Puma,485.77,Material de proteção e luvas de guarda-redes,Material Desportivo
+Asics,495.44,Coletes e fatos de treino,Material Desportivo
+EPAL,263.11,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+ManutençãoPro,590.21,Prémio de seguro anual clube,Seguros
+Allianz,85.34,Fatura telemóvel treinador,Comunicações
+Agência Criativa,329.11,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Samsung,791.61,Compra de portátil para escritório,Equipamento Informático
+NMedia,258.76,Produção de flyers para torneio,Publicidade e Marketing
+Continente,128.5,Snacks e lanches concentração,Alimentação e Bebidas
+Federação Portuguesa de Andebol,713.38,Equipamento de treino para atletas,Material Desportivo
+Ageas,1566.43,Seguro de saúde equipa técnica,Seguros
+NMedia,328.04,Publicidade jornal local,Publicidade e Marketing
+Samsung,810.63,Impressora para secretaria do clube,Equipamento Informático
+Lenovo,754.2,Tablet para gestão de treinos,Equipamento Informático
+NOS Empresas,63.98,Plano de dados móveis equipa técnica,Comunicações
+Allianz,293.17,Renovação seguro instalações desportivas,Seguros
+Galp Energia,87.85,Fatura de gás aquecimento balneários,Água Luz e Gás
+Electricista Costa,550.15,Produção de flyers para torneio,Publicidade e Marketing
+Lidl,111.02,Catering jantar de gala do clube,Alimentação e Bebidas
+Iberdrola Portugal,70.38,Água e saneamento mês de janeiro,Água Luz e Gás
+Mercadona,174.98,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Microsoft,1730.4,Software de gestão desportiva,Equipamento Informático
+FlixBus,131.74,Portagens deslocação equipa,Transportes e Deslocações
+Puma,461.91,Equipamento de treino para atletas,Material Desportivo
+NOS Empresas,81.08,Plano de dados móveis equipa técnica,Comunicações
+El Corte Inglés,153.76,Compras supermercado para torneio,Alimentação e Bebidas
+Generali,1041.55,Seguro de saúde equipa técnica,Seguros
+Pingo Doce,304.25,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Printmaster,483.01,Produção de flyers para torneio,Publicidade e Marketing
+Intersport,718.37,Compra de sacos de desporto e mochilas,Material Desportivo
+Zurich,509.85,Seguro de saúde equipa técnica,Seguros
+EPAL,292.32,Fatura bimestral de eletricidade,Água Luz e Gás
+Decathlon,336.97,Compra de bolas de andebol,Material Desportivo
+Delegado Ferreira,167.9,Custos organização jogo oficial,Arbitragem e Competições
+El Corte Inglés,165.19,Catering jantar de gala do clube,Alimentação e Bebidas
+Serralharia Norte,347.04,Substituição de equipamentos danificados,Manutenção e Reparações
+BP,74.04,Combustível viagem torneio nacional,Transportes e Deslocações
+Tranquilidade,511.08,Seguro de equipamentos e material,Seguros
+MEO Empresas,65.62,Serviço de internet banda larga,Comunicações
+Serralharia Norte,341.05,Arranjo de portões e vedações,Manutenção e Reparações
+BDO,373.1,Serviços de contabilidade mensal,Serviços de Contabilidade
+Hertz,85.0,Bilhetes de comboio campeonato,Transportes e Deslocações
+Associação Regional de Andebol,236.21,Inscrição campeonato nacional,Arbitragem e Competições
+PricewaterhouseCoopers,371.36,Processamento de salários e recibos verdes,Serviços de Contabilidade
+KPMG,174.17,Declaração fiscal anual do clube,Serviços de Contabilidade
+Samsung,1899.85,Tablet para gestão de treinos,Equipamento Informático
+MEO,55.84,Pack comunicações sede do clube,Comunicações
+Pingo Doce,122.88,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Deloitte,399.89,Consultoria financeira gestão associação,Serviços de Contabilidade
+Mercadona,68.69,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Pingo Doce,162.47,Compras supermercado para torneio,Alimentação e Bebidas
+Iberdrola Portugal,182.38,Água e saneamento mês de janeiro,Água Luz e Gás
+Allianz,86.11,Fatura bimestral de eletricidade,Água Luz e Gás
+Adidas,382.67,Coletes e fatos de treino,Material Desportivo
+Auchan,140.75,Refeições pós-jogo para atletas,Alimentação e Bebidas
+NOS Empresas,88.83,Fatura telefonia fixa mensal,Comunicações
+Intermarché,121.24,Snacks e lanches concentração,Alimentação e Bebidas
+Design Studio,210.46,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Continente,146.68,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Contabilidade Silva & Associados,255.58,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Endesa Energia,114.12,Consumo de água instalações desportivas,Água Luz e Gás
+Mercadona,118.04,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Allianz,795.71,Seguro de acidentes pessoais atletas,Seguros
+Serralharia Norte,315.53,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+El Corte Inglés,141.14,Catering jantar de gala do clube,Alimentação e Bebidas
+MEO,50.32,Mensalidade internet e telefone,Comunicações
+Sport Zone,403.32,Sapatos e sapatilhas de andebol,Material Desportivo
+Intersport,486.64,Aquisição de redes para baliza,Material Desportivo
+Generali,510.47,Seguro de acidentes pessoais atletas,Seguros
+Puma,381.1,Compra de bolas de andebol,Material Desportivo
+NMedia,281.66,Publicidade jornal local,Publicidade e Marketing
+Intersport,312.38,Coletes e fatos de treino,Material Desportivo
+MEO,77.32,Fatura telemóvel treinador,Comunicações
+Iberdrola,337.91,Auditoria às contas do exercício,Serviços de Contabilidade
+Deloitte,376.38,Auditoria às contas do exercício,Serviços de Contabilidade
+Design Studio,187.95,Design de logótipo do clube,Publicidade e Marketing
+BP,144.44,Portagens deslocação equipa,Transportes e Deslocações
+Nike,623.21,Coletes e fatos de treino,Material Desportivo
+KPMG,214.87,Auditoria às contas do exercício,Serviços de Contabilidade
+Galp,94.59,Aluguer de autocarro para viagem,Transportes e Deslocações
+Electricista Costa,350.5,Substituição de equipamentos danificados,Manutenção e Reparações
+Dell,156.11,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Tranquilidade,1141.29,Prémio de seguro anual clube,Seguros
+Decathlon,457.13,Sapatos e sapatilhas de andebol,Material Desportivo
+KPMG,342.88,Relatório de contas anual,Serviços de Contabilidade
+FlixBus,121.08,Transporte atletas para competição,Transportes e Deslocações
+Zurich,908.82,Renovação seguro instalações desportivas,Seguros
+PricewaterhouseCoopers,435.19,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Federação Portuguesa de Andebol,246.33,Honorários árbitro assistente,Arbitragem e Competições
+BDO,137.18,Auditoria às contas do exercício,Serviços de Contabilidade
+EPAL,204.61,Água e saneamento mês de janeiro,Água Luz e Gás
+Apple,1106.15,Disco externo backup documentos,Equipamento Informático
+BP,57.12,Bilhetes de comboio campeonato,Transportes e Deslocações
+Microsoft,1482.41,Webcam e microfone reuniões online,Equipamento Informático
+Continente,263.6,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Publico,249.02,Design de logótipo do clube,Publicidade e Marketing
+Sport Zone,425.75,Relatório de contas anual,Serviços de Contabilidade
+Printmaster,289.54,Criação de site e presença online,Publicidade e Marketing
+HP,1164.36,Compra de portátil para escritório,Equipamento Informático
+AXA,761.93,Seguro de acidentes pessoais atletas,Seguros
+Associação Regional de Andebol,68.88,Mensalidade internet e telefone,Comunicações
+EDP,105.34,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Publico,40.0,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Fixando,271.1,Reparação balneários instalações,Manutenção e Reparações
+Decathlon,425.96,Material de proteção e luvas de guarda-redes,Material Desportivo
+Federação Portuguesa de Andebol,329.57,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Naturgy,197.57,Período de faturação: março a abril,Água Luz e Gás
+Mercadona,186.88,Snacks e lanches concentração,Alimentação e Bebidas
+Samsung,1925.27,Webcam e microfone reuniões online,Equipamento Informático
+Galp,117.34,Aluguer de autocarro para viagem,Transportes e Deslocações
+Contabilidade Silva & Associados,228.02,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Serralharia Norte,314.84,Arranjo de portões e vedações,Manutenção e Reparações
+Nike,483.92,Sapatos e sapatilhas de andebol,Material Desportivo
+Intersport,470.37,Equipamento de treino para atletas,Material Desportivo
+Auchan,282.87,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Allianz,154.28,Portagens deslocação equipa,Transportes e Deslocações
+Design Studio,237.22,Produção de flyers para torneio,Publicidade e Marketing
+Auchan,63.2,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Intermarché,266.62,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Delegado Ferreira,203.89,Custos organização jogo oficial,Arbitragem e Competições
+TecnoFix,414.28,Custos organização jogo oficial,Arbitragem e Competições
+Pinturas Lisboa,382.06,Pintura e remodelação escritório,Manutenção e Reparações
+Microsoft,773.43,Compra de portátil para escritório,Equipamento Informático
+HP,369.58,Impressora para secretaria do clube,Equipamento Informático
+Delegado Ferreira,361.98,Honorários árbitro assistente,Arbitragem e Competições
+Águas de Portugal,184.78,Fatura de eletricidade mês de março,Água Luz e Gás
+Adidas,304.04,Material de proteção e luvas de guarda-redes,Material Desportivo
+NOS,19.5,Serviço de internet banda larga,Comunicações
+Árbitro Costa,40.0,Inscrição campeonato nacional,Arbitragem e Competições
+Gráfica Central,129.3,Patrocínio e materiais de merchandising,Publicidade e Marketing
+HP,352.58,Impressora para secretaria do clube,Equipamento Informático
+Printmaster,341.72,Campanha nas redes sociais,Publicidade e Marketing
+Intersport,441.32,Aquisição de redes para baliza,Material Desportivo
+Agência Criativa,378.95,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Árbitro Costa,185.94,Taxa de participação torneio,Arbitragem e Competições
+Árbitro Costa,274.85,Inscrição campeonato nacional,Arbitragem e Competições
+Fixando,311.91,Reparação balneários instalações,Manutenção e Reparações
+Fnac,1071.86,Impressora para secretaria do clube,Equipamento Informático
+Samsung,1604.34,Disco externo backup documentos,Equipamento Informático
+EDP Comercial,188.03,Período de faturação: março a abril,Água Luz e Gás
+Allianz,981.77,Seguro de saúde equipa técnica,Seguros
+EDP Comercial,159.8,Fatura de gás aquecimento balneários,Água Luz e Gás
+Serralharia Norte,234.76,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+Uber,38.57,Portagens deslocação equipa,Transportes e Deslocações
+Associação Regional de Andebol,254.99,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Federação Portuguesa de Andebol,227.52,Honorários árbitro assistente,Arbitragem e Competições
+Delegado Ferreira,176.42,Honorários árbitro assistente,Arbitragem e Competições
+Árbitro Silva,59.67,Honorários árbitro assistente,Arbitragem e Competições
+Samsung,102.61,Combustível deslocação a jogo fora,Transportes e Deslocações
+Deloitte,78.36,Pack comunicações sede do clube,Comunicações
+Ageas,437.54,Relatório de contas anual,Serviços de Contabilidade
+PricewaterhouseCoopers,364.28,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Microsoft,836.0,Monitor e periféricos computador,Equipamento Informático
+NOS,67.16,Fatura telemóvel treinador,Comunicações
+Dell,535.48,Tablet para gestão de treinos,Equipamento Informático
+Worten,920.68,Monitor e periféricos computador,Equipamento Informático
+Árbitro Silva,131.37,Taxa de participação torneio,Arbitragem e Competições
+Galp,8.19,Portagens deslocação equipa,Transportes e Deslocações
+Gráfica Central,418.05,Produção de flyers para torneio,Publicidade e Marketing
+PricewaterhouseCoopers,155.42,Auditoria às contas do exercício,Serviços de Contabilidade
+EDP,185.05,Fatura de eletricidade mês de março,Água Luz e Gás
+Gráfica Central,236.45,Impressão de cartazes e banners,Publicidade e Marketing
+FlixBus,116.19,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Deloitte,670.01,Serviços de contabilidade mensal,Serviços de Contabilidade
+Electricista Costa,184.02,Reparação canalização balneários,Manutenção e Reparações
+AXA,833.95,Seguro de saúde equipa técnica,Seguros
+NMedia,260.85,Design de logótipo do clube,Publicidade e Marketing
+Design Studio,447.07,Criação de site e presença online,Publicidade e Marketing
+Auchan,1077.08,Seguro de equipamentos e material,Seguros
+Pingo Doce,151.05,Compras alimentares para evento desportivo,Alimentação e Bebidas
+EPAL,69.46,Período de faturação: outubro a novembro,Água Luz e Gás
+Repsol,80.77,Portagens deslocação equipa,Transportes e Deslocações
+Galp,65.53,Aluguer de autocarro para viagem,Transportes e Deslocações
+Microsoft,1065.11,Compra de portátil para escritório,Equipamento Informático
+Pinturas Lisboa,341.65,Arranjo de portões e vedações,Manutenção e Reparações
+Samsung,1333.55,Software de gestão desportiva,Equipamento Informático
+Printmaster,300.79,Impressora para secretaria do clube,Equipamento Informático
+Ageas,804.41,Seguro de saúde equipa técnica,Seguros
+Galp,132.41,Portagens deslocação equipa,Transportes e Deslocações
+Intermarché,181.79,Compras supermercado para torneio,Alimentação e Bebidas
+Generali,598.08,Renovação seguro instalações desportivas,Seguros
+NOS Empresas,47.55,Fatura telemóvel treinador,Comunicações
+Fidelidade,1019.92,Prémio de seguro anual clube,Seguros
+Hertz,85.62,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Árbitro Costa,200.4,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Federação Portuguesa de Andebol,286.98,Quotas federação portuguesa de andebol,Arbitragem e Competições
+MEO,120.0,Serviço de internet banda larga,Comunicações
+TecnoFix,226.98,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Electricista Costa,223.96,Pintura e remodelação escritório,Manutenção e Reparações
+Printmaster,1353.97,Impressora para secretaria do clube,Equipamento Informático
+EDP Comercial,176.69,Água e saneamento mês de janeiro,Água Luz e Gás
+MEO Empresas,44.54,Plano de dados móveis equipa técnica,Comunicações
+Adidas,319.57,Equipamento de treino para atletas,Material Desportivo
+Hertz,355.67,Substituição de equipamentos danificados,Manutenção e Reparações
+AXA,512.22,Seguro de saúde equipa técnica,Seguros
+Vodafone,73.03,Fatura telefonia fixa mensal,Comunicações
+ManutençãoPro,419.79,Reparação balneários instalações,Manutenção e Reparações
+Design Studio,232.83,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Apple,848.12,Monitor e periféricos computador,Equipamento Informático
+Publico,171.26,Impressão de cartazes e banners,Publicidade e Marketing
+Endesa,179.45,Água e saneamento mês de janeiro,Água Luz e Gás
+Associação Regional de Andebol,40.0,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Asics,563.46,Coletes e fatos de treino,Material Desportivo
+CP Comboios,91.72,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Agência Criativa,300.19,Campanha nas redes sociais,Publicidade e Marketing
+Electricista Costa,190.05,Serviços de contabilidade mensal,Serviços de Contabilidade
+MEO Empresas,40.37,Pack comunicações sede do clube,Comunicações
+Puma,298.08,Equipamento de treino para atletas,Material Desportivo
+Naturgy,191.01,Fatura de energia elétrica e gás,Água Luz e Gás
+Uber,122.63,Combustível deslocação a jogo fora,Transportes e Deslocações
+Asics,351.48,Material de proteção e luvas de guarda-redes,Material Desportivo
+Allianz,517.1,Prémio de seguro anual clube,Seguros
+TecnoFix,92.94,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+ManutençãoPro,208.14,Reparação canalização balneários,Manutenção e Reparações
+Árbitro Silva,290.3,Inscrição campeonato nacional,Arbitragem e Competições
+MEO Empresas,70.3,Mensalidade internet e telefone,Comunicações
+NOWO,58.81,Plano de dados móveis equipa técnica,Comunicações
+Árbitro Silva,137.36,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Fidelidade,1273.86,Seguro de equipamentos e material,Seguros
+Apple,249.41,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Uber,130.17,Transporte atletas para competição,Transportes e Deslocações
+Design Studio,217.81,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Fixando,402.8,Reparação canalização balneários,Manutenção e Reparações
+El Corte Inglés,142.57,Compras supermercado para torneio,Alimentação e Bebidas
+Serralharia Norte,386.06,Substituição de equipamentos danificados,Manutenção e Reparações
+Deloitte,259.11,Auditoria às contas do exercício,Serviços de Contabilidade
+Federação Portuguesa de Andebol,181.48,Serviços de contabilidade mensal,Serviços de Contabilidade
+EDP,75.87,Período de faturação: março a abril,Água Luz e Gás
+Publico,401.74,Impressão de cartazes e banners,Publicidade e Marketing
+MEO,45.39,Fatura telefonia fixa mensal,Comunicações
+BDO,173.94,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Publico,107.06,Compras supermercado para torneio,Alimentação e Bebidas
+KPMG,374.48,Declaração fiscal anual do clube,Serviços de Contabilidade
+Endesa,107.84,Fatura de eletricidade mês de março,Água Luz e Gás
+Allianz,852.64,Seguro de saúde equipa técnica,Seguros
+Agência Criativa,415.18,Publicidade jornal local,Publicidade e Marketing
+Galp Energia,119.1,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+Ageas,181.04,Processamento de salários e recibos verdes,Serviços de Contabilidade
+Intermarché,92.46,Snacks e lanches concentração,Alimentação e Bebidas
+Fnac,772.82,Compra de portátil para escritório,Equipamento Informático
+Repsol,86.73,Combustível deslocação a jogo fora,Transportes e Deslocações
+TecnoFix,133.44,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+NMedia,297.28,Campanha nas redes sociais,Publicidade e Marketing
+BDO,278.05,Serviços de contabilidade mensal,Serviços de Contabilidade
+Sport Zone,489.43,Material de proteção e luvas de guarda-redes,Material Desportivo
+Fixando,288.25,Substituição de equipamentos danificados,Manutenção e Reparações
+BP,88.3,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Samsung,1357.42,Monitor e periféricos computador,Equipamento Informático
+Design Studio,462.76,Produção de flyers para torneio,Publicidade e Marketing
+EPAL,1424.99,Disco externo backup documentos,Equipamento Informático
+NMedia,486.14,Design de logótipo do clube,Publicidade e Marketing
+Sport Zone,105.87,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Asics,217.56,Compra de bolas de andebol,Material Desportivo
+Árbitro Silva,73.24,Serviço de internet banda larga,Comunicações
+Tranquilidade,592.95,Seguro de equipamentos e material,Seguros
+Árbitro Costa,224.68,Inscrição campeonato nacional,Arbitragem e Competições
+HP,1780.87,Monitor e periféricos computador,Equipamento Informático
+Generali,47.48,Portagens deslocação equipa,Transportes e Deslocações
+Águas de Portugal,81.51,Período de faturação: março a abril,Água Luz e Gás
+HP,726.27,Webcam e microfone reuniões online,Equipamento Informático
+MEO,70.1,Fatura telemóvel treinador,Comunicações
+Delegado Ferreira,341.3,Taxa de participação torneio,Arbitragem e Competições
+TOC Independente,375.96,Auditoria às contas do exercício,Serviços de Contabilidade
+TecnoFix,449.94,Arranjo de portões e vedações,Manutenção e Reparações
+Allianz,1205.34,Apólice de seguro responsabilidade civil,Seguros
+Electricista Costa,337.09,Reparação balneários instalações,Manutenção e Reparações
+BDO,136.23,Serviços de contabilidade mensal,Serviços de Contabilidade
+Federação Portuguesa de Andebol,389.6,Taxa de participação torneio,Arbitragem e Competições
+Hertz,140.88,Portagens deslocação equipa,Transportes e Deslocações
+Worten,1312.94,Impressora para secretaria do clube,Equipamento Informático
+Puma,367.02,Compra de sacos de desporto e mochilas,Material Desportivo
+NOS,73.73,Serviço de internet banda larga,Comunicações
+TOC Independente,382.0,Relatório de contas anual,Serviços de Contabilidade
+NOS,77.05,Serviço de internet banda larga,Comunicações
+Mercadona,85.86,Snacks e lanches concentração,Alimentação e Bebidas
+Vodafone,81.28,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Puma,290.03,Sapatos e sapatilhas de andebol,Material Desportivo
+NOS,34.78,Pack comunicações sede do clube,Comunicações
+Nike,94.43,Material de proteção e luvas de guarda-redes,Material Desportivo
+BDO,471.57,Declaração fiscal anual do clube,Serviços de Contabilidade
+Serralharia Norte,256.59,Arranjo de portões e vedações,Manutenção e Reparações
+Microsoft,933.9,Tablet para gestão de treinos,Equipamento Informático
+Serralharia Norte,509.02,Pintura e remodelação escritório,Manutenção e Reparações
+Design Studio,74.89,Patrocínio e materiais de merchandising,Publicidade e Marketing
+EPAL,110.85,Fatura de energia elétrica e gás,Água Luz e Gás
+Puma,492.81,Aquisição de redes para baliza,Material Desportivo
+MEO Empresas,82.71,Fatura telefonia fixa mensal,Comunicações
+Vodafone,50.5,Pack comunicações sede do clube,Comunicações
+Adidas,235.09,Compra de sacos de desporto e mochilas,Material Desportivo
+Dell,538.3,Disco externo backup documentos,Equipamento Informático
+Mercadona,36.89,Compras supermercado para torneio,Alimentação e Bebidas
+Gráfica Central,150.06,Patrocínio e materiais de merchandising,Publicidade e Marketing
+BDO,481.71,Serviços de contabilidade mensal,Serviços de Contabilidade
+Associação Regional de Andebol,281.48,Honorários árbitro assistente,Arbitragem e Competições
+Iberdrola Portugal,80.91,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Electricista Costa,295.63,Reparação canalização balneários,Manutenção e Reparações
+EPAL,84.59,Período de faturação: março a abril,Água Luz e Gás
+Serralharia Norte,188.46,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+Intermarché,16.0,Compras supermercado para torneio,Alimentação e Bebidas
+Apple,1458.7,Webcam e microfone reuniões online,Equipamento Informático
+Vodafone,72.68,Serviço de internet banda larga,Comunicações
+Zurich,1132.65,Apólice de seguro responsabilidade civil,Seguros
+FlixBus,8.0,Portagens deslocação equipa,Transportes e Deslocações
+Intermarché,265.16,Compras supermercado para torneio,Alimentação e Bebidas
+FlixBus,84.45,Combustível deslocação a jogo fora,Transportes e Deslocações
+Agência Criativa,324.98,Produção de flyers para torneio,Publicidade e Marketing
+Mercadona,275.15,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Federação Portuguesa de Andebol,258.01,Honorários árbitro assistente,Arbitragem e Competições
+Sport Zone,157.86,Sapatos e sapatilhas de andebol,Material Desportivo
+PricewaterhouseCoopers,571.35,Consultoria financeira gestão associação,Serviços de Contabilidade
+NOS,45.69,Mensalidade internet e telefone,Comunicações
+Endesa Energia,60.33,Período de faturação: março a abril,Água Luz e Gás
+Pinturas Lisboa,293.06,Substituição de equipamentos danificados,Manutenção e Reparações
+Pingo Doce,160.37,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Lenovo,2145.71,Disco externo backup documentos,Equipamento Informático
+Endesa Energia,92.71,Fatura de energia elétrica e gás,Água Luz e Gás
+Lenovo,714.27,Impressora para secretaria do clube,Equipamento Informático
+FlixBus,793.52,Seguro de saúde equipa técnica,Seguros
+Microsoft,755.79,Webcam e microfone reuniões online,Equipamento Informático
+Fnac,1008.09,Impressora para secretaria do clube,Equipamento Informático
+Galp,160.47,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Printmaster,472.13,Campanha nas redes sociais,Publicidade e Marketing
+Agência Criativa,254.2,Criação de site e presença online,Publicidade e Marketing
+Sport Zone,702.11,Material de proteção e luvas de guarda-redes,Material Desportivo
+AXA,534.3,Seguro de saúde equipa técnica,Seguros
+Allianz,919.61,Seguro de acidentes pessoais atletas,Seguros
+Federação Portuguesa de Andebol,76.15,Snacks e lanches concentração,Alimentação e Bebidas
+Zurich,972.17,Seguro de saúde equipa técnica,Seguros
+Fidelidade,615.99,Seguro de acidentes pessoais atletas,Seguros
+Intermarché,77.17,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Delegado Ferreira,264.17,Custos organização jogo oficial,Arbitragem e Competições
+KPMG,373.35,Relatório de contas anual,Serviços de Contabilidade
+Delegado Ferreira,318.94,Pagamento de árbitros jogo casa,Arbitragem e Competições
+EPAL,219.91,Período de faturação: outubro a novembro,Água Luz e Gás
+Naturgy,149.92,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Mercadona,242.55,Compras supermercado para torneio,Alimentação e Bebidas
+MEO,76.99,Fatura telefonia fixa mensal,Comunicações
+Adidas,422.47,Compra de bolas de andebol,Material Desportivo
+Árbitro Costa,262.23,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Adidas,492.76,Equipamento de treino para atletas,Material Desportivo
+Decathlon,390.19,Equipamento de treino para atletas,Material Desportivo
+FlixBus,121.04,Bilhetes de comboio campeonato,Transportes e Deslocações
+Decathlon,679.3,Equipamento de treino para atletas,Material Desportivo
+PricewaterhouseCoopers,368.79,Declaração fiscal anual do clube,Serviços de Contabilidade
+Allianz,1100.18,Apólice de seguro responsabilidade civil,Seguros
+Continente,210.23,Catering jantar de gala do clube,Alimentação e Bebidas
+Nike,338.63,Equipamento de treino para atletas,Material Desportivo
+Nike,40.0,Material de proteção e luvas de guarda-redes,Material Desportivo
+Uber,127.75,Portagens deslocação equipa,Transportes e Deslocações
+Fnac,1544.42,Disco externo backup documentos,Equipamento Informático
+TOC Independente,337.99,Serviços de contabilidade mensal,Serviços de Contabilidade
+Sport Zone,710.57,Equipamento de treino para atletas,Material Desportivo
+MEO Empresas,41.46,Fatura telefonia fixa mensal,Comunicações
+Pingo Doce,203.6,Catering jantar de gala do clube,Alimentação e Bebidas
+Nike,437.66,Equipamento de treino para atletas,Material Desportivo
+Fnac,1779.41,Impressora para secretaria do clube,Equipamento Informático
+Generali,807.35,Prémio de seguro anual clube,Seguros
+Serralharia Norte,241.93,Reparação balneários instalações,Manutenção e Reparações
+Lidl,255.68,Snacks e lanches concentração,Alimentação e Bebidas
+FlixBus,120.53,Portagens deslocação equipa,Transportes e Deslocações
+Nike,607.91,Sapatos e sapatilhas de andebol,Material Desportivo
+Lenovo,874.28,Software de gestão desportiva,Equipamento Informático
+El Corte Inglés,213.03,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Lenovo,770.11,Disco externo backup documentos,Equipamento Informático
+Galp,19.27,Portagens deslocação equipa,Transportes e Deslocações
+EPAL,269.62,Fatura de eletricidade mês de março,Água Luz e Gás
+Auchan,152.14,Catering jantar de gala do clube,Alimentação e Bebidas
+Nike,267.65,Material de proteção e luvas de guarda-redes,Material Desportivo
+Intermarché,152.51,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+BP,73.53,Aluguer de autocarro para viagem,Transportes e Deslocações
+Asics,363.56,Coletes e fatos de treino,Material Desportivo
+FlixBus,148.99,Combustível deslocação a jogo fora,Transportes e Deslocações
+Repsol,58.51,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Pinturas Lisboa,68.94,Pintura e remodelação escritório,Manutenção e Reparações
+NOS,71.42,Mensalidade internet e telefone,Comunicações
+HP,1155.19,Impressora para secretaria do clube,Equipamento Informático
+EPAL,215.76,Fatura de energia elétrica e gás,Água Luz e Gás
+ManutençãoPro,468.98,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+CP Comboios,101.86,Bilhetes de comboio campeonato,Transportes e Deslocações
+Fnac,786.4,Disco externo backup documentos,Equipamento Informático
+Águas de Portugal,148.44,Período de faturação: outubro a novembro,Água Luz e Gás
+Agência Criativa,180.68,Consumo de água instalações desportivas,Água Luz e Gás
+BP,76.31,Aluguer de autocarro para viagem,Transportes e Deslocações
+HP,286.07,Tablet para gestão de treinos,Equipamento Informático
+NOS Empresas,70.28,Serviço de internet banda larga,Comunicações
+Hertz,58.57,Bilhetes de comboio campeonato,Transportes e Deslocações
+Fixando,144.82,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+Fnac,1717.5,Compra de portátil para escritório,Equipamento Informático
+Águas de Portugal,152.02,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Galp,141.62,Aluguer de autocarro para viagem,Transportes e Deslocações
+Adidas,52.33,Compra de bolas de andebol,Material Desportivo
+Ageas,808.58,Prémio de seguro anual clube,Seguros
+Decathlon,221.45,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+Uber,144.7,Portagens deslocação equipa,Transportes e Deslocações
+Worten,1346.04,Compra de portátil para escritório,Equipamento Informático
+Galp,152.8,Aluguer de autocarro para viagem,Transportes e Deslocações
+Sport Zone,327.82,Sapatos e sapatilhas de andebol,Material Desportivo
+Federação Portuguesa de Andebol,135.64,Taxa de participação torneio,Arbitragem e Competições
+Gráfica Central,348.62,Impressão de cartazes e banners,Publicidade e Marketing
+Deloitte,429.05,Declaração fiscal anual do clube,Serviços de Contabilidade
+Design Studio,311.69,Impressão de cartazes e banners,Publicidade e Marketing
+NOWO,80.65,Serviço de internet banda larga,Comunicações
+PricewaterhouseCoopers,372.21,Consultoria financeira gestão associação,Serviços de Contabilidade
+MEO,27.75,Plano de dados móveis equipa técnica,Comunicações
+NMedia,356.19,Design de logótipo do clube,Publicidade e Marketing
+Samsung,1712.06,Compra de portátil para escritório,Equipamento Informático
+Galp,109.11,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Samsung,1545.0,Disco externo backup documentos,Equipamento Informático
+Intermarché,47.55,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Vodafone,146.38,Bilhetes de comboio campeonato,Transportes e Deslocações
+Deloitte,304.55,Relatório de contas anual,Serviços de Contabilidade
+El Corte Inglés,255.8,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Tranquilidade,80.0,Seguro de equipamentos e material,Seguros
+Gráfica Central,186.07,Produção de flyers para torneio,Publicidade e Marketing
+Publico,288.22,Reparação balneários instalações,Manutenção e Reparações
+Electricista Costa,135.18,Honorários árbitro assistente,Arbitragem e Competições
+EPAL,290.94,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+El Corte Inglés,221.71,Snacks e lanches concentração,Alimentação e Bebidas
+Endesa,112.13,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+Electricista Costa,224.03,Reparação balneários instalações,Manutenção e Reparações
+NOS Empresas,61.29,Plano de dados móveis equipa técnica,Comunicações
+Publico,398.1,Design de logótipo do clube,Publicidade e Marketing
+AXA,1105.31,Seguro de saúde equipa técnica,Seguros
+Samsung,1341.25,Monitor e periféricos computador,Equipamento Informático
+Fnac,849.85,Software de gestão desportiva,Equipamento Informático
+Iberdrola,218.39,Fatura de eletricidade mês de março,Água Luz e Gás
+TecnoFix,467.99,Arranjo de portões e vedações,Manutenção e Reparações
+AXA,913.46,Prémio de seguro anual clube,Seguros
+TOC Independente,341.23,Processamento de salários e recibos verdes,Serviços de Contabilidade
+TOC Independente,388.48,Auditoria às contas do exercício,Serviços de Contabilidade
+CP Comboios,77.6,Táxi ou uber após jogo tardio,Transportes e Deslocações
+KPMG,261.96,Serviços de contabilidade mensal,Serviços de Contabilidade
+Samsung,1309.66,Impressora para secretaria do clube,Equipamento Informático
+EDP Comercial,109.6,Período de faturação: outubro a novembro,Água Luz e Gás
+Puma,1256.92,Apólice de seguro responsabilidade civil,Seguros
+Mercadona,200.36,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+EPAL,103.62,Fatura de eletricidade mês de março,Água Luz e Gás
+Agência Criativa,330.05,Impressão de cartazes e banners,Publicidade e Marketing
+Árbitro Silva,200.71,Coletes e fatos de treino,Material Desportivo
+Dell,2004.97,Impressora para secretaria do clube,Equipamento Informático
+Deloitte,562.06,Declaração fiscal anual do clube,Serviços de Contabilidade
+Tranquilidade,834.19,Seguro de equipamentos e material,Seguros
+Gráfica Central,397.79,Impressão de cartazes e banners,Publicidade e Marketing
+Delegado Ferreira,216.66,Custos organização jogo oficial,Arbitragem e Competições
+Intersport,337.68,Compra de bolas de andebol,Material Desportivo
+Hertz,83.18,Combustível deslocação a jogo fora,Transportes e Deslocações
+Árbitro Silva,246.29,Pagamento de árbitros jogo casa,Arbitragem e Competições
+CP Comboios,92.18,Combustível viagem torneio nacional,Transportes e Deslocações
+Zurich,729.23,Seguro de acidentes pessoais atletas,Seguros
+Tranquilidade,687.51,Seguro de saúde equipa técnica,Seguros
+Vodafone,60.2,Mensalidade internet e telefone,Comunicações
+Serralharia Norte,427.16,Reparação balneários instalações,Manutenção e Reparações
+Mercadona,87.53,Compras supermercado para torneio,Alimentação e Bebidas
+Delegado Ferreira,57.71,Plano de dados móveis equipa técnica,Comunicações
+Zurich,337.92,Seguro de acidentes pessoais atletas,Seguros
+NOS Empresas,31.4,Pack comunicações sede do clube,Comunicações
+Intersport,721.1,Compra de bolas de andebol,Material Desportivo
+Vodafone,29.61,Fatura telemóvel treinador,Comunicações
+Generali,485.96,Apólice de seguro responsabilidade civil,Seguros
+Árbitro Silva,165.82,Quotas federação portuguesa de andebol,Arbitragem e Competições
+EDP,177.46,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+Iberdrola Portugal,62.75,Fatura de eletricidade mês de março,Água Luz e Gás
+Sport Zone,473.95,Aquisição de redes para baliza,Material Desportivo
+Associação Regional de Andebol,203.37,Inscrição campeonato nacional,Arbitragem e Competições
+Auchan,209.81,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Intersport,325.67,Coletes e fatos de treino,Material Desportivo
+Zurich,748.53,Seguro de saúde equipa técnica,Seguros
+FlixBus,107.28,Bilhetes de comboio campeonato,Transportes e Deslocações
+Lidl,63.39,Refeições pós-jogo para atletas,Alimentação e Bebidas
+Samsung,1165.97,Compra de portátil para escritório,Equipamento Informático
+Auchan,107.61,Catering jantar de gala do clube,Alimentação e Bebidas
+Worten,564.5,Campanha nas redes sociais,Publicidade e Marketing
+Apple,772.66,Software de gestão desportiva,Equipamento Informático
+Design Studio,217.49,Design de logótipo do clube,Publicidade e Marketing
+Árbitro Silva,386.58,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Árbitro Silva,278.19,Inscrição campeonato nacional,Arbitragem e Competições
+BDO,153.72,Declaração fiscal anual do clube,Serviços de Contabilidade
+Design Studio,234.39,Criação de site e presença online,Publicidade e Marketing
+ManutençãoPro,391.74,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+Electricista Costa,305.71,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+Dell,588.88,Software de gestão desportiva,Equipamento Informático
+Generali,881.22,Seguro de equipamentos e material,Seguros
+Serralharia Norte,227.21,Serviço de limpeza e manutenção geral,Manutenção e Reparações
 Puma,101.58,Compra de sacos de desporto e mochilas,Material Desportivo
-PricewaterhouseCoopers,293.74,Declaração fiscal anual do clube,Serviços de Contabilidade
-MEO Empresas,117.61,Fatura bimestral de eletricidade,Água Luz e Gás
-Design Studio,517.23,Publicidade jornal local,Publicidade e Marketing
-Pinturas Lisboa,267.16,Reparação balneários instalações,Manutenção e Reparações
-Contabilidade Silva & Associados,216.55,Serviços de contabilidade mensal,Serviços de Contabilidade
-Auchan,175.15,Catering jantar de gala do clube,Alimentação e Bebidas
-NOS,65.2,Pack comunicações sede do clube,Comunicações
-Galp Energia,144.82,Fatura bimestral de eletricidade,Água Luz e Gás
-Microsoft,1570.79,Software de gestão desportiva,Equipamento Informático
+Delegado Ferreira,263.5,Taxa de participação torneio,Arbitragem e Competições
+PricewaterhouseCoopers,409.07,Relatório de contas anual,Serviços de Contabilidade
+NOS,39.51,Mensalidade internet e telefone,Comunicações
+Gráfica Central,213.86,Publicidade jornal local,Publicidade e Marketing
+Pingo Doce,119.69,Catering jantar de gala do clube,Alimentação e Bebidas
+Contabilidade Silva & Associados,273.56,Relatório de contas anual,Serviços de Contabilidade
+Águas de Portugal,220.49,Consumo de água instalações desportivas,Água Luz e Gás
+Electricista Costa,274.03,Substituição de equipamentos danificados,Manutenção e Reparações
+EPAL,185.35,Período de faturação: outubro a novembro,Água Luz e Gás
+Samsung,820.16,Disco externo backup documentos,Equipamento Informático
+EPAL,175.38,Fatura de eletricidade mês de março,Água Luz e Gás
+MEO,52.29,Serviço de internet banda larga,Comunicações
+Intermarché,238.37,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+FlixBus,128.79,Bilhetes de comboio campeonato,Transportes e Deslocações
+Apple,635.83,Disco externo backup documentos,Equipamento Informático
+Pinturas Lisboa,143.26,Fatura de eletricidade mês de março,Água Luz e Gás
+Federação Portuguesa de Andebol,198.07,Inscrição campeonato nacional,Arbitragem e Competições
+Galp,81.86,Bilhetes de comboio campeonato,Transportes e Deslocações
+Iberdrola Portugal,64.13,Bilhetes de comboio campeonato,Transportes e Deslocações
+Hertz,81.84,Transporte atletas para competição,Transportes e Deslocações
+Gráfica Central,276.57,Publicidade jornal local,Publicidade e Marketing
+Auchan,144.53,Compras supermercado para torneio,Alimentação e Bebidas
+MEO Empresas,50.14,Pack comunicações sede do clube,Comunicações
+Ageas,622.57,Seguro de equipamentos e material,Seguros
+EDP Comercial,159.97,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Gráfica Central,356.65,Design de logótipo do clube,Publicidade e Marketing
+FlixBus,85.27,Combustível deslocação a jogo fora,Transportes e Deslocações
+TecnoFix,30.21,Pintura e remodelação escritório,Manutenção e Reparações
+Decathlon,526.73,Equipamento de treino para atletas,Material Desportivo
+Delegado Ferreira,164.46,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Mercadona,1096.52,Webcam e microfone reuniões online,Equipamento Informático
+NOS,77.99,Serviço de internet banda larga,Comunicações
+Fnac,1595.03,Tablet para gestão de treinos,Equipamento Informático
+Contabilidade Silva & Associados,345.63,Serviços de contabilidade mensal,Serviços de Contabilidade
+Endesa,134.86,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+BP,63.96,Portagens deslocação equipa,Transportes e Deslocações
+HP,1133.29,Software de gestão desportiva,Equipamento Informático
+Auchan,85.27,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Worten,619.23,Webcam e microfone reuniões online,Equipamento Informático
+Sport Zone,57.56,Material de proteção e luvas de guarda-redes,Material Desportivo
+Endesa Energia,207.23,Fornecimento de energia elétrica pavilhão,Água Luz e Gás
+Pinturas Lisboa,24.0,Substituição de equipamentos danificados,Manutenção e Reparações
+Serralharia Norte,305.71,Substituição de equipamentos danificados,Manutenção e Reparações
+Lidl,208.02,Compras supermercado para torneio,Alimentação e Bebidas
+HP,348.61,Período de faturação: janeiro a fevereiro,Água Luz e Gás
+Delegado Ferreira,216.32,Inscrição campeonato nacional,Arbitragem e Competições
+ManutençãoPro,372.67,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+TecnoFix,222.41,Pintura e remodelação escritório,Manutenção e Reparações
+Dell,938.74,Disco externo backup documentos,Equipamento Informático
+TecnoFix,119.89,Consultoria financeira gestão associação,Serviços de Contabilidade
+TOC Independente,411.66,Declaração fiscal anual do clube,Serviços de Contabilidade
+Rentalhas,95.36,Combustível viagem torneio nacional,Transportes e Deslocações
+MEO,63.73,Plano de dados móveis equipa técnica,Comunicações
+CP Comboios,64.63,Táxi ou uber após jogo tardio,Transportes e Deslocações
+Printmaster,444.2,Criação de site e presença online,Publicidade e Marketing
+Puma,606.62,Compra de bolas de andebol,Material Desportivo
+KPMG,407.4,Serviços de contabilidade mensal,Serviços de Contabilidade
+Árbitro Costa,219.25,Taxa de participação torneio,Arbitragem e Competições
+Asics,335.15,Sapatos e sapatilhas de andebol,Material Desportivo
+Gráfica Central,213.48,Publicidade jornal local,Publicidade e Marketing
+AXA,48.21,Plano de dados móveis equipa técnica,Comunicações
+Tranquilidade,1018.44,Seguro de saúde equipa técnica,Seguros
+Fixando,326.43,Reparação balneários instalações,Manutenção e Reparações
+Contabilidade Silva & Associados,427.73,Serviços de contabilidade mensal,Serviços de Contabilidade
+Vodafone,32.45,Fatura telefonia fixa mensal,Comunicações
+Printmaster,246.32,Design de logótipo do clube,Publicidade e Marketing
+Auchan,278.1,Snacks e lanches concentração,Alimentação e Bebidas
+Lidl,84.29,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Lenovo,626.74,Disco externo backup documentos,Equipamento Informático
+Delegado Ferreira,190.58,Custos organização jogo oficial,Arbitragem e Competições
+HP,264.97,Custos organização jogo oficial,Arbitragem e Competições
+Publico,40.0,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Lidl,268.58,Compras supermercado para torneio,Alimentação e Bebidas
+Águas de Portugal,218.13,Água e saneamento mês de janeiro,Água Luz e Gás
+Árbitro Costa,255.8,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Hertz,89.51,Transporte atletas para competição,Transportes e Deslocações
+Puma,381.1,Material de proteção e luvas de guarda-redes,Material Desportivo
+Serralharia Norte,429.42,Arranjo de portões e vedações,Manutenção e Reparações
+BDO,142.38,Auditoria às contas do exercício,Serviços de Contabilidade
+Agência Criativa,134.25,Patrocínio e materiais de merchandising,Publicidade e Marketing
+Delegado Ferreira,123.64,Inscrição campeonato nacional,Arbitragem e Competições
+MEO,174.24,Snacks e lanches concentração,Alimentação e Bebidas
+Deloitte,478.64,Relatório de contas anual,Serviços de Contabilidade
+Ageas,944.53,Prémio de seguro anual clube,Seguros
+Mercadona,228.01,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Endesa,141.87,Consumo de eletricidade pavilhão desportivo,Água Luz e Gás
+Intermarché,539.69,Material de proteção e luvas de guarda-redes,Material Desportivo
+MEO,46.76,Plano de dados móveis equipa técnica,Comunicações
+Printmaster,150.52,Impressão de cartazes e banners,Publicidade e Marketing
+NOS,64.33,Serviço de internet banda larga,Comunicações
+Electricista Costa,206.98,Reparação balneários instalações,Manutenção e Reparações
+Federação Portuguesa de Andebol,176.09,Custos organização jogo oficial,Arbitragem e Competições
+Agência Criativa,355.21,Design de logótipo do clube,Publicidade e Marketing
+Decathlon,352.8,Compra de sacos de desporto e mochilas,Material Desportivo
+Iberdrola,95.31,Serviço de internet banda larga,Comunicações
+MEO,53.31,Plano de dados móveis equipa técnica,Comunicações
+Design Studio,360.16,Impressão de cartazes e banners,Publicidade e Marketing
+KPMG,242.71,Consultoria financeira gestão associação,Serviços de Contabilidade
+Fixando,441.34,Reparação canalização balneários,Manutenção e Reparações
+Endesa Energia,163.21,Período de faturação: março a abril,Água Luz e Gás
+Águas de Portugal,180.35,Fatura de eletricidade mês de março,Água Luz e Gás
+MEO Empresas,61.4,Plano de dados móveis equipa técnica,Comunicações
+Contabilidade Silva & Associados,281.89,Consultoria financeira gestão associação,Serviços de Contabilidade
+FlixBus,8.0,Transporte atletas para competição,Transportes e Deslocações
+Delegado Ferreira,322.76,Custos organização jogo oficial,Arbitragem e Competições
+Ageas,48.0,Plano de dados móveis equipa técnica,Comunicações
+Uber,97.61,Combustível viagem torneio nacional,Transportes e Deslocações
+Apple,2221.96,Webcam e microfone reuniões online,Equipamento Informático
+NOS,70.3,Plano de dados móveis equipa técnica,Comunicações
+NOS,61.64,Mensalidade internet e telefone,Comunicações
+Mercadona,159.44,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+KPMG,262.1,Relatório de contas anual,Serviços de Contabilidade
+Gráfica Central,16.0,Serviço de internet banda larga,Comunicações
+Electricista Costa,351.09,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+Lidl,91.0,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+Árbitro Costa,91.52,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Pinturas Lisboa,79.77,Arranjo de portões e vedações,Manutenção e Reparações
+Asics,383.81,Compra de bolas de andebol,Material Desportivo
+TOC Independente,227.7,Serviços de contabilidade mensal,Serviços de Contabilidade
+Associação Regional de Andebol,86.41,Inscrição campeonato nacional,Arbitragem e Competições
+NOS Empresas,67.14,Serviço de internet banda larga,Comunicações
+Decathlon,368.54,Aquisição de redes para baliza,Material Desportivo
+Vodafone,66.15,Fatura telemóvel treinador,Comunicações
+NOS Empresas,72.59,Plano de dados móveis equipa técnica,Comunicações
+Deloitte,189.95,Serviços de contabilidade mensal,Serviços de Contabilidade
+Fnac,1637.18,Disco externo backup documentos,Equipamento Informático
+BDO,319.06,Declaração fiscal anual do clube,Serviços de Contabilidade
+MEO,68.1,Plano de dados móveis equipa técnica,Comunicações
+BP,64.34,Transporte atletas para competição,Transportes e Deslocações
+Rentalhas,118.76,Transporte atletas para competição,Transportes e Deslocações
+TOC Independente,345.3,Consultoria financeira gestão associação,Serviços de Contabilidade
+Associação Regional de Andebol,140.39,Taxa de participação torneio,Arbitragem e Competições
+Pinturas Lisboa,353.32,Criação de site e presença online,Publicidade e Marketing
+ManutençãoPro,373.64,Reparação canalização balneários,Manutenção e Reparações
+TecnoFix,323.05,Reparação balneários instalações,Manutenção e Reparações
+Uber,82.31,Combustível viagem torneio nacional,Transportes e Deslocações
+Design Studio,443.3,Design de logótipo do clube,Publicidade e Marketing
+Pingo Doce,297.53,Compras alimentares para evento desportivo,Alimentação e Bebidas
+NMedia,268.75,Criação de site e presença online,Publicidade e Marketing
+Galp,184.63,Transporte atletas para competição,Transportes e Deslocações
+Rentalhas,74.09,Aluguer de autocarro para viagem,Transportes e Deslocações
+Generali,1441.01,Seguro de acidentes pessoais atletas,Seguros
+Delegado Ferreira,46.35,Taxa de participação torneio,Arbitragem e Competições
+BP,51.34,Portagens deslocação equipa,Transportes e Deslocações
+BDO,327.0,Relatório de contas anual,Serviços de Contabilidade
+PricewaterhouseCoopers,481.13,Relatório de contas anual,Serviços de Contabilidade
+Árbitro Costa,301.34,Taxa de participação torneio,Arbitragem e Competições
+AXA,793.34,Apólice de seguro responsabilidade civil,Seguros
+TecnoFix,399.98,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+Deloitte,279.69,Auditoria às contas do exercício,Serviços de Contabilidade
+Delegado Ferreira,291.54,Inscrição campeonato nacional,Arbitragem e Competições
+Gráfica Central,286.97,Criação de site e presença online,Publicidade e Marketing
+El Corte Inglés,205.18,Snacks e lanches concentração,Alimentação e Bebidas
+NOS Empresas,91.72,Serviço de internet banda larga,Comunicações
+Iberdrola Portugal,126.77,Período de faturação: março a abril,Água Luz e Gás
+Árbitro Silva,351.01,Pagamento de árbitros jogo casa,Arbitragem e Competições
+Electricista Costa,279.1,Manutenção sistema elétrico pavilhão,Manutenção e Reparações
+HP,1000.89,Compra de portátil para escritório,Equipamento Informático
+Pingo Doce,168.1,Compras alimentares para evento desportivo,Alimentação e Bebidas
+Apple,1265.07,Monitor e periféricos computador,Equipamento Informático
+Ageas,723.81,Apólice de seguro responsabilidade civil,Seguros
+Fnac,1254.82,Impressora para secretaria do clube,Equipamento Informático
+NMedia,245.8,Criação de site e presença online,Publicidade e Marketing
+Delegado Ferreira,336.86,Inscrição campeonato nacional,Arbitragem e Competições
+Decathlon,175.97,Compra de bolas de andebol,Material Desportivo
+Zurich,485.55,Seguro de saúde equipa técnica,Seguros
+MEO Empresas,81.78,Pack comunicações sede do clube,Comunicações
+Adidas,577.35,Coletes e fatos de treino,Material Desportivo
+Pingo Doce,87.39,Água e bebidas isotónicas treinos,Alimentação e Bebidas
+AXA,1061.55,Apólice de seguro responsabilidade civil,Seguros
+PricewaterhouseCoopers,340.7,Relatório de contas anual,Serviços de Contabilidade
+Allianz,725.29,Renovação seguro instalações desportivas,Seguros
+Delegado Ferreira,220.83,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Iberdrola Portugal,192.27,Período de faturação: outubro a novembro,Água Luz e Gás
+Lidl,202.99,Catering jantar de gala do clube,Alimentação e Bebidas
+Hertz,173.47,Bilhetes de comboio campeonato,Transportes e Deslocações
+Federação Portuguesa de Andebol,165.41,Quotas federação portuguesa de andebol,Arbitragem e Competições
+Sport Zone,618.31,Equipamento de treino para atletas,Material Desportivo
+Printmaster,84.6,Impressão de cartazes e banners,Publicidade e Marketing
+Lenovo,1604.65,Disco externo backup documentos,Equipamento Informático
+Vodafone,50.56,Fatura telemóvel treinador,Comunicações
+Gráfica Central,380.26,Patrocínio e materiais de merchandising,Publicidade e Marketing
+KPMG,231.33,Consultoria financeira gestão associação,Serviços de Contabilidade
+Asics,579.23,Material de proteção e luvas de guarda-redes,Material Desportivo
+Federação Portuguesa de Andebol,298.56,Honorários árbitro assistente,Arbitragem e Competições
+Gráfica Central,148.38,Campanha nas redes sociais,Publicidade e Marketing
+ManutençãoPro,188.98,Reparação canalização balneários,Manutenção e Reparações
+TecnoFix,260.48,Reparação balneários instalações,Manutenção e Reparações
+Electricista Costa,291.37,Pintura e remodelação escritório,Manutenção e Reparações
+Agência Criativa,354.98,Patrocínio e materiais de merchandising,Publicidade e Marketing
+NMedia,306.5,Publicidade jornal local,Publicidade e Marketing
+Apple,813.18,Impressora para secretaria do clube,Equipamento Informático
+Ageas,826.53,Seguro de saúde equipa técnica,Seguros
+Publico,244.75,Impressão de cartazes e banners,Publicidade e Marketing
+NMedia,41.74,Produção de flyers para torneio,Publicidade e Marketing
+MEO Empresas,56.96,Pack comunicações sede do clube,Comunicações
+ManutençãoPro,186.08,Serviço de limpeza e manutenção geral,Manutenção e Reparações
+Allianz,841.06,Seguro de equipamentos e material,Seguros
+Delegado Ferreira,181.07,Inscrição campeonato nacional,Arbitragem e Competições
+TecnoFix,60.58,Pintura e remodelação escritório,Manutenção e Reparações

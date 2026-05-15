@@ -115,37 +115,51 @@ def extrair_fornecedor(texto):
     return ""
 
 
-PADROES_TOTAL = [
-    r"quanto tenho a pagar\??\s*(\d{1,6}[.,]\d{2})\s*€",
-    r"total\s+a\s+pagar\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
-    r"valor\s+a\s+pagar\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
-    r"montante\s+total\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
-    r"total\s+fatura\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
-    r"total\s+da\s+fatura\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
-    r"valor\s+total\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
-    r"total\s+a\s+pagar\s*[:\-]?\s*€\s*(\d{1,6}[.,]\d{2})",
-    r"valor\s+a\s+pagar\s*[:\-]?\s*€\s*(\d{1,6}[.,]\d{2})",
-]
-
-
 def extrair_valor(texto):
-    # prioridade: padrões explícitos de total a pagar
-    for padrao in PADROES_TOTAL:
-        m = re.search(padrao, texto, re.IGNORECASE)
-        if m:
-            v = float(m.group(1).replace(",", "."))
-            if 5 <= v <= 5000:
-                return str(round(v, 2))
-
-    # fallback: primeiro valor com € no intervalo válido
-    for c in re.findall(r"(\d{1,6}[.,]\d{2})\s*€", texto):
-        v = float(c.replace(",", "."))
+    # Prioridade 1: "Total a pagar [texto opcional] €XX,XX" — NOS e outros
+    m = re.search(r'Total a pagar[^\n€]*€\s*([\d]+[.,][\d]{2})', texto, re.IGNORECASE)
+    if m:
+        v = float(m.group(1).replace(',', '.'))
         if 5 <= v <= 5000:
             return str(round(v, 2))
 
-    # padrão invertido: € XX,XX
-    for c in re.findall(r"€\s*(\d{1,6}[.,]\d{2})", texto):
-        v = float(c.replace(",", "."))
+    # Prioridade 2: "Total a pagar: XX,XX €" — variante com valor antes do €
+    m = re.search(r'Total a pagar[^\n€]*?([\d]+[.,][\d]{2})\s*€', texto, re.IGNORECASE)
+    if m:
+        v = float(m.group(1).replace(',', '.'))
+        if 5 <= v <= 5000:
+            return str(round(v, 2))
+
+    # Prioridade 3: "Quanto tenho a pagar? XX,XX €" — EDP
+    m = re.search(r'Quanto tenho\s+a pagar\??\s*([\d]+[.,][\d]{2})\s*€', texto, re.IGNORECASE)
+    if m:
+        v = float(m.group(1).replace(',', '.'))
+        if 5 <= v <= 5000:
+            return str(round(v, 2))
+
+    # Prioridade 4: outros padrões de total explícito
+    outros = [
+        r'Valor a pagar[^\n€]*€\s*([\d]+[.,][\d]{2})',
+        r'Valor a pagar[^\n€]*?([\d]+[.,][\d]{2})\s*€',
+        r'Montante total[^\n€]*€\s*([\d]+[.,][\d]{2})',
+        r'Valor desta fatura com IVA\s*([\d]+[.,][\d]{2})',
+        r'Total fatura[^\n€]*€\s*([\d]+[.,][\d]{2})',
+        r'Valor total[^\n€]*€\s*([\d]+[.,][\d]{2})',
+    ]
+    for padrao in outros:
+        m = re.search(padrao, texto, re.IGNORECASE)
+        if m:
+            v = float(m.group(1).replace(',', '.'))
+            if 5 <= v <= 5000:
+                return str(round(v, 2))
+
+    # Fallback: primeiro valor €XX,XX ou XX,XX€ entre 5 e 5000
+    for c in re.findall(r'(\d{1,6}[.,]\d{2})\s*€', texto):
+        v = float(c.replace(',', '.'))
+        if 5 <= v <= 5000:
+            return str(round(v, 2))
+    for c in re.findall(r'€\s*(\d{1,6}[.,]\d{2})', texto):
+        v = float(c.replace(',', '.'))
         if 5 <= v <= 5000:
             return str(round(v, 2))
 
