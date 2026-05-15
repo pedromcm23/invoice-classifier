@@ -657,6 +657,7 @@
       if (data.fornecedor) document.getElementById("fornecedor").value = data.fornecedor;
       if (data.valor)      document.getElementById("valor").value = data.valor;
       if (data.descricao)  document.getElementById("descricao").value = data.descricao;
+      if (data.data)       document.getElementById("data").value = data.data;
 
       const filled = [data.fornecedor, data.valor, data.descricao].filter(Boolean).length;
       status.textContent = filled === 3

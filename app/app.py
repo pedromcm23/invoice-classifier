@@ -82,6 +82,98 @@ def predict():
     return jsonify({"categoria": categoria, "confianca": confianca, "top3": top3})
 
 
+FORNECEDORES_CONHECIDOS = [
+    "EDP Comercial", "EDP", "Galp Energia", "Galp", "Endesa", "Iberdrola",
+    "Águas de Portugal", "EPAL", "Naturgy",
+    "NOS", "MEO", "Vodafone", "NOWO",
+    "Fidelidade", "Allianz", "Zurich", "Generali", "Tranquilidade", "AXA", "Ageas",
+    "Continente", "Pingo Doce", "Intermarché", "Lidl", "Mercadona", "Auchan",
+    "BP", "Repsol", "CP Comboios", "Uber", "Hertz", "FlixBus",
+    "Decathlon", "Sport Zone", "Nike", "Adidas", "Intersport", "Puma", "Asics",
+    "PricewaterhouseCoopers", "PwC", "Deloitte", "BDO", "KPMG",
+    "Worten", "Fnac", "Apple", "Dell", "HP", "Lenovo", "Samsung",
+    "Federação Portuguesa de Andebol", "Fixando", "ManutençãoPro",
+]
+
+MESES_PT = {
+    "janeiro": 1, "fevereiro": 2, "março": 3, "abril": 4,
+    "maio": 5, "junho": 6, "julho": 7, "agosto": 8,
+    "setembro": 9, "outubro": 10, "novembro": 11, "dezembro": 12,
+}
+
+
+def extrair_fornecedor(texto):
+    texto_lower = texto.lower()
+    # fornecedores mais longos primeiro para evitar match parcial (ex: "EDP Comercial" antes de "EDP")
+    for nome in sorted(FORNECEDORES_CONHECIDOS, key=len, reverse=True):
+        if nome.lower() in texto_lower:
+            return nome
+    # fallback: primeira linha não-numérica com pelo menos 2 palavras
+    for linha in [l.strip() for l in texto.splitlines() if l.strip()][:15]:
+        if len(linha.split()) >= 2 and not re.match(r"^\d", linha):
+            return linha
+    return ""
+
+
+def extrair_valor(texto):
+    # padrão EDP: "Quanto tenho a pagar? XX,XX €"
+    m = re.search(r"Quanto tenho a pagar\??\s*(\d{1,6}[.,]\d{2})\s*€", texto, re.IGNORECASE)
+    if m:
+        return m.group(1).replace(",", ".")
+
+    # todos os valores com € no texto — filtra entre 5 e 5000 €
+    candidatos = re.findall(r"(\d{1,6}[.,]\d{2})\s*€", texto)
+    for c in candidatos:
+        v = float(c.replace(",", "."))
+        if 5 <= v <= 5000:
+            return str(round(v, 2))
+
+    # padrão invertido: € XX,XX
+    candidatos2 = re.findall(r"€\s*(\d{1,6}[.,]\d{2})", texto)
+    for c in candidatos2:
+        v = float(c.replace(",", "."))
+        if 5 <= v <= 5000:
+            return str(round(v, 2))
+
+    return ""
+
+
+def extrair_data(texto):
+    # "15 de março de 2024" ou "15 de março 2024"
+    m = re.search(
+        r"(\d{1,2})\s+de\s+(" + "|".join(MESES_PT.keys()) + r")\s+(?:de\s+)?(\d{4})",
+        texto, re.IGNORECASE
+    )
+    if m:
+        dia, mes_str, ano = m.group(1), m.group(2).lower(), m.group(3)
+        mes = MESES_PT.get(mes_str, 1)
+        return f"{ano}-{mes:02d}-{int(dia):02d}"
+
+    # DD/MM/YYYY ou DD-MM-YYYY
+    m = re.search(r"(\d{2})[/\-](\d{2})[/\-](\d{4})", texto)
+    if m:
+        return f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
+
+    return ""
+
+
+def extrair_descricao(texto):
+    # padrão EDP e similares
+    m = re.search(r"Per[ií]odo de fatura[çc][aã]o[:\s]+(.+)", texto, re.IGNORECASE)
+    if m:
+        return "Período de faturação: " + m.group(1).strip()[:80]
+
+    keywords = ["fatura", "serviço", "serviços", "compra", "fornecimento",
+                "mensalidade", "referente", "pagamento", "descrição", "energia",
+                "eletricidade", "electricidade", "gás", "internet", "seguro"]
+    for linha in [l.strip() for l in texto.splitlines() if l.strip()]:
+        if any(k in linha.lower() for k in keywords) and len(linha) > 8:
+            return linha[:120]
+
+    linhas = [l.strip() for l in texto.splitlines() if l.strip()]
+    return linhas[2] if len(linhas) > 2 else ""
+
+
 @app.route("/upload-pdf", methods=["POST"])
 def upload_pdf():
     if "file" not in request.files:
@@ -105,35 +197,18 @@ def upload_pdf():
                 texto += (page.extract_text() or "") + "\n"
         os.unlink(tmp_path)
 
-        linhas = [l.strip() for l in texto.splitlines() if l.strip()]
+        fornecedor = extrair_fornecedor(texto)
+        valor      = extrair_valor(texto)
+        data       = extrair_data(texto)
+        descricao  = extrair_descricao(texto)
 
-        # extrair valor — padrão: número com € ou EUR
-        valor = ""
-        for linha in linhas:
-            m = re.search(r"(\d{1,6}[.,]\d{2})\s*€?", linha)
-            if m:
-                valor = m.group(1).replace(",", ".")
-                break
-
-        # extrair fornecedor — primeira linha com >= 3 palavras ou linha com "NIF"/"empresa"
-        fornecedor = ""
-        for linha in linhas[:10]:
-            if len(linha.split()) >= 2 and not re.match(r"^\d", linha):
-                fornecedor = linha
-                break
-
-        # extrair descrição — linha que mencione palavras chave de fatura
-        descricao = ""
-        keywords = ["fatura", "serviço", "serviços", "compra", "fornecimento",
-                    "mensalidade", "referente", "pagamento", "descrição"]
-        for linha in linhas:
-            if any(k in linha.lower() for k in keywords):
-                descricao = linha
-                break
-        if not descricao and len(linhas) > 2:
-            descricao = linhas[2]
-
-        return jsonify({"fornecedor": fornecedor, "valor": valor, "descricao": descricao, "texto": texto[:500]})
+        return jsonify({
+            "fornecedor": fornecedor,
+            "valor": valor,
+            "data": data,
+            "descricao": descricao,
+            "texto": texto[:600],
+        })
 
     except Exception as e:
         return jsonify({"error": f"Erro ao processar PDF: {str(e)}"}), 500
