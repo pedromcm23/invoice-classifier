@@ -115,22 +115,36 @@ def extrair_fornecedor(texto):
     return ""
 
 
-def extrair_valor(texto):
-    # padrão EDP: "Quanto tenho a pagar? XX,XX €"
-    m = re.search(r"Quanto tenho a pagar\??\s*(\d{1,6}[.,]\d{2})\s*€", texto, re.IGNORECASE)
-    if m:
-        return m.group(1).replace(",", ".")
+PADROES_TOTAL = [
+    r"quanto tenho a pagar\??\s*(\d{1,6}[.,]\d{2})\s*€",
+    r"total\s+a\s+pagar\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
+    r"valor\s+a\s+pagar\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
+    r"montante\s+total\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
+    r"total\s+fatura\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
+    r"total\s+da\s+fatura\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
+    r"valor\s+total\s*[:\-]?\s*(\d{1,6}[.,]\d{2})\s*€",
+    r"total\s+a\s+pagar\s*[:\-]?\s*€\s*(\d{1,6}[.,]\d{2})",
+    r"valor\s+a\s+pagar\s*[:\-]?\s*€\s*(\d{1,6}[.,]\d{2})",
+]
 
-    # todos os valores com € no texto — filtra entre 5 e 5000 €
-    candidatos = re.findall(r"(\d{1,6}[.,]\d{2})\s*€", texto)
-    for c in candidatos:
+
+def extrair_valor(texto):
+    # prioridade: padrões explícitos de total a pagar
+    for padrao in PADROES_TOTAL:
+        m = re.search(padrao, texto, re.IGNORECASE)
+        if m:
+            v = float(m.group(1).replace(",", "."))
+            if 5 <= v <= 5000:
+                return str(round(v, 2))
+
+    # fallback: primeiro valor com € no intervalo válido
+    for c in re.findall(r"(\d{1,6}[.,]\d{2})\s*€", texto):
         v = float(c.replace(",", "."))
         if 5 <= v <= 5000:
             return str(round(v, 2))
 
     # padrão invertido: € XX,XX
-    candidatos2 = re.findall(r"€\s*(\d{1,6}[.,]\d{2})", texto)
-    for c in candidatos2:
+    for c in re.findall(r"€\s*(\d{1,6}[.,]\d{2})", texto):
         v = float(c.replace(",", "."))
         if 5 <= v <= 5000:
             return str(round(v, 2))
@@ -158,19 +172,29 @@ def extrair_data(texto):
 
 
 def extrair_descricao(texto):
-    # padrão EDP e similares
+    # 1. "Período de faturação: …" — EDP, Galp, etc.
     m = re.search(r"Per[ií]odo de fatura[çc][aã]o[:\s]+(.+)", texto, re.IGNORECASE)
     if m:
         return "Período de faturação: " + m.group(1).strip()[:80]
 
-    keywords = ["fatura", "serviço", "serviços", "compra", "fornecimento",
-                "mensalidade", "referente", "pagamento", "descrição", "energia",
-                "eletricidade", "electricidade", "gás", "internet", "seguro"]
+    # 2. "Mês de Janeiro 2024" — NOS e operadoras
+    m = re.search(r"(M[eê]s de \w+ \d{4})", texto, re.IGNORECASE)
+    if m:
+        return m.group(1).strip()
+
+    # 3. keywords úteis mas excluindo linhas com número de fatura (FT XXXX/XXXX)
+    keywords = ["serviço", "serviços", "compra", "fornecimento", "mensalidade",
+                "referente", "pagamento", "descrição", "energia", "eletricidade",
+                "electricidade", "gás", "internet", "seguro", "telecomunicações"]
     for linha in [l.strip() for l in texto.splitlines() if l.strip()]:
+        if re.search(r"\bFT\s+\d+/\d+\b", linha, re.IGNORECASE):
+            continue
         if any(k in linha.lower() for k in keywords) and len(linha) > 8:
             return linha[:120]
 
-    linhas = [l.strip() for l in texto.splitlines() if l.strip()]
+    # 4. fallback: terceira linha não-numérica que não seja número de fatura
+    linhas = [l.strip() for l in texto.splitlines()
+              if l.strip() and not re.search(r"\bFT\s+\d+/\d+\b", l)]
     return linhas[2] if len(linhas) > 2 else ""
 
 

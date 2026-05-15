@@ -21,7 +21,7 @@ CATEGORIES = {
         ],
     },
     "Água Luz e Gás": {
-        "fornecedores": ["EDP", "Galp Energia", "Endesa", "Iberdrola", "Águas de Portugal", "EPAL", "Naturgy"],
+        "fornecedores": ["EDP Comercial", "EDP", "Galp Energia", "Endesa Energia", "Endesa", "Iberdrola Portugal", "Iberdrola", "Águas de Portugal", "EPAL", "Naturgy"],
         "valor_min": 30, "valor_max": 300,
         "descricoes": [
             "Fatura de eletricidade mês de março",
