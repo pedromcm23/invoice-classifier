@@ -185,18 +185,41 @@ def extrair_data(texto):
     return ""
 
 
+MESES_NOMES = (
+    "janeiro|fevereiro|março|abril|maio|junho|"
+    "julho|agosto|setembro|outubro|novembro|dezembro"
+)
+
+
+def _limpar_periodo(conteudo):
+    """Remove números de fatura e datas DD-MM-YYYY que pdfplumber concatena na linha."""
+    conteudo = re.sub(r'\bFT\s+\d+/\d+\b', '', conteudo, flags=re.IGNORECASE)
+    conteudo = re.sub(r'\d{2}[-/]\d{2}[-/]\d{4}', '', conteudo)
+    return re.sub(r'\s+', ' ', conteudo).strip()
+
+
 def extrair_descricao(texto):
-    # 1. "Período de faturação: …" — EDP, Galp, etc.
+    # 1. "Período de faturação …" — EDP (intervalo) vs NOS (nome do mês)
     m = re.search(r"Per[ií]odo de fatura[çc][aã]o[:\s]+(.+)", texto, re.IGNORECASE)
     if m:
-        return "Período de faturação: " + m.group(1).strip()[:80]
+        conteudo = _limpar_periodo(m.group(1))
+        # EDP: intervalo de datas "DD de mês a DD de mês"
+        if re.search(r'\d{1,2}\s+de\s+\w+\s+a\s+\d{1,2}\s+de\s+\w+', conteudo, re.IGNORECASE):
+            return "Período de faturação: " + conteudo[:80]
+        # NOS/outros: sobra apenas o nome do mês — normaliza para "Mês de X"
+        m_mes = re.search(r'(' + MESES_NOMES + r')(?:\s+de\s+\d{4}|\s+\d{4})?',
+                          conteudo, re.IGNORECASE)
+        if m_mes:
+            return "Mês de " + m_mes.group(0).strip()
+        if conteudo:
+            return "Período de faturação: " + conteudo[:80]
 
-    # 2. "Mês de Janeiro 2024" — NOS e operadoras
-    m = re.search(r"(M[eê]s de \w+ \d{4})", texto, re.IGNORECASE)
+    # 2. "Mês de Janeiro 2024" explícito no texto
+    m = re.search(r"(M[eê]s de \w+(?:\s+\d{4})?)", texto, re.IGNORECASE)
     if m:
         return m.group(1).strip()
 
-    # 3. keywords úteis mas excluindo linhas com número de fatura (FT XXXX/XXXX)
+    # 3. keywords úteis, excluindo linhas com número de fatura
     keywords = ["serviço", "serviços", "compra", "fornecimento", "mensalidade",
                 "referente", "pagamento", "descrição", "energia", "eletricidade",
                 "electricidade", "gás", "internet", "seguro", "telecomunicações"]
@@ -206,7 +229,7 @@ def extrair_descricao(texto):
         if any(k in linha.lower() for k in keywords) and len(linha) > 8:
             return linha[:120]
 
-    # 4. fallback: terceira linha não-numérica que não seja número de fatura
+    # 4. fallback: terceira linha não-numérica sem número de fatura
     linhas = [l.strip() for l in texto.splitlines()
               if l.strip() and not re.search(r"\bFT\s+\d+/\d+\b", l)]
     return linhas[2] if len(linhas) > 2 else ""
