@@ -1,198 +1,820 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classificador de Faturas</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificador de Faturas · Escola de Andebol</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f4f8;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+    :root {
+      --blue-dark: #1a3a5c;
+      --blue-mid: #2d6a9f;
+      --blue-light: #e8f2fc;
+      --blue-pale: #f0f6fd;
+      --accent: #f0a500;
+      --text: #1e2d3d;
+      --muted: #6b7c93;
+      --border: #d0dce8;
+      --white: #ffffff;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(26,58,92,0.10);
+    }
 
-        .container {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(45, 106, 159, 0.12);
-            padding: 40px 48px;
-            max-width: 520px;
-            width: 100%;
-        }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #eef3f9;
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 32px;
-        }
+    /* ── HEADER ── */
+    header {
+      background: var(--blue-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
 
-        .header h1 {
-            color: #2d6a9f;
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 68px;
+    }
 
-        .header p {
-            color: #6b7c93;
-            font-size: 0.95rem;
-            margin-top: 6px;
-        }
+    .logo {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+    }
 
-        .divider {
-            border: none;
-            border-top: 2px solid #e8f0f9;
-            margin: 0 0 28px 0;
-        }
+    .header-titles { flex: 1; }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .header-titles h1 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
 
-        label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #4a5568;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    .header-titles p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.60);
+      margin-top: 2px;
+    }
 
-        input[type="text"],
-        input[type="number"] {
-            width: 100%;
-            padding: 11px 14px;
-            border: 1.5px solid #d0dce8;
-            border-radius: 8px;
-            font-size: 1rem;
-            color: #2d3748;
-            transition: border-color 0.2s;
-            outline: none;
-            background: #f8fafc;
-        }
+    /* hex pattern bg on header */
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='32'%3E%3Cpolygon points='14,2 26,9 26,23 14,30 2,23 2,9' fill='none' stroke='rgba(255,255,255,0.05)' stroke-width='1.2'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
 
-        input[type="text"]:focus,
-        input[type="number"]:focus {
-            border-color: #2d6a9f;
-            background: #fff;
-        }
+    /* ── TABS ── */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      margin-left: auto;
+    }
 
-        .btn {
-            width: 100%;
-            padding: 13px;
-            background: #2d6a9f;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            cursor: pointer;
-            letter-spacing: 0.3px;
-            transition: background 0.2s, transform 0.1s;
-            margin-top: 8px;
-        }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255,255,255,0.65);
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
 
-        .btn:hover { background: #245a8a; }
-        .btn:active { transform: scale(0.99); }
+    .tab-btn.active {
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+    }
 
-        .result-box {
-            margin-top: 28px;
-            padding: 24px;
-            background: linear-gradient(135deg, #e8f2fc 0%, #d0e6f9 100%);
-            border-radius: 10px;
-            border-left: 5px solid #2d6a9f;
-            text-align: center;
-        }
+    .tab-btn:hover:not(.active) {
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+    }
 
-        .result-label {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #2d6a9f;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
+    /* ── MAIN ── */
+    main {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 32px auto;
+      padding: 0 24px 48px;
+    }
 
-        .result-category {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1a3f5f;
-            margin-bottom: 10px;
-        }
+    .section { display: none; }
+    .section.active { display: block; }
 
-        .result-confidence {
-            font-size: 1rem;
-            color: #4a7ea8;
-            font-weight: 500;
-        }
+    /* ── CARD ── */
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
 
-        .result-confidence span {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #2d6a9f;
-        }
+    .card-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
 
-        .error-box {
-            margin-top: 20px;
-            padding: 14px 18px;
-            background: #fff5f5;
-            border-radius: 8px;
-            border-left: 4px solid #e53e3e;
-            color: #c53030;
-            font-size: 0.95rem;
-        }
-    </style>
+    /* ── DROP ZONE ── */
+    .drop-zone {
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+    }
+
+    .drop-zone:hover, .drop-zone.dragover {
+      border-color: var(--blue-mid);
+      background: var(--blue-pale);
+    }
+
+    .drop-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+
+    .drop-icon {
+      font-size: 2.4rem;
+      margin-bottom: 8px;
+    }
+
+    .drop-zone p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .drop-zone strong { color: var(--blue-mid); }
+
+    .pdf-status {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: var(--blue-mid);
+      font-weight: 600;
+      min-height: 20px;
+    }
+
+    /* ── DIVIDER ── */
+    .or-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 22px 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .or-divider::before, .or-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── FORM ── */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-full { grid-column: 1 / -1; }
+
+    .field label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.97rem;
+      color: var(--text);
+      background: #fafcfe;
+      outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+
+    .field input:focus {
+      border-color: var(--blue-mid);
+      box-shadow: 0 0 0 3px rgba(45,106,159,0.12);
+      background: var(--white);
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 13px;
+      background: var(--blue-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      margin-top: 20px;
+      transition: background 0.18s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover { background: #14304d; }
+    .btn-primary:active { transform: scale(0.99); }
+    .btn-primary:disabled { background: #9ab; cursor: not-allowed; }
+
+    /* ── RESULT ── */
+    #result-box {
+      display: none;
+      margin-top: 20px;
+      background: linear-gradient(135deg, var(--blue-pale) 0%, #daeaf9 100%);
+      border-radius: var(--radius);
+      border-left: 5px solid var(--blue-mid);
+      padding: 24px 28px;
+    }
+
+    .result-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .result-main-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--blue-mid);
+      margin-bottom: 4px;
+    }
+
+    .result-main-cat {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--blue-dark);
+    }
+
+    .btn-save {
+      background: var(--blue-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 9px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.18s;
+    }
+
+    .btn-save:hover { background: #14304d; }
+    .btn-save.saved { background: #2e7d4f; }
+
+    .confidence-bar-wrap {
+      margin: 14px 0 18px;
+    }
+
+    .confidence-label {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .confidence-label strong { color: var(--blue-dark); font-size: 0.95rem; }
+
+    .bar-track {
+      height: 10px;
+      background: rgba(45,106,159,0.15);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--blue-mid), var(--blue-dark));
+      transition: width 0.6s ease;
+    }
+
+    .top3-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .top3-list { display: flex; flex-direction: column; gap: 8px; }
+
+    .top3-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .top3-name {
+      font-size: 0.88rem;
+      color: var(--text);
+      min-width: 200px;
+    }
+
+    .top3-bar-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(45,106,159,0.12);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .top3-bar-fill {
+      height: 100%;
+      border-radius: 99px;
+      background: var(--blue-mid);
+      opacity: 0.6;
+    }
+
+    .top3-pct {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--blue-mid);
+      min-width: 42px;
+      text-align: right;
+    }
+
+    .error-msg {
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: #fff5f5;
+      border-radius: 8px;
+      border-left: 4px solid #e53e3e;
+      color: #c53030;
+      font-size: 0.9rem;
+    }
+
+    /* ── HISTÓRICO ── */
+    .historico-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .historico-header h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+    }
+
+    .btn-danger {
+      background: transparent;
+      border: 1.5px solid #e53e3e;
+      color: #e53e3e;
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.18s, color 0.18s;
+    }
+
+    .btn-danger:hover { background: #e53e3e; color: white; }
+
+    .empty-msg {
+      text-align: center;
+      padding: 48px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .empty-msg .empty-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--muted);
+      border-bottom: 2px solid var(--border);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.12s;
+    }
+
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--blue-pale); }
+
+    tbody td {
+      padding: 10px 12px;
+      vertical-align: middle;
+    }
+
+    .cat-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* category colours */
+    .cat-0  { background: #dbeafe; color: #1e40af; }
+    .cat-1  { background: #d1fae5; color: #065f46; }
+    .cat-2  { background: #ede9fe; color: #5b21b6; }
+    .cat-3  { background: #fee2e2; color: #991b1b; }
+    .cat-4  { background: #fef3c7; color: #92400e; }
+    .cat-5  { background: #e0f2fe; color: #0369a1; }
+    .cat-6  { background: #fce7f3; color: #9d174d; }
+    .cat-7  { background: #ecfdf5; color: #047857; }
+    .cat-8  { background: #f3f4f6; color: #374151; }
+    .cat-9  { background: #fefce8; color: #713f12; }
+    .cat-10 { background: #f0fdf4; color: #166534; }
+
+    @media (max-width: 600px) {
+      .form-grid { grid-template-columns: 1fr; }
+      .result-header { flex-direction: column; }
+      .top3-name { min-width: 120px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Classificador de Faturas</h1>
-            <p>Associação Desportiva &middot; Escola de Andebol</p>
-        </div>
-        <hr class="divider">
 
-        <form method="POST" action="/predict">
-            <div class="form-group">
-                <label for="fornecedor">Fornecedor</label>
-                <input type="text" id="fornecedor" name="fornecedor"
-                       placeholder="ex: Decathlon, EDP, NOS..."
-                       value="{{ fornecedor or '' }}" required>
-            </div>
-            <div class="form-group">
-                <label for="valor">Valor em €</label>
-                <input type="number" id="valor" name="valor"
-                       placeholder="ex: 125.50"
-                       step="0.01" min="0"
-                       value="{{ valor or '' }}" required>
-            </div>
-            <div class="form-group">
-                <label for="descricao">Descrição</label>
-                <input type="text" id="descricao" name="descricao"
-                       placeholder="ex: Compra de bolas de andebol"
-                       value="{{ descricao or '' }}" required>
-            </div>
-            <button type="submit" class="btn">Classificar</button>
-        </form>
+<header>
+  <div class="header-inner">
+    <!-- SVG bola de andebol -->
+    <svg class="logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="18" fill="#2d6a9f" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+      <path d="M20 2 C20 2 28 10 28 20 C28 30 20 38 20 38" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M20 2 C20 2 12 10 12 20 C12 30 20 38 20 38" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M3 14 Q20 18 37 14" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M3 26 Q20 22 37 26" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    </svg>
 
-        {% if error %}
-        <div class="error-box">{{ error }}</div>
-        {% endif %}
-
-        {% if result %}
-        <div class="result-box">
-            <div class="result-label">Categoria prevista</div>
-            <div class="result-category">{{ result.categoria }}</div>
-            <div class="result-confidence">
-                Confiança: <span>{{ result.confianca }}%</span>
-            </div>
-        </div>
-        {% endif %}
+    <div class="header-titles">
+      <h1>Classificador de Faturas</h1>
+      <p>Associação Desportiva · Escola de Andebol</p>
     </div>
+
+    <nav class="tabs">
+      <button class="tab-btn active" onclick="showTab('classificar', this)">🤾 Classificar</button>
+      <button class="tab-btn" onclick="showTab('historico', this)">📋 Histórico</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══ SECÇÃO CLASSIFICAR ══ -->
+  <section id="sec-classificar" class="section active">
+
+    <!-- Upload PDF -->
+    <div class="card">
+      <div class="card-title">📄 Upload de fatura em PDF</div>
+      <div class="drop-zone" id="drop-zone">
+        <input type="file" accept=".pdf" id="pdf-input" onchange="handlePdfUpload(this.files[0])">
+        <div class="drop-icon">📂</div>
+        <p><strong>Arrasta uma fatura em PDF</strong> ou clica para selecionar</p>
+        <p style="font-size:0.8rem;margin-top:4px">O sistema tentará extrair os dados automaticamente</p>
+      </div>
+      <div class="pdf-status" id="pdf-status"></div>
+    </div>
+
+    <!-- Form -->
+    <div class="card">
+      <div class="card-title">✏️ Preenche manualmente</div>
+
+      <div class="or-divider" id="or-div" style="display:none">ou preenche manualmente</div>
+
+      <div class="form-grid">
+        <div class="field form-full">
+          <label for="fornecedor">Fornecedor</label>
+          <input type="text" id="fornecedor" placeholder="ex: Decathlon, EDP, NOS…">
+        </div>
+        <div class="field">
+          <label for="valor">Valor em €</label>
+          <input type="number" id="valor" placeholder="ex: 125.50" step="0.01" min="0">
+        </div>
+        <div class="field">
+          <label for="data">Data</label>
+          <input type="date" id="data">
+        </div>
+        <div class="field form-full">
+          <label for="descricao">Descrição</label>
+          <input type="text" id="descricao" placeholder="ex: Compra de bolas de andebol">
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="classify()" id="classify-btn">
+        <span>⚡</span> Classificar Fatura
+      </button>
+
+      <div class="error-msg" id="error-msg" style="display:none"></div>
+    </div>
+
+    <!-- Resultado -->
+    <div id="result-box">
+      <div class="result-header">
+        <div>
+          <div class="result-main-label">Categoria prevista</div>
+          <div class="result-main-cat" id="result-cat">—</div>
+        </div>
+        <button class="btn-save" id="btn-save" onclick="saveToHistory()">💾 Guardar no histórico</button>
+      </div>
+
+      <div class="confidence-bar-wrap">
+        <div class="confidence-label">
+          <span>Confiança do modelo</span>
+          <strong id="result-pct">—</strong>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" id="bar-fill" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div class="top3-title">Top 3 categorias</div>
+      <div class="top3-list" id="top3-list"></div>
+    </div>
+
+  </section>
+
+  <!-- ══ SECÇÃO HISTÓRICO ══ -->
+  <section id="sec-historico" class="section">
+    <div class="card">
+      <div class="historico-header">
+        <h2>📋 Faturas classificadas</h2>
+        <button class="btn-danger" onclick="clearHistory()">🗑 Limpar histórico</button>
+      </div>
+      <div id="historico-content">
+        <div class="empty-msg">
+          <div class="empty-icon">📭</div>
+          A carregar…
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const CAT_COLORS = [
+    "cat-0","cat-1","cat-2","cat-3","cat-4","cat-5",
+    "cat-6","cat-7","cat-8","cat-9","cat-10"
+  ];
+  const catColorMap = {};
+
+  let lastResult = null;
+
+  // ── TABS ──
+  function showTab(name, btn) {
+    document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    document.getElementById("sec-" + name).classList.add("active");
+    btn.classList.add("active");
+    if (name === "historico") loadHistory();
+  }
+
+  // ── DRAG & DROP ──
+  const dz = document.getElementById("drop-zone");
+  dz.addEventListener("dragover", e => { e.preventDefault(); dz.classList.add("dragover"); });
+  dz.addEventListener("dragleave", () => dz.classList.remove("dragover"));
+  dz.addEventListener("drop", e => {
+    e.preventDefault();
+    dz.classList.remove("dragover");
+    const f = e.dataTransfer.files[0];
+    if (f) handlePdfUpload(f);
+  });
+
+  // ── PDF UPLOAD ──
+  async function handlePdfUpload(file) {
+    if (!file) return;
+    const status = document.getElementById("pdf-status");
+    status.textContent = "⏳ A processar " + file.name + "…";
+
+    const fd = new FormData();
+    fd.append("file", file);
+
+    try {
+      const res = await fetch("/upload-pdf", { method: "POST", body: fd });
+      const data = await res.json();
+
+      if (data.error) { status.textContent = "⚠️ " + data.error; return; }
+
+      if (data.fornecedor) document.getElementById("fornecedor").value = data.fornecedor;
+      if (data.valor)      document.getElementById("valor").value = data.valor;
+      if (data.descricao)  document.getElementById("descricao").value = data.descricao;
+
+      const filled = [data.fornecedor, data.valor, data.descricao].filter(Boolean).length;
+      status.textContent = filled === 3
+        ? "✅ Dados extraídos com sucesso!"
+        : `⚠️ Extraídos ${filled}/3 campos — completa os que faltam.`;
+
+      document.getElementById("or-div").style.display = "flex";
+    } catch {
+      status.textContent = "❌ Erro ao enviar o ficheiro.";
+    }
+  }
+
+  // ── CLASSIFY ──
+  async function classify() {
+    const fornecedor = document.getElementById("fornecedor").value.trim();
+    const valor      = document.getElementById("valor").value.trim();
+    const descricao  = document.getElementById("descricao").value.trim();
+    const errEl      = document.getElementById("error-msg");
+
+    errEl.style.display = "none";
+    if (!fornecedor || !valor || !descricao) {
+      errEl.textContent = "Preenche todos os campos obrigatórios.";
+      errEl.style.display = "block";
+      return;
+    }
+
+    const btn = document.getElementById("classify-btn");
+    btn.disabled = true;
+    btn.innerHTML = "<span>⏳</span> A classificar…";
+
+    try {
+      const res = await fetch("/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fornecedor, valor, descricao }),
+      });
+      const data = await res.json();
+
+      if (data.error) {
+        errEl.textContent = data.error;
+        errEl.style.display = "block";
+        return;
+      }
+
+      lastResult = {
+        fornecedor, valor, descricao,
+        data: document.getElementById("data").value,
+        categoria: data.categoria,
+        confianca: data.confianca,
+      };
+
+      showResult(data);
+      document.getElementById("btn-save").classList.remove("saved");
+      document.getElementById("btn-save").textContent = "💾 Guardar no histórico";
+
+    } catch {
+      errEl.textContent = "Erro de rede. Verifica se a app está a correr.";
+      errEl.style.display = "block";
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = "<span>⚡</span> Classificar Fatura";
+    }
+  }
+
+  function showResult(data) {
+    document.getElementById("result-box").style.display = "block";
+    document.getElementById("result-cat").textContent = data.categoria;
+    document.getElementById("result-pct").textContent = data.confianca + "%";
+    document.getElementById("bar-fill").style.width = data.confianca + "%";
+
+    const list = document.getElementById("top3-list");
+    list.innerHTML = "";
+    data.top3.forEach(item => {
+      const color = getCatColor(item.categoria);
+      list.innerHTML += `
+        <div class="top3-item">
+          <span class="top3-name"><span class="cat-badge ${color}">${item.categoria}</span></span>
+          <div class="top3-bar-track">
+            <div class="top3-bar-fill" style="width:${item.probabilidade}%"></div>
+          </div>
+          <span class="top3-pct">${item.probabilidade}%</span>
+        </div>`;
+    });
+
+    document.getElementById("result-box").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  // ── SAVE HISTORY ──
+  async function saveToHistory() {
+    if (!lastResult) return;
+    const btn = document.getElementById("btn-save");
+    await fetch("/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(lastResult),
+    });
+    btn.textContent = "✅ Guardado!";
+    btn.classList.add("saved");
+  }
+
+  // ── LOAD HISTORY ──
+  async function loadHistory() {
+    const res = await fetch("/historico");
+    const entries = await res.json();
+    const el = document.getElementById("historico-content");
+
+    if (!entries.length) {
+      el.innerHTML = `<div class="empty-msg"><div class="empty-icon">📭</div>Ainda não há faturas classificadas.</div>`;
+      return;
+    }
+
+    const sorted = [...entries].reverse();
+    const rows = sorted.map(e => {
+      const color = getCatColor(e.categoria);
+      const conf = e.confianca != null ? e.confianca + "%" : "—";
+      return `<tr>
+        <td>${e.data || "—"}</td>
+        <td><strong>${esc(e.fornecedor)}</strong></td>
+        <td>${e.valor ? parseFloat(e.valor).toFixed(2) + " €" : "—"}</td>
+        <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(e.descricao)}</td>
+        <td><span class="cat-badge ${color}">${esc(e.categoria)}</span></td>
+        <td>${conf}</td>
+      </tr>`;
+    }).join("");
+
+    el.innerHTML = `
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th><th>Fornecedor</th><th>Valor</th>
+            <th>Descrição</th><th>Categoria</th><th>Confiança</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }
+
+  async function clearHistory() {
+    if (!confirm("Tens a certeza que queres limpar o histórico?")) return;
+    await fetch("/historico", { method: "DELETE" });
+    loadHistory();
+  }
+
+  // ── HELPERS ──
+  function getCatColor(cat) {
+    if (!catColorMap[cat]) {
+      const idx = Object.keys(catColorMap).length % CAT_COLORS.length;
+      catColorMap[cat] = CAT_COLORS[idx];
+    }
+    return catColorMap[cat];
+  }
+
+  function esc(s) {
+    return String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  // ── SET DEFAULT DATE ──
+  document.getElementById("data").valueAsDate = new Date();
+</script>
 </body>
 </html>
