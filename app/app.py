@@ -1,7 +1,11 @@
 import os
+import sys
 import joblib
 import pandas as pd
 from flask import Flask, render_template, request
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from model.transformer import TextCombiner  # noqa: F401 — required for joblib unpickling
 
 app = Flask(__name__)
 
@@ -52,4 +56,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)

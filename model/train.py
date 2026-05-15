@@ -9,19 +9,11 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import cross_val_score, StratifiedKFold
 from sklearn.metrics import classification_report
-from sklearn.base import BaseEstimator, TransformerMixin
+from model.transformer import TextCombiner
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "faturas_sinteticas.csv")
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
 CATEGORIES_PATH = os.path.join(os.path.dirname(__file__), "categories.pkl")
-
-
-class TextCombiner(BaseEstimator, TransformerMixin):
-    def fit(self, X, y=None):
-        return self
-
-    def transform(self, X):
-        return (X["fornecedor"] + " " + X["descricao"]).values
 
 
 df = pd.read_csv(DATA_PATH)
