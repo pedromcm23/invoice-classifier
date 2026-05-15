@@ -7,7 +7,7 @@ import pandas as pd
 from flask import Flask, render_template, request, jsonify
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-from model.transformer import TextCombiner  # noqa: F401 — required for joblib unpickling
+from model.transformer import TextCombiner, ColumnSelector  # noqa: F401 — required for joblib unpickling
 
 app = Flask(__name__)
 

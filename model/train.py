@@ -9,12 +9,11 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import cross_val_score, StratifiedKFold
 from sklearn.metrics import classification_report
-from model.transformer import TextCombiner
+from model.transformer import ColumnSelector
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "faturas_sinteticas.csv")
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
 CATEGORIES_PATH = os.path.join(os.path.dirname(__file__), "categories.pkl")
-
 
 df = pd.read_csv(DATA_PATH)
 print(f"Dataset carregado: {len(df)} registos, {df['categoria'].nunique()} categorias\n")
@@ -28,15 +27,25 @@ for c in categories:
     print(f"  - {c}")
 print()
 
-text_pipeline = Pipeline([
-    ("combiner", TextCombiner()),
-    ("tfidf", TfidfVectorizer(max_features=500, ngram_range=(1, 2), sublinear_tf=True)),
+# Pipeline separado para fornecedor — vocabulário pequeno e focado em nomes de empresa
+forn_pipeline = Pipeline([
+    ("sel",  ColumnSelector("fornecedor")),
+    ("tfidf", TfidfVectorizer(max_features=200, ngram_range=(1, 2),
+                              min_df=1, sublinear_tf=True)),
+])
+
+# Pipeline separado para descrição — vocabulário maior para frases de fatura
+desc_pipeline = Pipeline([
+    ("sel",  ColumnSelector("descricao")),
+    ("tfidf", TfidfVectorizer(max_features=300, ngram_range=(1, 2),
+                              sublinear_tf=True)),
 ])
 
 preprocessor = ColumnTransformer(
     transformers=[
-        ("text", text_pipeline, ["fornecedor", "descricao"]),
-        ("num", StandardScaler(), ["valor"]),
+        ("forn", forn_pipeline, ["fornecedor", "descricao", "valor"]),
+        ("desc", desc_pipeline, ["fornecedor", "descricao", "valor"]),
+        ("num",  StandardScaler(), ["valor"]),
     ]
 )
 

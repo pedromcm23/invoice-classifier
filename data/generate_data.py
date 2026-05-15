@@ -39,7 +39,7 @@ CATEGORIES = {
     },
     "Comunicações": {
         "fornecedores": ["NOS", "MEO", "Vodafone", "NOWO", "NOS Empresas", "MEO Empresas"],
-        "valor_min": 20, "valor_max": 100,
+        "valor_min": 20, "valor_max": 250,
         "descricoes": [
             "Mensalidade internet e telefone",
             "Fatura telemóvel treinador",
@@ -47,6 +47,16 @@ CATEGORIES = {
             "Pack comunicações sede do clube",
             "Fatura telefonia fixa mensal",
             "Plano de dados móveis equipa técnica",
+            "Mês de janeiro",
+            "Mês de fevereiro",
+            "Mês de março",
+            "Mês de abril",
+            "Mês de março 2026",
+            "Mês de abril 2026",
+            "Fatura NOS março 2026",
+            "Fatura MEO fevereiro 2026",
+            "Pack NOS internet e televisão",
+            "Pack MEO total fibra e móvel",
         ],
     },
     "Seguros": {
