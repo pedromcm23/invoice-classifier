@@ -69,9 +69,11 @@ python model/train.py
 python app/app.py
 ```
 
-Abre o browser em [http://localhost:5000](http://localhost:5000).
+Abre o browser em **[http://localhost:5001](http://localhost:5001)**.
 
-Preenche o formulário com **fornecedor**, **valor** e **descrição** para obter a categoria prevista e a confiança do modelo.
+
+Preenche o formulário com **fornecedor**, **valor** e **descrição** para obter a categoria prevista e a confiança do modelo.  
+Em alternativa, faz **upload de uma fatura em PDF** — o sistema tenta extrair os campos automaticamente.
 
 ## Modelo & Pipeline
 
@@ -87,3 +89,4 @@ Preenche o formulário com **fornecedor**, **valor** e **descrição** para obte
 - Flask — aplicação web
 - pandas / numpy — manipulação de dados
 - joblib — serialização do modelo
+- pdfplumber — extração de texto de faturas PDF
