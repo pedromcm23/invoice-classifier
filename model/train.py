@@ -97,6 +97,9 @@ def treinar_modelos():
     joblib.dump(categories, CATEGORIES_PATH)
     print(f"Modelo exportado para: {MODEL_PATH}")
 
+if __name__ == "__main__":
+    print("A iniciar o script de treino...")
+    treinar_modelos()
 
 '''
 pipeline = Pipeline([

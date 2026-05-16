@@ -295,22 +295,27 @@ def save():
     entries = load_historico()
     entries.append(data)
     save_historico(entries)
+    return jsonify({"ok": True, "total": len(entries)})
+
+@app.route("/retrain", methods=["POST"])
+def retrain():
     try:
-        print("\n[MÁQUINA] Nova fatura guardada! A iniciar re-treino automático dos 3 modelos...")
-        from model.train import treinar_modelos
+        print("\n[MÁQUINA] Pedido manual de re-treino recebido! A processar...")
+        caminho_raiz = os.path.abspath(os.path.join(BASE_DIR, ".."))
+        subprocess.run([sys.executable, "-m", "model.train"], cwd=caminho_raiz, check=True)
         
-        # Corre o script de treino adicionando a nova linha
-        treinar_modelos()
-        
-        # Força a aplicação Flask a recarregar o model.pkl atualizado na próxima previsão
+
         global model, categories
         model = None
         categories = None
+        
         print("[MÁQUINA] Modelos atualizados em memória com sucesso!\n")
+        return jsonify({"ok": True, "message": "Modelos treinados com sucesso!"})
+        
     except Exception as e:
-        print(f"[ERRO] Falha no treino automático: {str(e)}")
-    return jsonify({"ok": True, "total": len(entries)})
-
+        erro_msg = str(e)
+        print(f"[ERRO] Falha no treino automático: {erro_msg}")
+        return jsonify({"error": erro_msg}), 500
 
 @app.route("/historico", methods=["GET"])
 def historico():

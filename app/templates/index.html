@@ -599,7 +599,12 @@
     <div class="card">
       <div class="historico-header">
         <h2>📋 Faturas classificadas</h2>
-        <button class="btn-danger" onclick="clearHistory()">🗑 Limpar histórico</button>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-primary" id="btn-retrain" style="margin-top: 0; padding: 7px 14px; font-size: 0.83rem;" onclick="triggerRetrain()">
+            🧠 Treinar Modelos
+          </button>
+          <button class="btn-danger" onclick="clearHistory()">🗑 Limpar histórico</button>
+        </div>
       </div>
       <div id="historico-content">
         <div class="empty-msg">
@@ -840,6 +845,30 @@
 
   // ── SET DEFAULT DATE ──
   document.getElementById("data").valueAsDate = new Date();
+
+  // ── TRIGGER RETRAIN ──
+  async function triggerRetrain() {
+    const btn = document.getElementById("btn-retrain");
+    const originalText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = "⏳ A treinar...";
+    
+    try {
+      const res = await fetch("/retrain", { method: "POST" });
+      const data = await res.json();
+      
+      if (data.ok) {
+        alert(" O modelo aprendeu com os novos dados!");
+      } else {
+        alert("⚠️ Ocorreu um erro ao treinar: " + data.error);
+      }
+    } catch (err) {
+      alert("⚠️ Erro de rede ao tentar treinar o modelo.");
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+    }
+  }
 </script>
 </body>
 </html>
