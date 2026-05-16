@@ -4,6 +4,7 @@ import json
 import re
 import joblib
 import pandas as pd
+import subprocess
 from flask import Flask, render_template, request, jsonify
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
@@ -69,17 +70,28 @@ def predict():
         return jsonify({"error": "Valor inválido."}), 400
 
     input_df = pd.DataFrame([{"fornecedor": fornecedor, "descricao": descricao, "valor": valor}])
-    categoria = model.predict(input_df)[0]
-    probas = model.predict_proba(input_df)[0]
-    classes = list(model.classes_)
+    
+    previsoes_modelos = {}
+    
+    for nome_modelo, pipeline_modelo in model.items():
+        categoria_prevista = pipeline_modelo.predict(input_df)[0]
+        probas = pipeline_modelo.predict_proba(input_df)[0]
+        classes = list(pipeline_modelo.classes_)
+        
+        todas_probas = {classes[i]: round(float(probas[i]) * 100, 1) for i in range(len(classes))}
+        
+        previsoes_modelos[nome_modelo] = {
+            "categoria": categoria_prevista,
+            "confianca": todas_probas.get(categoria_prevista, 0.0),
+            "todas_probas": todas_probas  # Enviado para o frontend conseguir calcular o vencedor mais tarde
+        }
+    
+    categoria_sugerida = previsoes_modelos["Random Forest"]["categoria"]
 
-    top3_idx = probas.argsort()[::-1][:3]
-    top3 = [{"categoria": classes[i], "probabilidade": round(float(probas[i]) * 100, 1)} for i in top3_idx]
-
-    main_idx = classes.index(categoria)
-    confianca = round(float(probas[main_idx]) * 100, 1)
-
-    return jsonify({"categoria": categoria, "confianca": confianca, "top3": top3})
+    return jsonify({
+        "categoria": categoria_sugerida,
+        "previsoes": previsoes_modelos
+    })
 
 
 FORNECEDORES_CONHECIDOS = [
@@ -283,6 +295,20 @@ def save():
     entries = load_historico()
     entries.append(data)
     save_historico(entries)
+    try:
+        print("\n[MÁQUINA] Nova fatura guardada! A iniciar re-treino automático dos 3 modelos...")
+        from model.train import treinar_modelos
+        
+        # Corre o script de treino adicionando a nova linha
+        treinar_modelos()
+        
+        # Força a aplicação Flask a recarregar o model.pkl atualizado na próxima previsão
+        global model, categories
+        model = None
+        categories = None
+        print("[MÁQUINA] Modelos atualizados em memória com sucesso!\n")
+    except Exception as e:
+        print(f"[ERRO] Falha no treino automático: {str(e)}")
     return jsonify({"ok": True, "total": len(entries)})
 
 

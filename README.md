@@ -57,6 +57,7 @@ Gera `data/faturas_sinteticas.csv` com 600 faturas sintéticas (~8% com ruído).
 
 ```bash
 python model/train.py
+python -m model.train
 ```
 
 - Treina um `RandomForestClassifier` com pipeline TF-IDF + StandardScaler
