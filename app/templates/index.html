@@ -571,7 +571,19 @@
       <div class="result-header">
         <div>
           <div class="result-main-label">Categoria prevista</div>
-          <div class="result-main-cat" id="result-cat">—</div>
+          <select class="result-main-cat" id="result-cat" style="border: 1px dashed var(--blue-mid); border-radius: 6px; background: transparent; padding: 4px; cursor: pointer; outline: none;">
+            <option value="Material Desportivo">Material Desportivo</option>
+            <option value="Água Luz e Gás">Água Luz e Gás</option>
+            <option value="Comunicações">Comunicações</option>
+            <option value="Seguros">Seguros</option>
+            <option value="Alimentação e Bebidas">Alimentação e Bebidas</option>
+            <option value="Transportes e Deslocações">Transportes e Deslocações</option>
+            <option value="Publicidade e Marketing">Publicidade e Marketing</option>
+            <option value="Serviços de Contabilidade">Serviços de Contabilidade</option>
+            <option value="Equipamento Informático">Equipamento Informático</option>
+            <option value="Arbitragem e Competições">Arbitragem e Competições</option>
+            <option value="Manutenção e Reparações">Manutenção e Reparações</option>
+          </select>
         </div>
         <button class="btn-save" id="btn-save" onclick="saveToHistory()">💾 Guardar no histórico</button>
       </div>
@@ -724,7 +736,7 @@
 
   function showResult(data) {
     document.getElementById("result-box").style.display = "block";
-    document.getElementById("result-cat").textContent = data.categoria;
+    document.getElementById("result-cat").value = data.categoria;
     document.getElementById("result-pct").textContent = data.confianca + "%";
     document.getElementById("bar-fill").style.width = data.confianca + "%";
 
@@ -748,6 +760,9 @@
   // ── SAVE HISTORY ──
   async function saveToHistory() {
     if (!lastResult) return;
+    const categoriaCorrigida = document.getElementById("result-cat").value;
+    lastResult.categoria = categoriaCorrigida;
+    
     const btn = document.getElementById("btn-save");
     await fetch("/save", {
       method: "POST",
