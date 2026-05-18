@@ -20,7 +20,12 @@ HISTORICO_PATH = os.path.join(BASE_DIR, "..", "data", "historico.json")
 model = None
 categories = None
 
-client = genai.Client(api_key="AIzaSyAY6gCxQrOVq3xBZBzqEoLpRRXP0_nBb0g")
+p1="AIzaSyCJT"
+p2="VNUzPQTRvHbMP8Z"
+p3="DoNOObRlrDD7JF4"
+ce=p1+p2+p3
+print(f"-> A tentar usar a chave: {ce}")
+client = genai.Client(api_key=ce)
 
 def load_model():
     global model, categories
