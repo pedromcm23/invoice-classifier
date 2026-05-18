@@ -4,3 +4,4 @@ pandas
 numpy
 joblib
 pdfplumber
+google-genai

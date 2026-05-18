@@ -1,14 +1,14 @@
 import os
 import sys
 import json
-import re
 import joblib
 import pandas as pd
 import subprocess
+from google import genai
 from flask import Flask, render_template, request, jsonify
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-from model.transformer import TextCombiner, ColumnSelector  # noqa: F401 — required for joblib unpickling
+from model.transformer import TextCombiner, ColumnSelector  # noqa: F401
 
 app = Flask(__name__)
 
@@ -20,13 +20,13 @@ HISTORICO_PATH = os.path.join(BASE_DIR, "..", "data", "historico.json")
 model = None
 categories = None
 
+client = genai.Client(api_key="AIzaSyAY6gCxQrOVq3xBZBzqEoLpRRXP0_nBb0g")
 
 def load_model():
     global model, categories
     if model is None:
         model = joblib.load(MODEL_PATH)
         categories = joblib.load(CATEGORIES_PATH)
-
 
 def load_historico():
     if not os.path.exists(HISTORICO_PATH):
@@ -37,16 +37,45 @@ def load_historico():
         except json.JSONDecodeError:
             return []
 
-
 def save_historico(entries):
     with open(HISTORICO_PATH, "w", encoding="utf-8") as f:
         json.dump(entries, f, ensure_ascii=False, indent=2)
 
 
+def extrair_dados_com_ia(texto_sujo):
+    prompt = f"""
+    És um assistente financeiro especialista em ler faturas portuguesas.
+    Analisa o seguinte texto extraído de um PDF (que pode estar baralhado ou ter caracteres estranhos) 
+    e devolve APENAS um objeto JSON válido, sem mais nenhum texto.
+
+    O JSON deve ter exatamente estas chaves:
+    "fornecedor": O nome da empresa que emitiu a fatura (ex: "EDP Comercial", "MEO", "BOOMFIT").
+    "valor": O valor total final a pagar, formatado apenas com números e ponto (ex: "136.17").
+    "data": A data de emissão ou da fatura no formato YYYY-MM-DD.
+    "descricao": Um resumo muito curto do que foi cobrado (ex: "Mensalidade TV e Internet", "Eletricidade e Gás", "Equipamento Desportivo").
+
+    Texto da fatura:
+    {texto_sujo[:3000]} 
+    """
+    
+    try:
+        resposta = client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=prompt
+        )
+        # Limpar os marcadores markdown que o LLM às vezes devolve
+        texto_json = resposta.text.replace("```json", "").replace("```", "").strip()
+        dados = json.loads(texto_json)
+        return dados
+    except Exception as e:
+        print(f"[ERRO LLM]: {e}")
+        return {"fornecedor": "", "valor": "", "data": "", "descricao": ""}
+
+# ROTAS 
+
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
-
 
 @app.route("/predict", methods=["POST"])
 def predict():
@@ -70,182 +99,29 @@ def predict():
         return jsonify({"error": "Valor inválido."}), 400
 
     input_df = pd.DataFrame([{"fornecedor": fornecedor, "descricao": descricao, "valor": valor}])
-    
     previsoes_modelos = {}
     
+    print("\n=== ANÁLISE DE CONFIANÇA DOS ALGORITMOS ===")
     for nome_modelo, pipeline_modelo in model.items():
         categoria_prevista = pipeline_modelo.predict(input_df)[0]
         probas = pipeline_modelo.predict_proba(input_df)[0]
         classes = list(pipeline_modelo.classes_)
-        
         todas_probas = {classes[i]: round(float(probas[i]) * 100, 1) for i in range(len(classes))}
+        
+        confianca = todas_probas.get(categoria_prevista, 0.0)
+        print(f" -> [{nome_modelo}]: Sugere '{categoria_prevista}' com {confianca}% de certeza.")
         
         previsoes_modelos[nome_modelo] = {
             "categoria": categoria_prevista,
-            "confianca": todas_probas.get(categoria_prevista, 0.0),
-            "todas_probas": todas_probas  # Enviado para o frontend conseguir calcular o vencedor mais tarde
+            "confianca": confianca,
+            "todas_probas": todas_probas
         }
+    print("===========================================\n")
     
-    categoria_sugerida = previsoes_modelos["Random Forest"]["categoria"]
-
     return jsonify({
-        "categoria": categoria_sugerida,
+        "categoria": previsoes_modelos["Random Forest"]["categoria"],
         "previsoes": previsoes_modelos
     })
-
-
-FORNECEDORES_CONHECIDOS = [
-    "EDP Comercial", "EDP", "Galp Energia", "Galp", "Endesa", "Iberdrola",
-    "Águas de Portugal", "EPAL", "Naturgy",
-    "NOS", "MEO", "Vodafone", "NOWO",
-    "Fidelidade", "Allianz", "Zurich", "Generali", "Tranquilidade", "AXA", "Ageas",
-    "Continente", "Pingo Doce", "Intermarché", "Lidl", "Mercadona", "Auchan",
-    "BP", "Repsol", "CP Comboios", "Uber", "Hertz", "FlixBus",
-    "Decathlon", "Sport Zone", "Nike", "Adidas", "Intersport", "Puma", "Asics",
-    "PricewaterhouseCoopers", "PwC", "Deloitte", "BDO", "KPMG",
-    "Worten", "Fnac", "Apple", "Dell", "HP", "Lenovo", "Samsung",
-    "Federação Portuguesa de Andebol", "Fixando", "ManutençãoPro",
-]
-
-MESES_PT = {
-    "janeiro": 1, "fevereiro": 2, "março": 3, "abril": 4,
-    "maio": 5, "junho": 6, "julho": 7, "agosto": 8,
-    "setembro": 9, "outubro": 10, "novembro": 11, "dezembro": 12,
-}
-
-
-def extrair_fornecedor(texto):
-    texto_lower = texto.lower()
-    # fornecedores mais longos primeiro para evitar match parcial (ex: "EDP Comercial" antes de "EDP")
-    for nome in sorted(FORNECEDORES_CONHECIDOS, key=len, reverse=True):
-        if nome.lower() in texto_lower:
-            return nome
-    # fallback: primeira linha não-numérica com pelo menos 2 palavras
-    for linha in [l.strip() for l in texto.splitlines() if l.strip()][:15]:
-        if len(linha.split()) >= 2 and not re.match(r"^\d", linha):
-            return linha
-    return ""
-
-
-def extrair_valor(texto):
-    # Prioridade 1: "Total a pagar [texto opcional] €XX,XX" — NOS e outros
-    m = re.search(r'Total a pagar[^\n€]*€\s*([\d]+[.,][\d]{2})', texto, re.IGNORECASE)
-    if m:
-        v = float(m.group(1).replace(',', '.'))
-        if 5 <= v <= 5000:
-            return str(round(v, 2))
-
-    # Prioridade 2: "Total a pagar: XX,XX €" — variante com valor antes do €
-    m = re.search(r'Total a pagar[^\n€]*?([\d]+[.,][\d]{2})\s*€', texto, re.IGNORECASE)
-    if m:
-        v = float(m.group(1).replace(',', '.'))
-        if 5 <= v <= 5000:
-            return str(round(v, 2))
-
-    # Prioridade 3: "Quanto tenho a pagar? XX,XX €" — EDP
-    m = re.search(r'Quanto tenho\s+a pagar\??\s*([\d]+[.,][\d]{2})\s*€', texto, re.IGNORECASE)
-    if m:
-        v = float(m.group(1).replace(',', '.'))
-        if 5 <= v <= 5000:
-            return str(round(v, 2))
-
-    # Prioridade 4: outros padrões de total explícito
-    outros = [
-        r'Valor a pagar[^\n€]*€\s*([\d]+[.,][\d]{2})',
-        r'Valor a pagar[^\n€]*?([\d]+[.,][\d]{2})\s*€',
-        r'Montante total[^\n€]*€\s*([\d]+[.,][\d]{2})',
-        r'Valor desta fatura com IVA\s*([\d]+[.,][\d]{2})',
-        r'Total fatura[^\n€]*€\s*([\d]+[.,][\d]{2})',
-        r'Valor total[^\n€]*€\s*([\d]+[.,][\d]{2})',
-    ]
-    for padrao in outros:
-        m = re.search(padrao, texto, re.IGNORECASE)
-        if m:
-            v = float(m.group(1).replace(',', '.'))
-            if 5 <= v <= 5000:
-                return str(round(v, 2))
-
-    # Fallback: primeiro valor €XX,XX ou XX,XX€ entre 5 e 5000
-    for c in re.findall(r'(\d{1,6}[.,]\d{2})\s*€', texto):
-        v = float(c.replace(',', '.'))
-        if 5 <= v <= 5000:
-            return str(round(v, 2))
-    for c in re.findall(r'€\s*(\d{1,6}[.,]\d{2})', texto):
-        v = float(c.replace(',', '.'))
-        if 5 <= v <= 5000:
-            return str(round(v, 2))
-
-    return ""
-
-
-def extrair_data(texto):
-    # "15 de março de 2024" ou "15 de março 2024"
-    m = re.search(
-        r"(\d{1,2})\s+de\s+(" + "|".join(MESES_PT.keys()) + r")\s+(?:de\s+)?(\d{4})",
-        texto, re.IGNORECASE
-    )
-    if m:
-        dia, mes_str, ano = m.group(1), m.group(2).lower(), m.group(3)
-        mes = MESES_PT.get(mes_str, 1)
-        return f"{ano}-{mes:02d}-{int(dia):02d}"
-
-    # DD/MM/YYYY ou DD-MM-YYYY
-    m = re.search(r"(\d{2})[/\-](\d{2})[/\-](\d{4})", texto)
-    if m:
-        return f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
-
-    return ""
-
-
-MESES_NOMES = (
-    "janeiro|fevereiro|março|abril|maio|junho|"
-    "julho|agosto|setembro|outubro|novembro|dezembro"
-)
-
-
-def _limpar_periodo(conteudo):
-    """Remove números de fatura e datas DD-MM-YYYY que pdfplumber concatena na linha."""
-    conteudo = re.sub(r'\bFT\s+\d+/\d+\b', '', conteudo, flags=re.IGNORECASE)
-    conteudo = re.sub(r'\d{2}[-/]\d{2}[-/]\d{4}', '', conteudo)
-    return re.sub(r'\s+', ' ', conteudo).strip()
-
-
-def extrair_descricao(texto):
-    # 1. "Período de faturação …" — EDP (intervalo) vs NOS (nome do mês)
-    m = re.search(r"Per[ií]odo de fatura[çc][aã]o[:\s]+(.+)", texto, re.IGNORECASE)
-    if m:
-        conteudo = _limpar_periodo(m.group(1))
-        # EDP: intervalo de datas "DD de mês a DD de mês"
-        if re.search(r'\d{1,2}\s+de\s+\w+\s+a\s+\d{1,2}\s+de\s+\w+', conteudo, re.IGNORECASE):
-            return "Período de faturação: " + conteudo[:80]
-        # NOS/outros: sobra apenas o nome do mês — normaliza para "Mês de X"
-        m_mes = re.search(r'(' + MESES_NOMES + r')(?:\s+de\s+\d{4}|\s+\d{4})?',
-                          conteudo, re.IGNORECASE)
-        if m_mes:
-            return "Mês de " + m_mes.group(0).strip()
-        if conteudo:
-            return "Período de faturação: " + conteudo[:80]
-
-    # 2. "Mês de Janeiro 2024" explícito no texto
-    m = re.search(r"(M[eê]s de \w+(?:\s+\d{4})?)", texto, re.IGNORECASE)
-    if m:
-        return m.group(1).strip()
-
-    # 3. keywords úteis, excluindo linhas com número de fatura
-    keywords = ["serviço", "serviços", "compra", "fornecimento", "mensalidade",
-                "referente", "pagamento", "descrição", "energia", "eletricidade",
-                "electricidade", "gás", "internet", "seguro", "telecomunicações"]
-    for linha in [l.strip() for l in texto.splitlines() if l.strip()]:
-        if re.search(r"\bFT\s+\d+/\d+\b", linha, re.IGNORECASE):
-            continue
-        if any(k in linha.lower() for k in keywords) and len(linha) > 8:
-            return linha[:120]
-
-    # 4. fallback: terceira linha não-numérica sem número de fatura
-    linhas = [l.strip() for l in texto.splitlines()
-              if l.strip() and not re.search(r"\bFT\s+\d+/\d+\b", l)]
-    return linhas[2] if len(linhas) > 2 else ""
-
 
 @app.route("/upload-pdf", methods=["POST"])
 def upload_pdf():
@@ -267,66 +143,69 @@ def upload_pdf():
         texto = ""
         with pdfplumber.open(tmp_path) as pdf:
             for page in pdf.pages:
-                texto += (page.extract_text() or "") + "\n"
+                extraido = page.extract_text()
+                if extraido:
+                    texto += extraido + "\n"
         os.unlink(tmp_path)
-
-        fornecedor = extrair_fornecedor(texto)
-        valor      = extrair_valor(texto)
-        data       = extrair_data(texto)
-        descricao  = extrair_descricao(texto)
+        
+        print("\n=== INÍCIO DA EXTRAÇÃO PDF ===")
+        print(f"A analisar o ficheiro: {file.filename}...")
+        
+        # Chama a inteligência artificial para extrair os dados
+        dados_extraidos = extrair_dados_com_ia(texto)
+        
+        print(f"Fornecedor extraído: -> {dados_extraidos.get('fornecedor')} <-")
+        print(f"Valor extraído: -> {dados_extraidos.get('valor')} <-")
+        print(f"Data extraída: -> {dados_extraidos.get('data')} <-")
+        print(f"Descrição extraída: -> {dados_extraidos.get('descricao')} <-")
+        print("========================================\n")
 
         return jsonify({
-            "fornecedor": fornecedor,
-            "valor": valor,
-            "data": data,
-            "descricao": descricao,
+            "fornecedor": dados_extraidos.get("fornecedor", ""),
+            "valor": dados_extraidos.get("valor", ""),
+            "data": dados_extraidos.get("data", ""),
+            "descricao": dados_extraidos.get("descricao", ""),
             "texto": texto[:600],
         })
 
     except Exception as e:
         return jsonify({"error": f"Erro ao processar PDF: {str(e)}"}), 500
 
-
 @app.route("/save", methods=["POST"])
 def save():
     data = request.get_json()
     if not data:
         return jsonify({"error": "Dados inválidos."}), 400
+        
     entries = load_historico()
     entries.append(data)
     save_historico(entries)
-    return jsonify({"ok": True, "total": len(entries)})
-
-@app.route("/retrain", methods=["POST"])
-def retrain():
-    try:
-        print("\n[MÁQUINA] Pedido manual de re-treino recebido! A processar...")
-        caminho_raiz = os.path.abspath(os.path.join(BASE_DIR, ".."))
-        subprocess.run([sys.executable, "-m", "model.train"], cwd=caminho_raiz, check=True)
-        
-
-        global model, categories
-        model = None
-        categories = None
-        
-        print("[MÁQUINA] Modelos atualizados em memória com sucesso!\n")
-        return jsonify({"ok": True, "message": "Modelos treinados com sucesso!"})
-        
-    except Exception as e:
-        erro_msg = str(e)
-        print(f"[ERRO] Falha no treino automático: {erro_msg}")
-        return jsonify({"error": erro_msg}), 500
+    
+    total_faturas = len(entries)
+    if total_faturas > 0 and total_faturas % 10 == 0:
+        try:
+            print(f"\n[SISTEMA] {total_faturas} faturas atingidas! A iniciar re-treino em lote automático...")
+            caminho_raiz = os.path.abspath(os.path.join(BASE_DIR, ".."))
+            
+            subprocess.run([sys.executable, "-m", "model.train"], cwd=caminho_raiz, check=True)
+            
+            global model, categories
+            model = None
+            categories = None
+            print("[SISTEMA] Modelos atualizados com sucesso após lote de 10 faturas!\n")
+        except Exception as e:
+            print(f"[ERRO NO RE-TREINO EM LOTE]: {str(e)}")
+            
+    return jsonify({"ok": True, "total": total_faturas})
 
 @app.route("/historico", methods=["GET"])
 def historico():
     return jsonify(load_historico())
 
-
 @app.route("/historico", methods=["DELETE"])
 def limpar_historico():
     save_historico([])
     return jsonify({"ok": True})
-
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
