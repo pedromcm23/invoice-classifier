@@ -509,11 +509,6 @@
       <h1>Classificador de Faturas</h1>
       <p>Associação Desportiva · Escola de Andebol</p>
     </div>
-
-    <nav class="tabs">
-      <button class="tab-btn active" onclick="showTab('classificar', this)">🤾 Classificar</button>
-      <button class="tab-btn" onclick="showTab('historico', this)">📋 Histórico</button>
-    </nav>
   </div>
 </header>
 
@@ -535,10 +530,8 @@
     </div>
 
     <!-- Form -->
-    <div class="card">
-      <div class="card-title">✏️ Preenche manualmente</div>
-
-      <div class="or-divider" id="or-div" style="display:none">ou preenche manualmente</div>
+    <div class="card" id="form-card" style="display:none">
+      <div class="card-title">✏️ Verifica os dados extraídos</div>
 
       <div class="form-grid">
         <div class="field form-full">
@@ -585,7 +578,7 @@
             <option value="Manutenção e Reparações">Manutenção e Reparações</option>
           </select>
         </div>
-        <button class="btn-save" id="btn-save" onclick="saveToHistory()">💾 Guardar no histórico</button>
+        <button class="btn-save" id="btn-save" onclick="confirmAndAdd()" style="background: #2e7d4f;">✅ Confirmar e Adicionar</button>
       </div>
 
       <div class="top3-title" style="margin-top: 25px;" id="algo-title">Previsão por Algoritmo</div>
@@ -594,26 +587,7 @@
 
   </section>
 
-  <!-- ══ SECÇÃO HISTÓRICO ══ -->
-  <section id="sec-historico" class="section">
-    <div class="card">
-      <div class="historico-header">
-        <h2>📋 Faturas classificadas</h2>
-        <div style="display: flex; gap: 10px;">
-          <button class="btn-primary" id="btn-retrain" style="margin-top: 0; padding: 7px 14px; font-size: 0.83rem;" onclick="triggerRetrain()">
-            🧠 Treinar Modelos
-          </button>
-          <button class="btn-danger" onclick="clearHistory()">🗑 Limpar histórico</button>
-        </div>
-      </div>
-      <div id="historico-content">
-        <div class="empty-msg">
-          <div class="empty-icon">📭</div>
-          A carregar…
-        </div>
-      </div>
-    </div>
-  </section>
+
 
 </main>
 
@@ -626,14 +600,7 @@
 
   let lastResult = null;
 
-  // ── TABS ──
-  function showTab(name, btn) {
-    document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
-    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-    document.getElementById("sec-" + name).classList.add("active");
-    btn.classList.add("active");
-    if (name === "historico") loadHistory();
-  }
+
 
   // ── DRAG & DROP ──
   const dz = document.getElementById("drop-zone");
@@ -671,7 +638,10 @@
         ? "✅ Dados extraídos com sucesso!"
         : `⚠️ Extraídos ${filled}/3 campos — completa os que faltam.`;
 
-      document.getElementById("or-div").style.display = "flex";
+      document.getElementById("form-card").style.display = "block";
+      if (filled === 3) {
+          classify();
+      }
     } catch {
       status.textContent = "❌ Erro ao enviar o ficheiro.";
     }
@@ -716,8 +686,6 @@
       };
 
       showResult(data);
-      document.getElementById("btn-save").classList.remove("saved");
-      document.getElementById("btn-save").textContent = "💾 Guardar no histórico";
 
     } catch {
       errEl.textContent = "Erro de rede. Verifica se a app está a correr.";
@@ -749,85 +717,9 @@
     document.getElementById("result-box").scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
-  // ── SAVE HISTORY ──
-  async function saveToHistory() {
-    if (!lastResult) return;
-    const btn = document.getElementById("btn-save");
-
-    const categoriaFinal = document.getElementById("result-cat").value;
-    
-    let melhorAlgoritmo = "Nenhum";
-    let maiorConfianca = -1;
-
-    // Algoritmo que deu a maior percentagem para a categoria final escolhida
-    Object.keys(lastResult.previsoes).forEach(nomeModelo => {
-      const probDaCategoria = lastResult.previsoes[nomeModelo].todas_probas[categoriaFinal] || 0;
-      if (probDaCategoria > maiorConfianca) {
-        maiorConfianca = probDaCategoria;
-        melhorAlgoritmo = nomeModelo;
-      }
-    });
-
-    // Montar o objeto final limpo, trocando a confiança pelo Algoritmo Vencedor
-    const dadosEnvio = {
-      fornecedor: lastResult.fornecedor,
-      valor: lastResult.valor,
-      descricao: lastResult.descricao,
-      data: lastResult.data,
-      categoria: categoriaFinal,            
-      algoritmo_vencedor: melhorAlgoritmo
-    };
-
-    await fetch("/save", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(dadosEnvio),
-    });
-    btn.textContent = "✅ Guardado!";
-    btn.classList.add("saved");
-  }
-
-  // ── LOAD HISTORY ──
-  async function loadHistory() {
-    const res = await fetch("/historico");
-    const entries = await res.json();
-    const el = document.getElementById("historico-content");
-
-    if (!entries.length) {
-      el.innerHTML = `<div class="empty-msg"><div class="empty-icon">📭</div>Ainda não há faturas classificadas.</div>`;
-      return;
-    }
-
-    const sorted = [...entries].reverse();
-    const rows = sorted.map(e => {
-      const color = getCatColor(e.categoria);
-      const algoVencedor = e.algoritmo_vencedor || "—";
-      return `<tr>
-        <td>${e.data || "—"}</td>
-        <td><strong>${esc(e.fornecedor)}</strong></td>
-        <td>${e.valor ? parseFloat(e.valor).toFixed(2) + " €" : "—"}</td>
-        <td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(e.descricao)}</td>
-        <td><span class="cat-badge ${color}">${esc(e.categoria)}</span></td>
-        <td><strong style="color: var(--blue-mid);">${esc(algoVencedor)}</strong></td>
-      </tr>`;
-    }).join("");
-
-    el.innerHTML = `
-      <table>
-        <thead>
-          <tr>
-            <th>Data</th><th>Fornecedor</th><th>Valor</th>
-            <th>Descrição</th><th>Categoria</th><th>Algoritmo Vencedor</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>`;
-  }
-
-  async function clearHistory() {
-    if (!confirm("Tens a certeza que queres limpar o histórico?")) return;
-    await fetch("/historico", { method: "DELETE" });
-    loadHistory();
+  function confirmAndAdd() {
+    alert("Fatura adicionada à contabilidade com sucesso!");
+    location.reload();
   }
 
   // ── HELPERS ──
@@ -846,29 +738,7 @@
   // ── SET DEFAULT DATE ──
   document.getElementById("data").valueAsDate = new Date();
 
-  // ── TRIGGER RETRAIN ──
-  async function triggerRetrain() {
-    const btn = document.getElementById("btn-retrain");
-    const originalText = btn.innerHTML;
-    btn.disabled = true;
-    btn.innerHTML = "⏳ A treinar...";
-    
-    try {
-      const res = await fetch("/retrain", { method: "POST" });
-      const data = await res.json();
-      
-      if (data.ok) {
-        alert(" O modelo aprendeu com os novos dados!");
-      } else {
-        alert("⚠️ Ocorreu um erro ao treinar: " + data.error);
-      }
-    } catch (err) {
-      alert("⚠️ Erro de rede ao tentar treinar o modelo.");
-    } finally {
-      btn.disabled = false;
-      btn.innerHTML = originalText;
-    }
-  }
+
 </script>
 </body>
 </html>

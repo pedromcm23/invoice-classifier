@@ -15,8 +15,6 @@ app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "..", "model", "model.pkl")
 CATEGORIES_PATH = os.path.join(BASE_DIR, "..", "model", "categories.pkl")
-HISTORICO_PATH = os.path.join(BASE_DIR, "..", "data", "historico.json")
-
 model = None
 categories = None
 
@@ -26,21 +24,6 @@ def load_model():
     if model is None:
         model = joblib.load(MODEL_PATH)
         categories = joblib.load(CATEGORIES_PATH)
-
-
-def load_historico():
-    if not os.path.exists(HISTORICO_PATH):
-        return []
-    with open(HISTORICO_PATH, "r", encoding="utf-8") as f:
-        try:
-            return json.load(f)
-        except json.JSONDecodeError:
-            return []
-
-
-def save_historico(entries):
-    with open(HISTORICO_PATH, "w", encoding="utf-8") as f:
-        json.dump(entries, f, ensure_ascii=False, indent=2)
 
 
 @app.route("/", methods=["GET"])
@@ -136,7 +119,7 @@ def extrair_valor(texto):
             return str(round(v, 2))
 
     # Prioridade 2: "Total a pagar: XX,XX €" — variante com valor antes do €
-    m = re.search(r'Total a pagar[^\n€]*?([\d]+[.,][\d]{2})\s*€', texto, re.IGNORECASE)
+    m = re.search(r'Total a pagar[^\n€]*?([\d]+[.,][\d]{2})\s*(?:€|EUR)', texto, re.IGNORECASE)
     if m:
         v = float(m.group(1).replace(',', '.'))
         if 5 <= v <= 5000:
@@ -285,47 +268,6 @@ def upload_pdf():
 
     except Exception as e:
         return jsonify({"error": f"Erro ao processar PDF: {str(e)}"}), 500
-
-
-@app.route("/save", methods=["POST"])
-def save():
-    data = request.get_json()
-    if not data:
-        return jsonify({"error": "Dados inválidos."}), 400
-    entries = load_historico()
-    entries.append(data)
-    save_historico(entries)
-    return jsonify({"ok": True, "total": len(entries)})
-
-@app.route("/retrain", methods=["POST"])
-def retrain():
-    try:
-        print("\n[MÁQUINA] Pedido manual de re-treino recebido! A processar...")
-        caminho_raiz = os.path.abspath(os.path.join(BASE_DIR, ".."))
-        subprocess.run([sys.executable, "-m", "model.train"], cwd=caminho_raiz, check=True)
-        
-
-        global model, categories
-        model = None
-        categories = None
-        
-        print("[MÁQUINA] Modelos atualizados em memória com sucesso!\n")
-        return jsonify({"ok": True, "message": "Modelos treinados com sucesso!"})
-        
-    except Exception as e:
-        erro_msg = str(e)
-        print(f"[ERRO] Falha no treino automático: {erro_msg}")
-        return jsonify({"error": erro_msg}), 500
-
-@app.route("/historico", methods=["GET"])
-def historico():
-    return jsonify(load_historico())
-
-
-@app.route("/historico", methods=["DELETE"])
-def limpar_historico():
-    save_historico([])
-    return jsonify({"ok": True})
 
 
 if __name__ == "__main__":

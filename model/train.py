@@ -16,24 +16,11 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import MultinomialNB
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "faturas_sinteticas.csv")
-HISTORICO_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "historico.json")
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "model.pkl")
 CATEGORIES_PATH = os.path.join(os.path.dirname(__file__), "categories.pkl")
 def treinar_modelos():
     # Dataset Default
     df = pd.read_csv(DATA_PATH)
-    # Correções do utilizador, caso existam
-    if os.path.exists(HISTORICO_PATH):
-        with open(HISTORICO_PATH, "r", encoding="utf-8") as f:
-            historico_dados = json.load(f)
-        
-        if len(historico_dados) > 0:
-            df_historico = pd.DataFrame(historico_dados)
-            colunas_necessarias = ["fornecedor", "descricao", "valor", "categoria"]
-
-            # Junta aos dados default
-            df = pd.concat([df, df_historico[["fornecedor", "descricao", "valor", "categoria"]]], ignore_index=True)
-            print(f"Adicionadas {len(df_historico)} faturas corrigidas pelo utilizador!")
     print(f"Dataset carregado: {len(df)} registos, {df['categoria'].nunique()} categorias\n")
 
     X = df[["fornecedor", "descricao", "valor"]]
