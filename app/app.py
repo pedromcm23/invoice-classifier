@@ -85,6 +85,7 @@ FORNECEDORES_CONHECIDOS = [
     "Continente", "Pingo Doce", "Intermarché", "Lidl", "Mercadona", "Auchan",
     "BP", "Repsol", "CP Comboios", "Uber", "Hertz", "FlixBus",
     "Decathlon", "Sport Zone", "Nike", "Adidas", "Intersport", "Puma", "Asics",
+    "BOOMFIT", "World Fit Online",
     "PricewaterhouseCoopers", "PwC", "Deloitte", "BDO", "KPMG",
     "Worten", "Fnac", "Apple", "Dell", "HP", "Lenovo", "Samsung",
     "Federação Portuguesa de Andebol", "Fixando", "ManutençãoPro",
@@ -134,12 +135,15 @@ def extrair_valor(texto):
 
     # Prioridade 4: outros padrões de total explícito
     outros = [
-        r'Valor a pagar[^\n€]*€\s*([\d]+[.,][\d]{2})',
-        r'Valor a pagar[^\n€]*?([\d]+[.,][\d]{2})\s*€',
-        r'Montante total[^\n€]*€\s*([\d]+[.,][\d]{2})',
-        r'Valor desta fatura com IVA\s*([\d]+[.,][\d]{2})',
-        r'Total fatura[^\n€]*€\s*([\d]+[.,][\d]{2})',
-        r'Valor total[^\n€]*€\s*([\d]+[.,][\d]{2})',
+        r'Valor a pagar[^\n€]*€\s*([\d]+[.,][\d]{2})(?!\d)',
+        r'Valor a pagar[^\n€]*?([\d]+[.,][\d]{2})(?!\d)\s*€',
+        r'Montante total[^\n€]*€\s*([\d]+[.,][\d]{2})(?!\d)',
+        r'Valor desta fatura com IVA\s*([\d]+[.,][\d]{2})(?!\d)',
+        r'Total fatura[^\n€]*€\s*([\d]+[.,][\d]{2})(?!\d)',
+        r'Total da fatura[^\n€]*€\s*([\d]+[.,][\d]{2})(?!\d)',
+        r'Valor total[^\n€]*€\s*([\d]+[.,][\d]{2})(?!\d)',
+        r'Total Pago[^\n]*?(?:€\s*)?([\d]+[.,][\d]{2})(?!\d)',
+        r'TOTAL DA FATURA[^\n€]*€\s*([\d]+[.,][\d]{2})(?!\d)',
     ]
     for padrao in outros:
         m = re.search(padrao, texto, re.IGNORECASE)
@@ -162,9 +166,9 @@ def extrair_valor(texto):
 
 
 def extrair_data(texto):
-    # "15 de março de 2024" ou "15 de março 2024"
+    # "15 de março de 2024", "15 de março 2024", ou "15 março 2024"
     m = re.search(
-        r"(\d{1,2})\s+de\s+(" + "|".join(MESES_PT.keys()) + r")\s+(?:de\s+)?(\d{4})",
+        r"(\d{1,2})\s+(?:de\s+)?(" + "|".join(MESES_PT.keys()) + r")\s+(?:de\s+)?(\d{4})",
         texto, re.IGNORECASE
     )
     if m:
@@ -177,6 +181,20 @@ def extrair_data(texto):
     if m:
         return f"{m.group(3)}-{m.group(2)}-{m.group(1)}"
 
+    return ""
+
+
+def extrair_nif(texto):
+    m = re.search(r'\b(?:NIF|Contribuinte)[\s:]*([0-9]{9})\b', texto, re.IGNORECASE)
+    return m.group(1) if m else ""
+
+
+def extrair_n_fatura(texto):
+    m = re.search(r'\b(?:Fatura\s*N[ºo\xba.]*|Fatura-Recibo\s*N[ºo\xba.]*|Fatura|FT|INV)[\s:-]*([A-Z0-9]+(?:[\s/-]+[A-Z0-9]+)*)', texto, re.IGNORECASE)
+    if m:
+        n_fat = m.group(1).strip()
+        n_fat = re.split(r'\b(?:data|emiss|venc|de)\b', n_fat, flags=re.IGNORECASE)[0].strip()
+        return n_fat
     return ""
 
 
@@ -217,17 +235,20 @@ def extrair_descricao(texto):
     # 3. keywords úteis, excluindo linhas com número de fatura
     keywords = ["serviço", "serviços", "compra", "fornecimento", "mensalidade",
                 "referente", "pagamento", "descrição", "energia", "eletricidade",
-                "electricidade", "gás", "internet", "seguro", "telecomunicações"]
+                "electricidade", "gás", "internet", "seguro", "telecomunicações",
+                "kit", "elástico", "elásticos", "artigo", "produto", "transporte", "bolas", "redes"]
+    bad_phrases = ["artigos e/ou serviços faturados", "serviços faturados foram", "descrição valor", "refª. artigo designação"]
     for linha in [l.strip() for l in texto.splitlines() if l.strip()]:
         if re.search(r"\bFT\s+\d+/\d+\b", linha, re.IGNORECASE):
             continue
+        if any(b in linha.lower() for b in bad_phrases):
+            continue
         if any(k in linha.lower() for k in keywords) and len(linha) > 8:
-            return linha[:120]
+            linha_limpa = re.sub(r'\s*\d+[.,]\d{2}\s*(?:€|EUR)?\s*$', '', linha)
+            return linha_limpa[:120].strip()
 
-    # 4. fallback: terceira linha não-numérica sem número de fatura
-    linhas = [l.strip() for l in texto.splitlines()
-              if l.strip() and not re.search(r"\bFT\s+\d+/\d+\b", l)]
-    return linhas[2] if len(linhas) > 2 else ""
+    # 4. Se não encontrar nada de fiável, devolve vazio para forçar preenchimento manual pelo utilizador
+    return ""
 
 
 @app.route("/upload-pdf", methods=["POST"])
@@ -257,12 +278,16 @@ def upload_pdf():
         valor      = extrair_valor(texto)
         data       = extrair_data(texto)
         descricao  = extrair_descricao(texto)
+        nif        = extrair_nif(texto)
+        n_fatura   = extrair_n_fatura(texto)
 
         return jsonify({
             "fornecedor": fornecedor,
             "valor": valor,
             "data": data,
             "descricao": descricao,
+            "nif": nif,
+            "n_fatura": n_fatura,
             "texto": texto[:600],
         })
 

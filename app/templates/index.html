@@ -539,6 +539,14 @@
           <input type="text" id="fornecedor" placeholder="ex: Decathlon, EDP, NOS…">
         </div>
         <div class="field">
+          <label for="nif">NIF</label>
+          <input type="text" id="nif" placeholder="ex: 501234567">
+        </div>
+        <div class="field">
+          <label for="n_fatura">Nº Fatura</label>
+          <input type="text" id="n_fatura" placeholder="ex: FT 2026/001">
+        </div>
+        <div class="field">
           <label for="valor">Valor em €</label>
           <input type="number" id="valor" placeholder="ex: 125.50" step="0.01" min="0">
         </div>
@@ -628,20 +636,23 @@
 
       if (data.error) { status.textContent = "⚠️ " + data.error; return; }
 
-      if (data.fornecedor) document.getElementById("fornecedor").value = data.fornecedor;
-      if (data.valor)      document.getElementById("valor").value = data.valor;
-      if (data.descricao)  document.getElementById("descricao").value = data.descricao;
-      if (data.data)       document.getElementById("data").value = data.data;
+      document.getElementById("fornecedor").value = data.fornecedor || "";
+      document.getElementById("valor").value      = data.valor || "";
+      document.getElementById("descricao").value  = data.descricao || "";
+      document.getElementById("data").value       = data.data || "";
+      document.getElementById("nif").value        = data.nif || "";
+      document.getElementById("n_fatura").value   = data.n_fatura || "";
+
+      document.getElementById("result-box").style.display = "none";
 
       const filled = [data.fornecedor, data.valor, data.descricao].filter(Boolean).length;
       status.textContent = filled === 3
-        ? "✅ Dados extraídos com sucesso!"
-        : `⚠️ Extraídos ${filled}/3 campos — completa os que faltam.`;
+        ? "✅ Dados extraídos com sucesso! Verifica e classifica a fatura."
+        : `⚠️ Extraídos ${filled}/3 campos obrigatórios — completa os que faltam.`;
 
       document.getElementById("form-card").style.display = "block";
-      if (filled === 3) {
-          classify();
-      }
+      // Auto-classification removed per user request:
+      // if (filled === 3) { classify(); }
     } catch {
       status.textContent = "❌ Erro ao enviar o ficheiro.";
     }
